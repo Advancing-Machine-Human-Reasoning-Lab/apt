@@ -1,87 +1,95 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    </head>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style2.css">
+</head>
+
 <body>
 
-<script>
-    $(document).ready(function(){
-    $.ajax({ 
-        type: "POST",
-        url: "http://mi.amhrlab.com:5000/start",
-        crossDomain:true,
-        success: function (data) {
-            console.log('Submission was successful.');
-            console.log(data);
-            $("#div1").html(data);
-        },
-        error: function (data) {
-            console.log('An error occurred.');
-            console.log(data);
-        },
-    });
-    });
-</script>
-
-<form id="study" action="http://mi.amhrlab.com:5000/check" method="POST">
-    <div id="sentence">
-        Given sentence:
-    <div id="div1"><h2></h2></div>
-    <p></p>
-  <label for="candidate">Your sentence:</label><br>
-  <input type="text" id="candidate" name="candidate" ><br>
-  <input type="button" id="submit_reload" name='submit' value="Submit">
-  <input type="submit" name='check' value="Check">
-</form> 
-<p></p>
-<div id="scores">
-    BLEURTScore:
-<div id="div2"><h2></h2></div>
-<div id="scores">
-    MIScore:
-<div id="div3"><h2></h2></div>
-<div id="scores">
-    Dollars:
-<div id="div4"><h2></h2></div>
-</div>
-
-<script type="text/javascript">
-    var frm = $('#study');
-    frm.submit(function (e) {
-        e.preventDefault();
-        $.ajax({
-            type: frm.attr('method'),
-            url: frm.attr('action'),
-            data: frm.serialize(),  //you may use jsonp for cross origin request
-            crossDomain:true,
-            success: function (data) {
-                console.log('Submission was successful.');
-                console.log(data);
-                $("#div2").html(data['bleurtscore']);
-                $("#div3").html(data['miscore']);
-                $("#div4").html(data['dollars']);
-                $("#candidate").html(data['candidate']);
-            },
-            error: function (data) {
-                console.log('An error occurred.');
-                console.log(data);
-            },
+    <script>
+        $(document).ready(function() {
+            $.ajax({
+                type: "POST",
+                url: "http://mi.amhrlab.com:5000/start",
+                crossDomain: true,
+                success: function(data) {
+                    console.log('Submission was successful.');
+                    console.log(data);
+                    $("#div1").html(data);
+                },
+                error: function(data) {
+                    console.log('An error occurred.');
+                    console.log(data);
+                },
+            });
         });
-    });
-    $('#submit_reload').click(function(){
-    $.ajax({
-        type: "POST",
-        url: "http://mi.amhrlab.com:5000/submit",
-        crossDomain: true,
-        data: $('#study').serialize(),
-        success: function (data) {
-            console.log('The request was a success');
-            window.location.href='/start';
-        },
-    });
-  });
-</script>
+    </script>
+
+    <div class="main">
+        <div class="container">
+            <form id="study" action="http://mi.amhrlab.com:5000/check" method="POST" class="form1">
+                <p class="sign" align="center">Given Sentence</p>
+                <div id="div1" class="sen" align="center"></div>
+                <p></p>
+                <!-- <input type="text" id="candidate" name="candidate" placeholder="Your sentence" class="un" align="center"> -->
+                <textarea rows="2" cols="50" name="candidate" form="study" placeholder="Your sentence" class="un"></textarea>
+                <input type="submit" id="check" name='check' value="Check" class="forgot" align="center">
+                <input type="button" id="submit_reload" name='submit' value="Submit" class="submit" align="center">
+            </form>
+            <p></p>
+            <div id="scores" class="sign1" align="center">
+                <p class="sen" align="center">BLEURTScore:
+                    <div id="div2" class="sen" align="center"></div>
+                </p>
+                <p class="sen" align="center">MIScore:
+                    <div id="div3" class="sen" align="center"></div>
+                </p>
+                <p class="sen" align="center">Dollars:
+                    <div id="div4" class="sen" align="center"></div>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        var frm = $('#study');
+        frm.submit(function(e) {
+            e.preventDefault();
+            $.ajax({
+                type: frm.attr('method'),
+                url: frm.attr('action'),
+                data: frm.serialize(), //you may use jsonp for cross origin request
+                crossDomain: true,
+                success: function(data) {
+                    console.log('Submission was successful.');
+                    console.log(data);
+                    $("#div2").html(data['bleurtscore']);
+                    $("#div3").html(data['miscore']);
+                    $("#div4").html(data['dollars']);
+                    $("#candidate").html(data['candidate']);
+                },
+                error: function(data) {
+                    console.log('An error occurred.');
+                    console.log(data);
+                },
+            });
+        });
+        $('#submit_reload').click(function() {
+            $.ajax({
+                type: "POST",
+                url: "http://mi.amhrlab.com:5000/submit",
+                crossDomain: true,
+                data: $('#study').serialize(),
+                success: function(data) {
+                    console.log('The request was a success');
+                    window.location.href = '/start';
+                },
+            });
+        });
+    </script>
 
 </body>
+
 </html>

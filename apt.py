@@ -49,7 +49,7 @@ def check_candidate():
     print("BLEURT:", str(bleurtscore))
     miscore = get_mi_score([sentence], [candidate])
     print("MI:", str(miscore))
-    dollars = max(0, miscore - 1 / (1 + exp(-bleurtscore)))
+    dollars = min(0.5, max(0, miscore - (1 / (1 + exp(-bleurtscore)))))
     print("Dollars:", str(dollars))
     with open('sentences/checks', 'a+') as f:
         f.write('\t'.join([str(time()), sentence, candidate, str(bleurtscore), str(miscore), str(dollars)]) + '\n')
@@ -62,7 +62,7 @@ def submit_candidate():
     print("Candidate:", str(candidate))
     bleurtscore = (bleurt_scorer.score([sentence], [candidate])[0] + bleurt_scorer.score([candidate], [sentence])[0]) / 2
     miscore = get_mi_score([sentence], [candidate])
-    dollars = max(0, miscore - 1 / (1 + exp(-bleurtscore)))
+    dollars = min(0.5, max(0, miscore - (1 / (1 + exp(-bleurtscore)))))
     with open('sentences/submits', 'a+') as f:
         f.write('\t'.join([str(time()), sentence, candidate, str(bleurtscore), str(miscore), str(dollars)]) + '\n')
     return ''
