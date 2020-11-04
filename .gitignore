@@ -6,4 +6,4 @@ outputs
 roberta_nli
 sembert
 wandb
-sentences/*
+sentences
