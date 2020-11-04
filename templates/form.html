@@ -3,38 +3,115 @@
 
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="style2.css">
+    <!-- <link rel="stylesheet" href="static/style2.css"> -->
+    <style>
+        body {
+            background-color: cornflowerblue;
+            font-family: 'Ubuntu', sans-serif;
+        }
+        
+        .main {
+            background-color: white;
+            width: 70%;
+            height: 90%;
+            margin: 7em auto;
+            border-radius: 1.5em;
+            box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+        }
+        
+        .container {
+            padding-bottom: 5%;
+        }
+        
+        .sign {
+            padding-top: 40px;
+            color: darkblue;
+            font-family: 'Ubuntu', sans-serif;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        
+        .sign1 {
+            padding-top: 20px;
+            color: black;
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 18px;
+        }
+        
+        .sen {
+            color: black;
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 16px;
+            padding-top: 1%;
+            padding-left: 10%;
+            padding-right: 10%;
+        }
+        
+        .un {
+            width: 80%;
+            color: rgb(38, 50, 56);
+            font-weight: 700;
+            font-size: 14px;
+            letter-spacing: 1px;
+            background: rgba(136, 126, 126, 0.04);
+            padding: 10px 10px;
+            border: none;
+            border-radius: 20px;
+            outline: none;
+            box-sizing: border-box;
+            border: 2px solid rgba(0, 0, 0, 0.02);
+            margin-left: 10%;
+            margin-top: 5%;
+            text-align: center;
+            font-family: 'Ubuntu', sans-serif;
+        }
+        
+        form.form1 {
+            padding-top: 0px;
+        }
+        
+        .un:focus {
+            border: 2px solid rgba(0, 0, 0, 0.18) !important;
+        }
+        
+        .submit {
+            cursor: pointer;
+            width: 20%;
+            border-radius: 5em;
+            color: #fff;
+            background: linear-gradient(to right, rgb(17, 33, 122), rgb(46, 67, 156));
+            border: 0;
+            padding-bottom: 1.5%;
+            padding-top: 1.5%;
+            font-family: 'Ubuntu', sans-serif;
+            margin-top: 1%;
+            margin-left: 40%;
+            font-size: 14px;
+            text-align: center;
+            font-weight: bolder;
+            box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+        }
+        
+        @media (max-width: 600px) {
+            .main {
+                border-radius: 0px;
+            }
+        }
+    </style>
 </head>
 
 <body>
-
-    <script>
-        $(document).ready(function() {
-            $.ajax({
-                type: "POST",
-                url: "http://mi.amhrlab.com:5000/form.html",
-                crossDomain: true,
-                success: function(data) {
-                    console.log('Submission was successful.');
-                    console.log(data);
-                    $("#div1").html(data);
-                },
-                error: function(data) {
-                    console.log('An error occurred.');
-                    console.log(data);
-                },
-            });
-        });
-    </script>
 
     <div class="main">
         <div class="container">
             <form id="study" action="http://mi.amhrlab.com:5000/check" method="POST" class="form1" onsubmit="this.check.disabled=true; this.check.value='Calculating...'; this.check.style.opacity=0.7">
                 <p class="sign" align="center">Given Sentence</p>
-                <div id="div1" class="sen" align="center"></div>
+                <div id="div1" class="sen" align="center">{{data["token"]}}</div>
+                <div id="div1" class="sen" align="center">{{data["final_amt"]}}</div>
+                <div id="div1" class="sen" align="center">{{data["sentence"]}}</div>
                 <textarea rows="2" cols="50" name="candidate" form="study" placeholder="Your sentence" class="un"></textarea>
                 <input type="submit" id="check" name='check' value="Check" class="submit" align="center">
-                <div id="suremsg" class="sen" align="center"></div>
+                <div id="suremsg" class="sen" align="center" style="color:darkred; font-weight:bold;"></div>
                 <input type="button" id="submit_reload" name='submit' value="Submit" class="submit" align="center" style="opacity:0.7;" disabled=true>
             </form>
             <p></p>
@@ -91,7 +168,7 @@
                 data: $('#study').serialize(),
                 success: function(data) {
                     console.log('The request was a success');
-                    window.location.href = '/form.html';
+                    window.location.href = '/start';
                 },
             });
         });
