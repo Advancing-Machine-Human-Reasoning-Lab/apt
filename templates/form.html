@@ -12,7 +12,7 @@
         $(document).ready(function() {
             $.ajax({
                 type: "POST",
-                url: "http://mi.amhrlab.com:5000/start",
+                url: "http://mi.amhrlab.com:5000/form.html",
                 crossDomain: true,
                 success: function(data) {
                     console.log('Submission was successful.');
@@ -29,14 +29,12 @@
 
     <div class="main">
         <div class="container">
-            <form id="study" action="http://mi.amhrlab.com:5000/check" method="POST" class="form1">
+            <form id="study" action="http://mi.amhrlab.com:5000/check" method="POST" class="form1" onsubmit="this.check.disabled=true; this.check.value='Calculating...'; this.check.style.opacity=0.7">
                 <p class="sign" align="center">Given Sentence</p>
                 <div id="div1" class="sen" align="center"></div>
-                <p></p>
-                <!-- <input type="text" id="candidate" name="candidate" placeholder="Your sentence" class="un" align="center"> -->
                 <textarea rows="2" cols="50" name="candidate" form="study" placeholder="Your sentence" class="un"></textarea>
-                <input type="submit" id="check" name='check' value="Check" class="forgot" align="center">
-                <input type="button" id="submit_reload" name='submit' value="Submit" class="submit" align="center">
+                <input type="submit" id="check" name='check' value="Check" class="submit" align="center">
+                <input type="button" id="submit_reload" name='submit' value="Submit" class="submit" align="center" style="opacity:0.7;" disabled=true>
             </form>
             <p></p>
             <div id="scores" class="sign1" align="center">
@@ -69,6 +67,11 @@
                     $("#div3").html(data['miscore']);
                     $("#div4").html(data['dollars']);
                     $("#candidate").html(data['candidate']);
+                    $('#check').prop('disabled', false);
+                    $('#check').prop('value', 'Check');
+                    $('#check').css('opacity', '1');
+                    $('#submit_reload').prop('disabled', false);
+                    $('#submit_reload').css('opacity', '1');
                 },
                 error: function(data) {
                     console.log('An error occurred.');
@@ -84,7 +87,7 @@
                 data: $('#study').serialize(),
                 success: function(data) {
                     console.log('The request was a success');
-                    window.location.href = '/start';
+                    window.location.href = '/form.html';
                 },
             });
         });

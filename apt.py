@@ -31,7 +31,7 @@ app.config["DEBUG"] = True
 
 sentence = ''
 
-@app.route('/start', methods=['POST'])
+@app.route('/form.html', methods=['GET', 'POST'])
 @cross_origin()
 def start():
     global sentence

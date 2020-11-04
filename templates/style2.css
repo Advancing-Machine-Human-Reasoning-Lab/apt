@@ -94,31 +94,13 @@ form.form1 {
     width: 20%;
     background: linear-gradient(to right, #9C27B0, #E040FB);
     border: 0;
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-bottom: 10px;
-    padding-top: 10px;
+    padding-left: 40%;
+    padding-right: 40%;
+    padding-bottom: 10%;
+    padding-top: 10%;
     font-family: 'Ubuntu', sans-serif;
     margin-top: 1%;
     margin-left: 40%;
-    font-size: 14px;
-    text-align: center;
-    font-weight: bolder;
-    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
-}
-
-.forgot {
-    cursor: pointer;
-    border-radius: 5em;
-    color: #fff;
-    width: 10%;
-    background: linear-gradient(to right, #9C27B0, #E040FB);
-    border: 0;
-    padding-bottom: 10px;
-    padding-top: 10px;
-    font-family: 'Ubuntu', sans-serif;
-    margin-top: 5%;
-    margin-left: 45%;
     font-size: 14px;
     text-align: center;
     font-weight: bolder;
