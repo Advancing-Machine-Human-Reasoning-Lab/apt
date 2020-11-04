@@ -65,6 +65,6 @@ def submit_candidate():
     dollars = min(0.5, max(0, miscore - (1 / (1 + exp(-bleurtscore)))))
     with open('sentences/submits', 'a+') as f:
         f.write('\t'.join([str(time()), sentence, candidate, str(bleurtscore), str(miscore), str(dollars)]) + '\n')
-    return ''
+    return {'candidate':candidate, 'bleurtscore':bleurtscore, 'miscore':miscore, 'dollars':dollars}
 
 app.run(host='0.0.0.0')

@@ -34,6 +34,7 @@
                 <div id="div1" class="sen" align="center"></div>
                 <textarea rows="2" cols="50" name="candidate" form="study" placeholder="Your sentence" class="un"></textarea>
                 <input type="submit" id="check" name='check' value="Check" class="submit" align="center">
+                <div id="suremsg" class="sen" align="center"></div>
                 <input type="button" id="submit_reload" name='submit' value="Submit" class="submit" align="center" style="opacity:0.7;" disabled=true>
             </form>
             <p></p>
@@ -66,6 +67,9 @@
                     $("#div2").html(data['bleurtscore']);
                     $("#div3").html(data['miscore']);
                     $("#div4").html(data['dollars']);
+                    if (data['dollars'] == 0) {
+                        $("#suremsg").html('Dollar value is 0. If you submit, you would not get any money for this submission. Please retry and check.');
+                    }
                     $("#candidate").html(data['candidate']);
                     $('#check').prop('disabled', false);
                     $('#check').prop('value', 'Check');
