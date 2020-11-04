@@ -1,8 +1,9 @@
 asset
 bleurt
-cache_dir/*
-mrpc/*
-outputs/*
-roberta_nli/*
-sembert/*
-wandb/*
+cache_dir
+mrpc
+outputs
+roberta_nli
+sembert
+wandb
+sentences
