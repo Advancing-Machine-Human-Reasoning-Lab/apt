@@ -11,6 +11,7 @@ from numpy import argmax
 from flask import Flask, request, jsonify, session, render_template, redirect
 from flask_cors import CORS, cross_origin
 from flask_session import Session
+from waitress import serve
 
 bleurt_scorer = BleurtScorer('bleurt/bleurt/bleurt-base-128/')
 mi_scorer = ClassificationModel('roberta', 'roberta_nli/', use_cuda=False, args = {'reprocess_input_data':True})
@@ -31,7 +32,7 @@ app.config['SESSION_TYPE'] = 'redis'
 cors = CORS(app)
 app.config['CORS_HEADERS'] = 'Content-Type'
 app.config["DEBUG"] = True
-app.config['SECRET_KEY'] = 'Manvi'
+app.config['SECRET_KEY'] = b'\xb3\xb6\x02\x08E\\\xcb.\x13b(\x0f\xfb\x15\xcf\xc5'
 Session(app)
 
 letters_digits = string.ascii_uppercase + string.digits
@@ -67,10 +68,10 @@ def check_candidate():
     miscore = get_mi_score([session['sentence']], [session['candidate']])
     print("MI:", str(miscore))
     session['dollars'] = round(max(0, (miscore - (1 / (1 + exp(-bleurtscore)))) / 2), 2) if session['candidate'] != session['sentence'] else 0
-    print("Dollars:", str(dollars))
+    print("Dollars:", str(session['dollars']))
     with open('sentences/checks', 'a+') as f:
         f.write('\t'.join([str(time()), session['sentence'], session['candidate'], str(bleurtscore), str(miscore), str(session['dollars'])]) + '\n')
-    return session
+    return dict(session)
 
 @app.route('/submit', methods=['POST'])
 @cross_origin()
@@ -83,8 +84,8 @@ def submit_candidate():
     miscore = get_mi_score([session['sentence']], [candidate])
     session['dollars'] = round(max(0, (miscore - (1 / (1 + exp(-bleurtscore)))) / 2), 2) if session['candidate'] != session['sentence'] else 0
     with open('sentences/submits', 'a+') as f:
-        f.write('\t'.join([session['token'], str(time()), session['sentence'], candidate, str(bleurtscore), str(miscore), str(dollars)]) + '\n')
-    session['final_amt'] += dollars
+        f.write('\t'.join([session['token'], str(time()), session['sentence'], candidate, str(bleurtscore), str(miscore), str(session['dollars'])]) + '\n')
+    session['final_amt'] += session['dollars']
     if session['final_amt'] >= 10:
         return end()
     return start()
@@ -97,4 +98,5 @@ def end():
     print(session['final_amt'])
     return render_template("end.html", data=session)
 
-app.run(host='0.0.0.0')
+# app.run(host='0.0.0.0')
+serve(app, host='0.0.0.0', port=5000)

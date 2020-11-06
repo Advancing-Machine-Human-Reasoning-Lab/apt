@@ -146,13 +146,13 @@
                 <input type="button" id="submit_reload" name='submit' value="Submit" class="submit" align="center" style="opacity:0.7;" disabled=true>
             </form>
             <p></p>
-            <p class="sen" align="center">Amount for this submission:
+            <p class="sen" align="center">Amount for this submission: ($)
                 <mark1 id="dollars"></mark1>
             </p>
-            <p class="sen1" align="center">Final Amount:
+            <p class="sen1" align="center">Final Amount: ($)
                 <mark1>{{data["final_amt"]}}</mark1>
             </p>
-            <input type="button" id="end_task" name='end' value="End task" class="submit" align="center" style="opacity:0.7;" disabled=true>
+            <input type="button" id="end_task" name='end' value="End task" class="submit" align="center">
         </div>
     </div>
 
@@ -171,6 +171,8 @@
                     $("#dollars").html(data['dollars']);
                     if (data['dollars'] == 0) {
                         $("#suremsg").html('Either the sentences are identical, or they do not mean the same. If you submit, you would not get any reward for this submission. Please retry and check.');
+                    } else {
+                        $('#suremsg').hide();
                     }
                     $("#candidate").html(data['candidate']);
                     $('#check').prop('disabled', false);
@@ -178,10 +180,6 @@
                     $('#check').css('opacity', '1');
                     $('#submit_reload').prop('disabled', false);
                     $('#submit_reload').css('opacity', '1');
-                    if (data['final_amt'] >= 2.5) {
-                        $('#end').prop('disabled', false);
-                        $('#end').css('opacity', '1');
-                    }
                 },
                 error: function(data) {
                     console.log('An error occurred.');
@@ -190,6 +188,9 @@
             });
         });
         $('#submit_reload').click(function() {
+            $('#submit_reload').prop('disabled', true);
+            $('#submit_reload').prop('value', 'Submitting...');
+            $('#submit_reload').css('opacity', '0.7');
             $.ajax({
                 type: "POST",
                 url: "http://mi.amhrlab.com:5000/submit",
@@ -202,16 +203,19 @@
             });
         });
         $('#end_task').click(function() {
-            $.ajax({
-                type: "GET",
-                url: "http://mi.amhrlab.com:5000/end",
-                crossDomain: true,
-                data: $('#study').serialize(),
-                success: function(data) {
-                    console.log('The request was a success');
-                    window.location.href = '/end';
-                },
-            });
+            var e = confirm("Do you want to end? You won't get any money for the study if your final amount at this point is below $2.5")
+            if (e == true) {
+                $.ajax({
+                    type: "GET",
+                    url: "http://mi.amhrlab.com:5000/end",
+                    crossDomain: true,
+                    data: $('#study').serialize(),
+                    success: function(data) {
+                        console.log('The request was a success');
+                        window.location.href = '/end';
+                    },
+                });
+            }
         });
     </script>
 
