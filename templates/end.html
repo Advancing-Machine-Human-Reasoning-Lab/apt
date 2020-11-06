@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            background-color: cornflowerblue;
+            font-family: 'Ubuntu', sans-serif;
+        }
+        
+        .main {
+            background-color: white;
+            width: 70%;
+            height: 90%;
+            margin: 7em auto;
+            border-radius: 1.5em;
+            box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+        }
+        
+        .container {
+            padding-bottom: 5%;
+        }
+        
+        .sign {
+            padding-top: 5%;
+            color: darkblue;
+            font-family: 'Ubuntu', sans-serif;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        
+        .sen {
+            color: black;
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 16px;
+            padding-top: 1%;
+            padding-left: 10%;
+            padding-right: 10%;
+        }
+        
+        .sen1 {
+            color: black;
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 16px;
+            padding-top: 3%;
+            padding-left: 10%;
+            padding-right: 10%;
+        }
+        
+        mark {
+            background-color: lightgray;
+            font-family: 'Lucida Console', monospace;
+        }
+        
+        mark1 {
+            font-family: 'Lucida Console', monospace;
+            font-weight: bolder;
+        }
+        
+        @media (max-width: 600px) {
+            .main {
+                border-radius: 0px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="main">
+        <div class="container">
+            <p class="sign" align="center">Thanks for participating in the study.</p>
+            <p class="sen1" align="center">Your final amount for this study session is:
+                <mark1>{{data["final_amt"]}}</mark1>
+            </p>
+            <p class="sen1" align="center">Please copy and paste the following token in your mTurk interface to get the promised amount:
+                <mark>{{data["token"]}}</mark>
+            </p>
+            <p class="sen1" align="center">Close this window when done.</p>
+        </div>
+    </div>
+
+</body>
+
+</html>

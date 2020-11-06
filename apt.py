@@ -19,7 +19,7 @@ def get_mi_score(s1, s2): # returns average of s1 and s2
     _, s1s2, __ = mi_scorer.eval_model(DataFrame({'text_a':s1, 'text_b':s2, 'labels':2}))
     _, s2s1, __ = mi_scorer.eval_model(DataFrame({'text_a':s2, 'text_b':s1, 'labels':2}))
     print(s1s2[0], s2s1[0], argmax(s1s2[0]), argmax(s2s1[0]))
-    return (int(s1s2[0][2] > 0 and argmax(s1s2[0]) == 2) + int(s2s1[0][2] > 0 and argmax(s2s1[0]) == 2)) / 2
+    return int(s1s2[0][2] > 0 and argmax(s1s2[0]) == 2 and s2s1[0][2] > 0 and argmax(s2s1[0]) == 2)
 
 mrpc = [] # [quality, id1, id2, s1, s2]
 with open('mrpc/msr_paraphrase_train.txt', 'r') as f:
@@ -34,7 +34,7 @@ app.config["DEBUG"] = True
 app.config['SECRET_KEY'] = 'Manvi'
 Session(app)
 
-letters_digits = string.ascii_letters + string.digits
+letters_digits = string.ascii_uppercase + string.digits
 
 @app.route('/', methods=['GET', 'POST'])
 @cross_origin()
@@ -59,18 +59,18 @@ def start():
 @app.route('/check', methods=['POST'])
 @cross_origin()
 def check_candidate():
-    candidate = request.form.get('candidate')
+    session['candidate'] = request.form.get('candidate')
     print(session['token'])
-    print("Candidate:", str(candidate))
-    bleurtscore = (bleurt_scorer.score([session['sentence']], [candidate])[0] + bleurt_scorer.score([candidate], [session['sentence']])[0]) / 2
+    print("Candidate:", str(session['candidate']))
+    bleurtscore = (bleurt_scorer.score([session['sentence']], [session['candidate']])[0] + bleurt_scorer.score([session['candidate']], [session['sentence']])[0]) / 2
     print("BLEURT:", str(bleurtscore))
-    miscore = get_mi_score([session['sentence']], [candidate])
+    miscore = get_mi_score([session['sentence']], [session['candidate']])
     print("MI:", str(miscore))
-    dollars = min(0.5, max(0, miscore - (1 / (1 + exp(-bleurtscore)))))
+    session['dollars'] = round(max(0, (miscore - (1 / (1 + exp(-bleurtscore)))) / 2), 2) if session['candidate'] != session['sentence'] else 0
     print("Dollars:", str(dollars))
     with open('sentences/checks', 'a+') as f:
-        f.write('\t'.join([str(time()), session['sentence'], candidate, str(bleurtscore), str(miscore), str(dollars)]) + '\n')
-    return {'candidate':candidate, 'bleurtscore':bleurtscore, 'miscore':miscore, 'dollars':dollars}
+        f.write('\t'.join([str(time()), session['sentence'], session['candidate'], str(bleurtscore), str(miscore), str(session['dollars'])]) + '\n')
+    return session
 
 @app.route('/submit', methods=['POST'])
 @cross_origin()
@@ -81,10 +81,20 @@ def submit_candidate():
     print("Sentence:", str(session['sentence']))
     bleurtscore = (bleurt_scorer.score([session['sentence']], [candidate])[0] + bleurt_scorer.score([candidate], [session['sentence']])[0]) / 2
     miscore = get_mi_score([session['sentence']], [candidate])
-    dollars = min(0.5, max(0, miscore - (1 / (1 + exp(-bleurtscore)))))
+    session['dollars'] = round(max(0, (miscore - (1 / (1 + exp(-bleurtscore)))) / 2), 2) if session['candidate'] != session['sentence'] else 0
     with open('sentences/submits', 'a+') as f:
         f.write('\t'.join([session['token'], str(time()), session['sentence'], candidate, str(bleurtscore), str(miscore), str(dollars)]) + '\n')
     session['final_amt'] += dollars
+    if session['final_amt'] >= 10:
+        return end()
     return start()
-    
+
+@app.route('/end', methods=['GET', 'POST'])
+@cross_origin()
+def end():
+    print('in end')
+    print(session['token'])
+    print(session['final_amt'])
+    return render_template("end.html", data=session)
+
 app.run(host='0.0.0.0')
