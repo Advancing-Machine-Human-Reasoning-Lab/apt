@@ -63,14 +63,17 @@ def check_candidate():
     session['candidate'] = request.form.get('candidate').strip()
     print(session['token'])
     print("Candidate:", str(session['candidate']))
-    bleurtscore = (bleurt_scorer.score([session['sentence']], [session['candidate']])[0] + bleurt_scorer.score([session['candidate']], [session['sentence']])[0]) / 2
-    print("BLEURT:", str(bleurtscore))
-    miscore = get_mi_score([session['sentence']], [session['candidate']])
-    print("MI:", str(miscore))
-    session['dollars'] = round(max(0, (miscore - (1 / (1 + exp(-bleurtscore)))) / 2), 2) if session['candidate'] != session['sentence'] else 0
-    print("Dollars:", str(session['dollars']))
-    with open('sentences/checks', 'a+') as f:
-        f.write('\t'.join([str(time()), session['sentence'], session['candidate'], str(bleurtscore), str(miscore), str(session['dollars'])]) + '\n')
+    if session['candidate'] == session['sentence']:
+        session['dollars'] = 0
+    else:
+        bleurtscore = (bleurt_scorer.score([session['sentence']], [session['candidate']])[0] + bleurt_scorer.score([session['candidate']], [session['sentence']])[0]) / 2
+        print("BLEURT:", str(bleurtscore))
+        miscore = get_mi_score([session['sentence']], [session['candidate']])
+        print("MI:", str(miscore))
+        session['dollars'] = round(max(0, (miscore - (1 / (1 + exp(-bleurtscore)))) / 2), 2)
+        print("Dollars:", str(session['dollars']))
+        with open('sentences/checks', 'a+') as f:
+            f.write('\t'.join([str(time()), session['sentence'], session['candidate'], str(bleurtscore), str(miscore), str(session['dollars'])]) + '\n')
     return dict(session)
 
 @app.route('/submit', methods=['POST'])
@@ -80,12 +83,15 @@ def submit_candidate():
     print(session['token'])
     print("Candidate:", str(candidate))
     print("Sentence:", str(session['sentence']))
-    bleurtscore = (bleurt_scorer.score([session['sentence']], [candidate])[0] + bleurt_scorer.score([candidate], [session['sentence']])[0]) / 2
-    miscore = get_mi_score([session['sentence']], [candidate])
-    session['dollars'] = round(max(0, (miscore - (1 / (1 + exp(-bleurtscore)))) / 2), 2) if session['candidate'] != session['sentence'] else 0
-    with open('sentences/submits', 'a+') as f:
-        f.write('\t'.join([session['token'], str(time()), session['sentence'], candidate, str(bleurtscore), str(miscore), str(session['dollars'])]) + '\n')
-    session['final_amt'] += session['dollars']
+    if session['candidate'] == session['sentence']:
+        session['dollars'] = 0
+    else:
+        bleurtscore = (bleurt_scorer.score([session['sentence']], [candidate])[0] + bleurt_scorer.score([candidate], [session['sentence']])[0]) / 2
+        miscore = get_mi_score([session['sentence']], [candidate])
+        session['dollars'] = round(max(0, (miscore - (1 / (1 + exp(-bleurtscore)))) / 2), 2)
+        with open('sentences/submits', 'a+') as f:
+            f.write('\t'.join([session['token'], str(time()), session['sentence'], candidate, str(bleurtscore), str(miscore), str(session['dollars'])]) + '\n')
+        session['final_amt'] += session['dollars']
     if session['final_amt'] >= 10:
         return end()
     return start()
