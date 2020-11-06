@@ -60,7 +60,7 @@ def start():
 @app.route('/check', methods=['POST'])
 @cross_origin()
 def check_candidate():
-    session['candidate'] = request.form.get('candidate')
+    session['candidate'] = request.form.get('candidate').strip()
     print(session['token'])
     print("Candidate:", str(session['candidate']))
     bleurtscore = (bleurt_scorer.score([session['sentence']], [session['candidate']])[0] + bleurt_scorer.score([session['candidate']], [session['sentence']])[0]) / 2
@@ -76,7 +76,7 @@ def check_candidate():
 @app.route('/submit', methods=['POST'])
 @cross_origin()
 def submit_candidate():
-    candidate = request.form.get('candidate')
+    candidate = request.form.get('candidate').strip()
     print(session['token'])
     print("Candidate:", str(candidate))
     print("Sentence:", str(session['sentence']))
@@ -96,6 +96,8 @@ def end():
     print('in end')
     print(session['token'])
     print(session['final_amt'])
+    if session['final_amt'] < 2.5:
+        session['final_amt'] = 0
     return render_template("end.html", data=session)
 
 # app.run(host='0.0.0.0')
