@@ -4,7 +4,9 @@ from time import time
 from math import exp
 
 from bleurt.score import BleurtScorer
-from simpletransformers.classification import ClassificationModel
+# from simpletransformers.classification import ClassificationModel
+from transformers import AutoTokenizer, AutoModelForSequenceClassification
+import torch
 from pandas import DataFrame
 from numpy import argmax
 
@@ -14,13 +16,32 @@ from flask_session import Session
 from waitress import serve
 
 bleurt_scorer = BleurtScorer('bleurt/bleurt/bleurt-base-128/')
-mi_scorer = ClassificationModel('roberta', 'roberta_nli/', use_cuda=False, args = {'reprocess_input_data':True})
+hg_model_hub_name = "ynie/roberta-large-snli_mnli_fever_anli_R1_R2_R3-nli"
+tokenizer = AutoTokenizer.from_pretrained(hg_model_hub_name)
+model = AutoModelForSequenceClassification.from_pretrained(hg_model_hub_name)
+# mi_scorer = ClassificationModel('roberta', 'roberta_nli/', use_cuda=False, args = {'reprocess_input_data':True})
 
 def get_mi_score(s1, s2): # returns average of s1 and s2
-    _, s1s2, __ = mi_scorer.eval_model(DataFrame({'text_a':s1, 'text_b':s2, 'labels':2}))
-    _, s2s1, __ = mi_scorer.eval_model(DataFrame({'text_a':s2, 'text_b':s1, 'labels':2}))
-    print(s1s2[0], s2s1[0], argmax(s1s2[0]), argmax(s2s1[0]))
-    return int(s1s2[0][2] > 0 and argmax(s1s2[0]) == 2 and s2s1[0][2] > 0 and argmax(s2s1[0]) == 2)
+    tokenized_input_seq_pair = tokenizer.encode_plus(s1, s2, max_length=256, return_token_type_ids=True, truncation=True)
+    input_ids = torch.Tensor(tokenized_input_seq_pair['input_ids']).long().unsqueeze(0)
+    token_type_ids = torch.Tensor(tokenized_input_seq_pair['token_type_ids']).long().unsqueeze(0)
+    attention_mask = torch.Tensor(tokenized_input_seq_pair['attention_mask']).long().unsqueeze(0)
+    outputs = model(input_ids, attention_mask=attention_mask, token_type_ids=token_type_ids, labels=None)
+    predicted_probability_12 = torch.softmax(outputs[0], dim=1)[0].tolist()  # batch_size only one
+
+    tokenized_input_seq_pair = tokenizer.encode_plus(s2, s1, max_length=256, return_token_type_ids=True, truncation=True)
+    input_ids = torch.Tensor(tokenized_input_seq_pair['input_ids']).long().unsqueeze(0)
+    token_type_ids = torch.Tensor(tokenized_input_seq_pair['token_type_ids']).long().unsqueeze(0)
+    attention_mask = torch.Tensor(tokenized_input_seq_pair['attention_mask']).long().unsqueeze(0)
+    outputs = model(input_ids, attention_mask=attention_mask, token_type_ids=token_type_ids, labels=None)
+    predicted_probability_21 = torch.softmax(outputs[0], dim=1)[0].tolist()  # batch_size only one
+
+    return argmax(predicted_probability_12) == 0 and argmax(predicted_probability_21) == 0
+    
+    # _, s1s2, __ = mi_scorer.eval_model(DataFrame({'text_a':s1, 'text_b':s2, 'labels':2}))
+    # _, s2s1, __ = mi_scorer.eval_model(DataFrame({'text_a':s2, 'text_b':s1, 'labels':2}))
+    # print(s1s2[0], s2s1[0], argmax(s1s2[0]), argmax(s2s1[0]))
+    # return int(s1s2[0][2] > 0 and argmax(s1s2[0]) == 2 and s2s1[0][2] > 0 and argmax(s2s1[0]) == 2)
 
 mrpc = [] # [quality, id1, id2, s1, s2]
 with open('mrpc/msr_paraphrase_train.txt', 'r') as f:
@@ -70,7 +91,8 @@ def check_candidate():
         print("BLEURT:", str(bleurtscore))
         miscore = get_mi_score([session['sentence']], [session['candidate']])
         print("MI:", str(miscore))
-        session['dollars'] = round(max(0, (miscore - (1 / (1 + exp(-bleurtscore)))) / 2), 2)
+        # session['dollars'] = round(max(0, (miscore - (1 / (1 + exp(-bleurtscore)))) / 2), 2)
+        session['dollars'] = round(exp(-bleurtscore)/4, 2) if miscore else 0
         print("Dollars:", str(session['dollars']))
         with open('sentences/checks', 'a+') as f:
             f.write('\t'.join([str(time()), session['sentence'], session['candidate'], str(bleurtscore), str(miscore), str(session['dollars'])]) + '\n')
@@ -88,7 +110,8 @@ def submit_candidate():
     else:
         bleurtscore = (bleurt_scorer.score([session['sentence']], [candidate])[0] + bleurt_scorer.score([candidate], [session['sentence']])[0]) / 2
         miscore = get_mi_score([session['sentence']], [candidate])
-        session['dollars'] = round(max(0, (miscore - (1 / (1 + exp(-bleurtscore)))) / 2), 2)
+        # session['dollars'] = round(max(0, (miscore - (1 / (1 + exp(-bleurtscore)))) / 2), 2)
+        session['dollars'] = round(exp(-bleurtscore)/4, 2) if miscore else 0
         with open('sentences/submits', 'a+') as f:
             f.write('\t'.join([session['token'], str(time()), session['sentence'], candidate, str(bleurtscore), str(miscore), str(session['dollars'])]) + '\n')
         session['final_amt'] += session['dollars']
@@ -102,7 +125,7 @@ def end():
     print('in end')
     print(session['token'])
     print(session['final_amt'])
-    if session['final_amt'] < 2.5:
+    if session['final_amt'] < 1:
         session['final_amt'] = 0
     return render_template("end.html", data=session)
 

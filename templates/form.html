@@ -135,9 +135,9 @@
     <div class="main">
         <div class="container">
             <form id="study" action="http://mi.amhrlab.com:5000/check" method="POST" class="form1" onsubmit="this.check.disabled=true; this.check.value='Calculating...'; this.check.style.opacity=0.7">
-                <p class="sen1" align="left">Token:
+                <!-- <p class="sen1" align="left">Token:
                     <mark>{{data["token"]}}</mark>
-                </p>
+                </p> -->
                 <p class="sign" align="center">Given Sentence</p>
                 <div id="div1" class="sen" align="center">{{data["sentence"]}}</div>
                 <textarea rows="2" cols="50" name="candidate" form="study" placeholder="Your sentence" class="un"></textarea>
@@ -203,7 +203,7 @@
             });
         });
         $('#end_task').click(function() {
-            var e = confirm("Do you want to end? You won't get any money for the study if your final amount at this point is below $2.5")
+            var e = confirm("Do you want to end? You won't get any money for the study if your final amount at this point is below $1.00")
             if (e == true) {
                 $.ajax({
                     type: "GET",
