@@ -10,7 +10,7 @@ import torch
 from pandas import DataFrame
 from numpy import argmax
 
-from flask import Flask, request, jsonify, session, render_template, redirect
+from flask import Flask, request, jsonify, session, render_template
 from flask_cors import CORS, cross_origin
 from flask_session import Session
 from waitress import serve
