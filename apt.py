@@ -66,7 +66,7 @@ letters_digits = string.ascii_uppercase + string.digits
 @app.route('/', methods=['GET', 'POST'])
 @cross_origin()
 def init():
-    session['token'] = ''.join((random.choice(letters_digits) for i in range(10)))
+    session['token'] = ''.join((choice(letters_digits) for i in range(10)))
     session['final_amt'] = 0.0
     session['sentence'] = None
     print(session['token'])
