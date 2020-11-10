@@ -1,4 +1,4 @@
-import random
+from random import randrange, choice
 import string
 from time import time
 from math import exp
@@ -48,6 +48,11 @@ with open('mrpc/msr_paraphrase_train.txt', 'r') as f:
     for l in f.readlines()[1:]:
         mrpc.append(l.split('\t'))
 
+engeng = [] # [quality, id1, id2, s1, s2]
+with open('engeng/czeng_test_engeng.txt', 'r') as f:
+    for l in f.readlines()[1:]:
+        engeng.append(l.split('\t'))
+
 app = Flask(__name__)
 app.config['SESSION_TYPE'] = 'redis'
 cors = CORS(app)
@@ -72,7 +77,15 @@ def init():
 @cross_origin()
 def start():
     print('in start')
-    session['sentence'] = str(random.choice(mrpc)[3])
+    session['dataset'] = choice(['mrpc', 'engeng'])
+    if session['dataset'] == 'mrpc':
+        session['sentence_index'] = randrange(len(mrpc))
+        session['sentence'] = str(mrpc[session['sentence_index']][3])
+        del mrpc[session['sentence_index']]
+    else:
+        session['sentence_index'] = randrange(len(engeng))
+        session['sentence'] = str(engeng[session['sentence_index']][1])
+        del engeng[session['sentence_index']]
     print(session['sentence'])
     print(session['token'])
     print(session['final_amt'])
@@ -92,10 +105,10 @@ def check_candidate():
         miscore = get_mi_score([session['sentence']], [session['candidate']])
         print("MI:", str(miscore))
         # session['dollars'] = round(max(0, (miscore - (1 / (1 + exp(-bleurtscore)))) / 2), 2)
-        session['dollars'] = round(exp(-bleurtscore)/4, 2) if miscore else 0
+        session['dollars'] = round(0.5 / ((1+exp(5*bleurtscore))**2), 2) if miscore else 0
         print("Dollars:", str(session['dollars']))
         with open('sentences/checks', 'a+') as f:
-            f.write('\t'.join([str(time()), session['sentence'], session['candidate'], str(bleurtscore), str(miscore), str(session['dollars'])]) + '\n')
+            f.write('\t'.join([session['token'], str(time()), session['dataset'], str(session['sentence_index']), session['sentence'], session['candidate'], str(bleurtscore), str(miscore), str(session['dollars'])]) + '\n')
     return dict(session)
 
 @app.route('/submit', methods=['POST'])
@@ -111,9 +124,9 @@ def submit_candidate():
         bleurtscore = (bleurt_scorer.score([session['sentence']], [candidate])[0] + bleurt_scorer.score([candidate], [session['sentence']])[0]) / 2
         miscore = get_mi_score([session['sentence']], [candidate])
         # session['dollars'] = round(max(0, (miscore - (1 / (1 + exp(-bleurtscore)))) / 2), 2)
-        session['dollars'] = round(exp(-bleurtscore)/4, 2) if miscore else 0
+        session['dollars'] = round(0.5 / ((1+exp(5*bleurtscore))**2), 2) if miscore else 0
         with open('sentences/submits', 'a+') as f:
-            f.write('\t'.join([session['token'], str(time()), session['sentence'], candidate, str(bleurtscore), str(miscore), str(session['dollars'])]) + '\n')
+            f.write('\t'.join([session['token'], str(time()), session['dataset'], str(session['sentence_index']), session['sentence'], session['candidate'], str(bleurtscore), str(miscore), str(session['dollars'])]) + '\n')
         session['final_amt'] += session['dollars']
     if session['final_amt'] >= 10:
         return end()

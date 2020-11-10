@@ -138,6 +138,45 @@
                 <!-- <p class="sen1" align="left">Token:
                     <mark>{{data["token"]}}</mark>
                 </p> -->
+                <p class="sign" align="center">Instructions</p>
+                <div class="sen" align="left">
+                    <p>The objective of this task is to write a sentence which is the same in meaning as the given sentence but as structurally different as possible.
+                    </p>
+                    <p>Your sentence should be such that you can infer your sentence from the given sentence AND vice-versa.
+                    </p>
+                    <p>
+                        Some tips on writing structurally different sentences -
+                        <ul>
+                            <li>Vocabulary replacement: You can replace words in the given sentence with their synonyms, antonyms, meronyms, etc. while preserving the meaning.</li>
+                            <li>Grammar: You can change the voice of the sentence, swap subject and predicate, use causative verbs, dummy subjects/objects (it), etc.</li>
+                            <li>Sentence complexity: You can increase or decrease the complexity of the sentence.</li>
+                        </ul>
+                    </p>
+                    <b>Your sentence should be sufficiently different from the given sentence to earn more than $0.05
+                        per submission. For eg: a simple synonym
+                        substitution would most likely give you less than $0.05.</b>
+                    <p>
+                        <p>Given sentence: <i>They found molecules that can only be produced when ozone breaks down cholesterol.</i></p>
+                        <p>Bad example: <i>They found molecules that can be produced only when ozone breaks down cholesterol.</i></p>
+                        <p>Good example: <i>Only upon cholesterol's decomposition by ozone, can some molecules be formed.</i></p>
+                    </p>
+                    <p>
+                        Here's how you perform the study -
+                        <ol>
+                            <li>Write your sentence in the text box provided.</li>
+                            <li>Click on "Check" to see how much amount you'd get if you were to submit this very sentence. You can't submit without checking at least once.</li>
+                            <li>You revise your sentence if needed and go to step 2 again.</li>
+                            <li>Once you are satisfied with your sentence, you may choose to "Submit".
+                                <p>Note that you don't get any amount for unsubmitted attempts. It's highly recommended to check even your modified version right before you submit, in case the dollar value reduces.
+                                </p>
+                            </li>
+                            <li>You get a new sentence when you click on "Submit".</li>
+                            <li>Please be patient after clicking on "Check" and "Submit" as it may take a while.</li>
+                            <li>The study ends automatically once you reach a total of $10. You can choose to end it before you reach $10, but in order to receive any compensation for your contribution, you need to have contributed at least worth $1.</li>
+                            <li>You'll see a code once your study ends which needs to be copied and pasted on mTurk so that you receive compensation.</li>
+                        </ol>
+                    </p>
+                </div>
                 <p class="sign" align="center">Given Sentence</p>
                 <div id="div1" class="sen" align="center">{{data["sentence"]}}</div>
                 <textarea rows="2" cols="50" name="candidate" form="study" placeholder="Your sentence" class="un"></textarea>
@@ -170,7 +209,7 @@
                     console.log(data);
                     $("#dollars").html(data['dollars']);
                     if (data['dollars'] == 0) {
-                        $("#suremsg").html('Either the sentences are identical, or they do not mean the same. If you submit, you would not get any reward for this submission. Please retry and check.');
+                        $("#suremsg").html('Either the sentences do not mean the same, or they are not sufficiently different. If you submit, you would not get any reward for this submission. Please retry and check.');
                     } else {
                         $('#suremsg').hide();
                     }
