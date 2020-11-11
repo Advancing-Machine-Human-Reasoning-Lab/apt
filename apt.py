@@ -18,7 +18,7 @@ from waitress import serve
 bleurt_scorer = BleurtScorer('bleurt/bleurt/bleurt-base-128/')
 hg_model_hub_name = "ynie/roberta-large-snli_mnli_fever_anli_R1_R2_R3-nli"
 tokenizer = AutoTokenizer.from_pretrained(hg_model_hub_name)
-model = AutoModelForSequenceClassification.from_pretrained(hg_model_hub_name)
+model = AutoModelForSequenceClassification.from_pretrained(hg_model_hub_name) # predicts E, N, C
 # mi_scorer = ClassificationModel('roberta', 'roberta_nli/', use_cuda=False, args = {'reprocess_input_data':True})
 
 def get_mi_score(s1, s2): # returns average of s1 and s2
@@ -60,7 +60,7 @@ app.config['CORS_HEADERS'] = 'Content-Type'
 app.config["DEBUG"] = True
 app.config['SECRET_KEY'] = b'\xb3\xb6\x02\x08E\\\xcb.\x13b(\x0f\xfb\x15\xcf\xc5'
 Session(app)
-
+    
 letters_digits = string.ascii_uppercase + string.digits
 
 @app.route('/', methods=['GET', 'POST'])
@@ -81,11 +81,9 @@ def start():
     if session['dataset'] == 'mrpc':
         session['sentence_index'] = randrange(len(mrpc))
         session['sentence'] = str(mrpc[session['sentence_index']][3])
-        del mrpc[session['sentence_index']]
     else:
         session['sentence_index'] = randrange(len(engeng))
         session['sentence'] = str(engeng[session['sentence_index']][1])
-        del engeng[session['sentence_index']]
     print(session['sentence'])
     print(session['token'])
     print(session['final_amt'])
@@ -121,6 +119,10 @@ def submit_candidate():
     if session['candidate'] == session['sentence']:
         session['dollars'] = 0
     else:
+        if session['dataset'] == 'mrpc':
+            del mrpc[session['sentence_index']]
+        else:
+            del engeng[session['sentence_index']]
         bleurtscore = (bleurt_scorer.score([session['sentence']], [candidate])[0] + bleurt_scorer.score([candidate], [session['sentence']])[0]) / 2
         miscore = get_mi_score([session['sentence']], [candidate])
         # session['dollars'] = round(max(0, (miscore - (1 / (1 + exp(-bleurtscore)))) / 2), 2)
@@ -140,6 +142,8 @@ def end():
     print(session['final_amt'])
     if session['final_amt'] < 1:
         session['final_amt'] = 0
+    with open('sentences/ends', 'a+') as f:
+            f.write('\t'.join([session['token'], session['final_amt']]) + '\n')
     return render_template("end.html", data=session)
 
 # app.run(host='0.0.0.0')

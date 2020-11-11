@@ -199,3 +199,15 @@
 1604978470.7620382	University of Michigan President Mary Sue Coleman said in a statement on the university's Web site, "Our fundamental values haven't changed.	q	-1.6970139145851135	False	0
 1605047287.9464602	Later this year, the command will send trainers with soldiers from four North African nations on patrolling and intelligence gathering missions.	q	-1.7012418508529663	False	0
 CO7ROFL74V	1605047501.576964	mrpc	3091	The broader Standard & Poor's 500 Index <.SPX> was up 9.69 points, or 0.98 percent, at 994.53.	q	-1.9940503239631653	False	0
+1YDNQJ4DIX	1605127069.7959838	engeng	42101	In a war no one is safe.	In a war everybody in in danger.	0.26001501083374023	True	0.02
+1YDNQJ4DIX	1605127074.9902315	engeng	42101	In a war no one is safe.	In a war everybody is in danger.	0.43654704093933105	True	0.01
+1YDNQJ4DIX	1605127091.9054208	engeng	42101	In a war no one is safe.	In a military conflict everybody is in danger.	0.2565101683139801	True	0.02
+SGU8Q3UO0B	1605127106.3815236	mrpc	1814	Since March 11, when the market's major indexes were at their lowest levels since hitting multi-year lows in October, the Nasdaq has barreled back 21.2 percent.	hello my name is	-1.7906160354614258	True	0.5
+1YDNQJ4DIX	1605127115.6483943	engeng	42101	In a war no one is safe.	Everybody is in danger when there is a military conflict.	-0.11775392480194569	True	0.21
+SGU8Q3UO0B	1605127115.8336034	mrpc	1814	Since March 11, when the market's major indexes were at their lowest levels since hitting multi-year lows in October, the Nasdaq has barreled back 21.2 percent.	hello my name is	-1.7906160354614258	True	0.5
+3B0ZQMFHSY	1605127189.6117253	engeng	119596	Why don't you give me your phone?	For what reason will you not hand your telephone to me?	0.001364685595035553	True	0.12
+3B0ZQMFHSY	1605127333.6328945	mrpc	3741	The broader Standard & Poor's 500 Index .SPX advanced 2 points, or 0.24 percent, to 977.	The Standard and Poor's Index .SPX increased by 2 points to 977, which was an increase of twenty-four percent.	0.07219216972589493	True	0.08
+3B0ZQMFHSY	1605127378.9511204	engeng	151149	I just need a bit of additional funding for human trials.	In order to continue human trials, I will need additional funding.	0.3797731250524521	True	0.01
+3B0ZQMFHSY	1605127387.5458934	engeng	151149	I just need a bit of additional funding for human trials.	In order to continue human trials, I will need additional money.	0.43807077407836914	True	0.01
+3B0ZQMFHSY	1605127396.612437	engeng	151149	I just need a bit of additional funding for human trials.	In order to continue human studies, I will need additional money.	0.3084491938352585	True	0.02
+1YDNQJ4DIX	1605127422.379195	engeng	4256	Let's go.	Let's begin the activity.	-0.540169358253479	True	0.44
