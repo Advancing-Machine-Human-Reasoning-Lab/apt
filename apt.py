@@ -100,7 +100,7 @@ def check_candidate():
     else:
         bleurtscore = (bleurt_scorer.score([session['sentence']], [session['candidate']])[0] + bleurt_scorer.score([session['candidate']], [session['sentence']])[0]) / 2
         print("BLEURT:", str(bleurtscore))
-        miscore = get_mi_score([session['sentence']], [session['candidate']])
+        miscore = get_mi_score(session['sentence'], session['candidate'])
         print("MI:", str(miscore))
         # session['dollars'] = round(max(0, (miscore - (1 / (1 + exp(-bleurtscore)))) / 2), 2)
         session['dollars'] = round(0.5 / ((1+exp(5*bleurtscore))**2), 2) if miscore else 0
@@ -112,9 +112,9 @@ def check_candidate():
 @app.route('/submit', methods=['POST'])
 @cross_origin()
 def submit_candidate():
-    candidate = request.form.get('candidate').strip()
+    session['candidate'] = request.form.get('candidate').strip()
     print(session['token'])
-    print("Candidate:", str(candidate))
+    print("Candidate:", str(session['candidate']))
     print("Sentence:", str(session['sentence']))
     if session['candidate'] == session['sentence']:
         session['dollars'] = 0
@@ -123,8 +123,8 @@ def submit_candidate():
             del mrpc[session['sentence_index']]
         else:
             del ppnmt[session['sentence_index']]
-        bleurtscore = (bleurt_scorer.score([session['sentence']], [candidate])[0] + bleurt_scorer.score([candidate], [session['sentence']])[0]) / 2
-        miscore = get_mi_score([session['sentence']], [candidate])
+        bleurtscore = (bleurt_scorer.score([session['sentence']], [session['candidate']])[0] + bleurt_scorer.score([session['candidate']], [session['sentence']])[0]) / 2
+        miscore = get_mi_score(session['sentence'], session['candidate'])
         # session['dollars'] = round(max(0, (miscore - (1 / (1 + exp(-bleurtscore)))) / 2), 2)
         session['dollars'] = round(0.5 / ((1+exp(5*bleurtscore))**2), 2) if miscore else 0
         with open('sentences/submits', 'a+') as f:
