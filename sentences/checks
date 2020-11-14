@@ -211,3 +211,25 @@ SGU8Q3UO0B	1605127115.8336034	mrpc	1814	Since March 11, when the market's major 
 3B0ZQMFHSY	1605127387.5458934	engeng	151149	I just need a bit of additional funding for human trials.	In order to continue human trials, I will need additional money.	0.43807077407836914	True	0.01
 3B0ZQMFHSY	1605127396.612437	engeng	151149	I just need a bit of additional funding for human trials.	In order to continue human studies, I will need additional money.	0.3084491938352585	True	0.02
 1YDNQJ4DIX	1605127422.379195	engeng	4256	Let's go.	Let's begin the activity.	-0.540169358253479	True	0.44
+YPL175IL5K	1605311751.2042108	engeng	35795	If I can get one of the other girls to cover my shift, maybe I'll meet you there.	I can meet you there if someone else covers my shift.	0.10486661642789841	True	0.07
+YPL175IL5K	1605311768.4169087	engeng	35795	If I can get one of the other girls to cover my shift, maybe I'll meet you there.	We can meet if someone else covers my shift.	-0.25262628495693207	True	0.3
+YPL175IL5K	1605311791.383217	engeng	156127	Muei-Ly you're here.	You came, Muei-Ly!	-0.35647304356098175	True	0.37
+YPL175IL5K	1605311879.0444489	engeng	272831	Regulators have struggled with the problem for years without finding a solution.	The problem has troubled regulators for years.	0.3822788745164871	True	0.01
+YPL175IL5K	1605311906.5786395	engeng	272831	Regulators have struggled with the problem for years without finding a solution.	The problem has pained regulators for decades.	0.3136388957500458	True	0.01
+YPL175IL5K	1605311931.4481127	engeng	272831	Regulators have struggled with the problem for years without finding a solution.	For years, this problem has troubled regulators.	0.3766295462846756	True	0.01
+YPL175IL5K	1605311955.9548547	engeng	272831	Regulators have struggled with the problem for years without finding a solution.	This problem has remained unsolved after years of regulators' efforts.	0.24073322117328644	True	0.03
+YPL175IL5K	1605311991.8394537	mrpc	2497	"I´m very proud of the citizens of this state," Gov. John Baldacci said.	Gov. Baldacci expressed his happiness with the state's people.	-0.04389160871505737	True	0.15
+YPL175IL5K	1605312000.7718685	mrpc	2497	"I´m very proud of the citizens of this state," Gov. John Baldacci said.	Gov. Baldacci expressed his happiness with the state's population.	-0.03956252336502075	True	0.15
+YPL175IL5K	1605312039.057784	engeng	29983	The sub-contractor must fulfil the conditions laid down in Article 3 (1).	Conditions laid down in Article 3 (1) should be fulfiled by the sub-contractor.	0.3487783223390579	True	0.01
+YPL175IL5K	1605312061.2208228	engeng	29983	The sub-contractor must fulfil the conditions laid down in Article 3 (1).	Conditions outlined in Article 3(1) should be met by the sub-contractor.	0.3720874786376953	True	0.01
+YPL175IL5K	1605312079.7625978	engeng	29983	The sub-contractor must fulfil the conditions laid down in Article 3 (1).	Conditions outlined in Article 3(1) should be adhered to by the sub-contractor.	0.3125207871198654	True	0.02
+YPL175IL5K	1605312090.788835	engeng	29983	The sub-contractor must fulfil the conditions laid down in Article 3 (1).	Rules outlined in Article 3(1) should be adhered to by the sub-contractor.	0.28927181661129	True	0.02
+YPL175IL5K	1605312106.476044	engeng	29983	The sub-contractor must fulfil the conditions laid down in Article 3 (1).	Rules outlined in Article 3(1) should be adhered to.	-0.3336302936077118	True	0.35
+M5MBED6CBD	1605312392.131354	mrpc	544	The second company, temporarily dubbed ``InternationalCo.'', includes 19 international power and pipeline holdings.	International Co. incorporates over 15 power and pipeline holdings.	-0.14431889913976192	True	0.23
+M5MBED6CBD	1605312444.8770278	ppnmt	115684	Two!	2	-0.3962861765176058	False	0
+M5MBED6CBD	1605312457.3008773	ppnmt	115684	Two!	two	0.5037424266338348	False	0
+M5MBED6CBD	1605312625.883883	mrpc	1612	Also helping Tokyo stocks were hopes the government would next week adopt some of the market boosting proposals discussed on Thursday at a meeting of its top economic advisory panel.	At a finance meeting, there were discussions of market boosting proposals which the govt. might adopt that'll help Tokyo stocks.	-0.2742599621415138	True	0.32
+M5MBED6CBD	1605312648.6702378	mrpc	3756	The technology-laced Nasdaq Composite Index .IXIC gave up 3.88 points, or 0.24 percent, to 1,644.76.	Nasdaq Composite Index .IXIC gave up 3.88 points, or 0.24 percent, to 1,644.76.	0.37522315979003906	True	0.01
+M5MBED6CBD	1605312671.9210765	mrpc	3756	The technology-laced Nasdaq Composite Index .IXIC gave up 3.88 points, or 0.24 percent, to 1,644.76.	Nasdaq Composite Index .IXIC is now 1644.76 after reducing by 3.88 points.	-0.30646413564682007	True	0.34
+M5MBED6CBD	1605312690.5785651	ppnmt	89940	We're going down once.	We'll go down only once.	0.4727456271648407	True	0.0
+M5MBED6CBD	1605312702.9567103	ppnmt	89940	We're going down once.	We'll not go down more than once.	-0.22092054598033428	True	0.28

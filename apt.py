@@ -48,10 +48,10 @@ with open('mrpc/msr_paraphrase_train.txt', 'r') as f:
     for l in f.readlines()[1:]:
         mrpc.append(l.split('\t'))
 
-engeng = [] # [quality, id1, id2, s1, s2]
-with open('engeng/czeng_test_engeng.txt', 'r') as f:
+ppnmt = [] # [quality, id1, id2, s1, s2]
+with open('ppnmt/czeng_test_engeng.txt', 'r') as f:
     for l in f.readlines()[1:]:
-        engeng.append(l.split('\t'))
+        ppnmt.append(l.split('\t'))
 
 app = Flask(__name__)
 app.config['SESSION_TYPE'] = 'redis'
@@ -77,13 +77,13 @@ def init():
 @cross_origin()
 def start():
     print('in start')
-    session['dataset'] = choice(['mrpc', 'engeng'])
+    session['dataset'] = choice(['mrpc', 'ppnmt'])
     if session['dataset'] == 'mrpc':
         session['sentence_index'] = randrange(len(mrpc))
         session['sentence'] = str(mrpc[session['sentence_index']][3])
     else:
-        session['sentence_index'] = randrange(len(engeng))
-        session['sentence'] = str(engeng[session['sentence_index']][1])
+        session['sentence_index'] = randrange(len(ppnmt))
+        session['sentence'] = str(ppnmt[session['sentence_index']][1])
     print(session['sentence'])
     print(session['token'])
     print(session['final_amt'])
@@ -122,7 +122,7 @@ def submit_candidate():
         if session['dataset'] == 'mrpc':
             del mrpc[session['sentence_index']]
         else:
-            del engeng[session['sentence_index']]
+            del ppnmt[session['sentence_index']]
         bleurtscore = (bleurt_scorer.score([session['sentence']], [candidate])[0] + bleurt_scorer.score([candidate], [session['sentence']])[0]) / 2
         miscore = get_mi_score([session['sentence']], [candidate])
         # session['dollars'] = round(max(0, (miscore - (1 / (1 + exp(-bleurtscore)))) / 2), 2)
@@ -143,7 +143,7 @@ def end():
     if session['final_amt'] < 1:
         session['final_amt'] = 0
     with open('sentences/ends', 'a+') as f:
-            f.write('\t'.join([session['token'], session['final_amt']]) + '\n')
+        f.write('\t'.join([session['token'], str(session['final_amt'])]) + '\n')
     return render_template("end.html", data=session)
 
 # app.run(host='0.0.0.0')
