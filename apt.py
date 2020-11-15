@@ -87,6 +87,7 @@ def start():
     print(session['sentence'])
     print(session['token'])
     print(session['final_amt'])
+    session['start_time'] = time()
     return render_template("form.html", data=session)
 
 @app.route('/check', methods=['POST'])
@@ -106,7 +107,7 @@ def check_candidate():
         session['dollars'] = round(0.5 / ((1+exp(5*bleurtscore))**2), 2) if miscore else 0
         print("Dollars:", str(session['dollars']))
         with open('sentences/checks', 'a+') as f:
-            f.write('\t'.join([session['token'], str(time()), session['dataset'], str(session['sentence_index']), session['sentence'], session['candidate'], str(bleurtscore), str(miscore), str(session['dollars'])]) + '\n')
+            f.write('\t'.join([session['token'], str(time()), str(time() - session['start_time']), session['dataset'], str(session['sentence_index']), session['sentence'], session['candidate'], str(bleurtscore), str(miscore), str(session['dollars'])]) + '\n')
     return dict(session)
 
 @app.route('/submit', methods=['POST'])
@@ -128,7 +129,7 @@ def submit_candidate():
         # session['dollars'] = round(max(0, (miscore - (1 / (1 + exp(-bleurtscore)))) / 2), 2)
         session['dollars'] = round(0.5 / ((1+exp(5*bleurtscore))**2), 2) if miscore else 0
         with open('sentences/submits', 'a+') as f:
-            f.write('\t'.join([session['token'], str(time()), session['dataset'], str(session['sentence_index']), session['sentence'], session['candidate'], str(bleurtscore), str(miscore), str(session['dollars'])]) + '\n')
+            f.write('\t'.join([session['token'], str(time()), str(time() - session['start_time']), session['dataset'], str(session['sentence_index']), session['sentence'], session['candidate'], str(bleurtscore), str(miscore), str(session['dollars'])]) + '\n')
         session['final_amt'] += session['dollars']
     if session['final_amt'] >= 10:
         return end()
