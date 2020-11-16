@@ -134,59 +134,58 @@
 
     <div class="main">
         <div class="container">
+            <p class="sign" align="center">Instructions</p>
+            <div class="sen" align="left">
+                <p>The objective of this task is to write a sentence which is the same in meaning as the given sentence but as structurally different as possible.
+                </p>
+                <p>Your sentence should be such that you can infer your sentence from the given sentence AND vice-versa.
+                </p>
+                <p>
+                    Some tips on writing structurally different sentences -
+                    <ul>
+                        <li>Vocabulary replacement: You can replace words in the given sentence with their synonyms, antonyms, etc. while preserving the meaning.</li>
+                        <li>Grammar: You can change the voice of the sentence, swap subject and predicate, use causative verbs, dummy subjects/objects (it), etc.</li>
+                        <li>Sentence complexity: You can increase or decrease the complexity of the sentence.</li>
+                    </ul>
+                </p>
+                <b>Your sentence should be sufficiently different from the given sentence to earn more than $0.02
+                    per submission. For eg: a simple synonym
+                    substitution would most likely give you less than $0.02.</b>
+                <p>
+                    <p>Given sentence: <i>They found molecules that can only be produced when ozone breaks down
+                        cholesterol.</i></p>
+                    <p>Bad example ($0.00): <i>They found molecules that can be produced only when ozone breaks down
+                        cholesterol.</i></p>
+                    <p>Good example ($0.11): <i>Only upon cholesterol's decomposition by ozone, can some molecules be
+                        formed.</i></p>
+                </p>
+                <p>
+                    Here's how you perform the study -
+                    <ol>
+                        <li>Write your sentence in the text box provided.</li>
+                        <li>Click on "Check" to see how much amount you'd get if you were to submit this very sentence. You can't submit without checking at least once.</li>
+                        <li>You revise your sentence if needed and go to step 2 again.</li>
+                        <li>Once you are satisfied with your sentence, you may choose to "Submit".
+                            <p>Note that you don't get any amount for unsubmitted attempts. It's highly recommended to check even your modified version right before you submit, in case the dollar value reduces. You can spend as much time as you want on each
+                                sentence, but the maximum per sentence you can earn is $1.00.</p>
+                        </li>
+                        <li>You get a new sentence when you click on "Submit".</li>
+                        <li>Please be patient after clicking on "Check" and "Submit" as it may take a while.</li>
+                        <li>The study ends automatically once you reach a total of $20. You can choose to end it before you reach $20, but in order to receive any compensation for your contribution, you need to have contributed at least worth $2. Any amount
+                            you earn over $2 will be sent to you in a bonus payment later.</li>
+                        <li>You'll see a code once your study ends which needs to be copied and pasted on mTurk so that you receive compensation.</li>
+                        <li>You may re-take this HIT as many times as you want, as long as it's still available. It will continue to show up occasionally, so check back on mTurk often.</li>
+                        <li>If you have any questions about this study, you may contact the study organizer, <a href="mailto: licato@usf.edu">Dr. Licato</a>.</li>
+                    </ol>
+                </p>
+            </div>
             <form id="study" action="http://mi.amhrlab.com:5000/check" method="POST" class="form1" onsubmit="this.check.disabled=true; this.check.value='Calculating...'; this.check.style.opacity=0.7">
-                <!-- <p class="sen1" align="left">Token:
-                    <mark>{{data["token"]}}</mark>
-                </p> -->
-                <p class="sign" align="center">Instructions</p>
-                <div class="sen" align="left">
-                    <p>The objective of this task is to write a sentence which is the same in meaning as the given sentence but as structurally different as possible.
-                    </p>
-                    <p>Your sentence should be such that you can infer your sentence from the given sentence AND vice-versa.
-                    </p>
-                    <p>
-                        Some tips on writing structurally different sentences -
-                        <ul>
-                            <li>Vocabulary replacement: You can replace words in the given sentence with their synonyms, antonyms, etc. while preserving the meaning.</li>
-                            <li>Grammar: You can change the voice of the sentence, swap subject and predicate, use causative verbs, dummy subjects/objects (it), etc.</li>
-                            <li>Sentence complexity: You can increase or decrease the complexity of the sentence.</li>
-                        </ul>
-                    </p>
-                    <b>Your sentence should be sufficiently different from the given sentence to earn more than $0.02
-                        per submission. For eg: a simple synonym
-                        substitution would most likely give you less than $0.02.</b>
-                    <p>
-                        <p>Given sentence: <i>They found molecules that can only be produced when ozone breaks down cholesterol.</i></p>
-                        <p>Bad example ($0.00): <i>They found molecules that can be produced only when ozone breaks down cholesterol.</i></p>
-                        <p>Good example ($0.11): <i>Only upon cholesterol's decomposition by ozone, can some molecules be formed.</i></p>
-                    </p>
-                    <p>
-                        Here's how you perform the study -
-                        <ol>
-                            <li>Write your sentence in the text box provided.</li>
-                            <li>Click on "Check" to see how much amount you'd get if you were to submit this very sentence. You can't submit without checking at least once.</li>
-                            <li>You revise your sentence if needed and go to step 2 again.</li>
-                            <li>Once you are satisfied with your sentence, you may choose to "Submit".
-                                <p>Note that you don't get any amount for unsubmitted attempts. It's highly recommended to check even your modified version right before you submit, in case the dollar value reduces. You can spend as much time as you want
-                                    on each sentence, but the maximum per sentence you can earn is $1.00.</p>
-                            </li>
-                            <li>You get a new sentence when you click on "Submit".</li>
-                            <li>Please be patient after clicking on "Check" and "Submit" as it may take a while.</li>
-                            <li>The study ends automatically once you reach a total of $20. You can choose to end it before you reach $20, but in order to receive any compensation for your contribution, you need to have contributed at least worth $2. Any
-                                amount you earn over $2 will be sent to you in a bonus payment later.</li>
-                            <li>You'll see a code once your study ends which needs to be copied and pasted on mTurk so that you receive compensation.</li>
-                            <li>You may re-take this HIT as many times as you want, as long as it's still available. It will continue to show up occasionally, so check back on mTurk often.</li>
-                            <li>If you have any questions about this study, you may contact the study organizer, <a href="mailto: licato@usf.edu">Dr. Licato</a>.</li>
-                        </ol>
-                    </p>
-                </div>
                 <p class="sign" align="center">Given Sentence</p>
                 <div id="div1" class="sen" align="center">{{data["sentence"]}}</div>
                 <textarea rows="2" cols="50" name="candidate" form="study" placeholder="Your sentence" class="un"></textarea>
                 <input type="submit" id="check" name='check' value="Check" class="submit" align="center">
                 <div id="suremsg" class="sen" align="center" style="color:darkred; font-weight:bold;"></div>
                 <input type="button" id="submit_reload" name='submit' value="Submit" class="submit" align="center" style="opacity:0.7;" disabled=true>
-                <input type="button" id="skip" name='skip' value="Skip" class="submit" align="center">
             </form>
             <p></p>
             <p class="sen" align="center">Amount for this submission: $
@@ -195,6 +194,7 @@
             <p class="sen1" align="center">Final Amount: $
                 <mark1>{{data["final_amt"]}}</mark1>
             </p>
+            <input type="button" id="skip" name='skip' value="Skip" class="submit" align="center">
             <input type="button" id="end_task" name='end' value="End task" class="submit" align="center">
         </div>
     </div>
