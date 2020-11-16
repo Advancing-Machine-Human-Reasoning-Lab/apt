@@ -36,7 +36,7 @@ def get_mi_score(s1, s2): # returns average of s1 and s2
     outputs = model(input_ids, attention_mask=attention_mask, token_type_ids=token_type_ids, labels=None)
     predicted_probability_21 = torch.softmax(outputs[0], dim=1)[0].tolist()  # batch_size only one
 
-    return argmax(predicted_probability_12) == 0 and argmax(predicted_probability_21) == 0
+    return int(argmax(predicted_probability_12) == 0 and argmax(predicted_probability_21) == 0)
     
     # _, s1s2, __ = mi_scorer.eval_model(DataFrame({'text_a':s1, 'text_b':s2, 'labels':2}))
     # _, s2s1, __ = mi_scorer.eval_model(DataFrame({'text_a':s2, 'text_b':s1, 'labels':2}))
@@ -97,17 +97,18 @@ def check_candidate():
     print(session['token'])
     print("Candidate:", str(session['candidate']))
     if session['candidate'] == session['sentence']:
+        session['miscore'] = 1
         session['dollars'] = 0
     else:
         bleurtscore = (bleurt_scorer.score([session['sentence']], [session['candidate']])[0] + bleurt_scorer.score([session['candidate']], [session['sentence']])[0]) / 2
         print("BLEURT:", str(bleurtscore))
-        miscore = get_mi_score(session['sentence'], session['candidate'])
-        print("MI:", str(miscore))
+        session['miscore'] = get_mi_score(session['sentence'], session['candidate'])
+        print("MI:", str(session['miscore']))
         # session['dollars'] = round(max(0, (miscore - (1 / (1 + exp(-bleurtscore)))) / 2), 2)
-        session['dollars'] = round(0.5 / ((1+exp(5*bleurtscore))**2), 2) if miscore else 0
+        session['dollars'] = round(session['miscore'] / ((1+exp(5*bleurtscore))**2), 2)
         print("Dollars:", str(session['dollars']))
         with open('sentences/checks', 'a+') as f:
-            f.write('\t'.join([session['token'], str(time()), str(time() - session['start_time']), session['dataset'], str(session['sentence_index']), session['sentence'], session['candidate'], str(bleurtscore), str(miscore), str(session['dollars'])]) + '\n')
+            f.write('\t'.join([session['token'], str(time()), str(time() - session['start_time']), session['dataset'], str(session['sentence_index']), session['sentence'], session['candidate'], str(bleurtscore), str(session['miscore']), str(session['dollars'])]) + '\n')
     return dict(session)
 
 @app.route('/submit', methods=['POST'])
@@ -125,13 +126,13 @@ def submit_candidate():
         else:
             del ppnmt[session['sentence_index']]
         bleurtscore = (bleurt_scorer.score([session['sentence']], [session['candidate']])[0] + bleurt_scorer.score([session['candidate']], [session['sentence']])[0]) / 2
-        miscore = get_mi_score(session['sentence'], session['candidate'])
+        session['miscore'] = get_mi_score(session['sentence'], session['candidate'])
         # session['dollars'] = round(max(0, (miscore - (1 / (1 + exp(-bleurtscore)))) / 2), 2)
-        session['dollars'] = round(0.5 / ((1+exp(5*bleurtscore))**2), 2) if miscore else 0
+        session['dollars'] = round(session['miscore'] / ((1+exp(5*bleurtscore))**2), 2)
         with open('sentences/submits', 'a+') as f:
-            f.write('\t'.join([session['token'], str(time()), str(time() - session['start_time']), session['dataset'], str(session['sentence_index']), session['sentence'], session['candidate'], str(bleurtscore), str(miscore), str(session['dollars'])]) + '\n')
+            f.write('\t'.join([session['token'], str(time()), str(time() - session['start_time']), session['dataset'], str(session['sentence_index']), session['sentence'], session['candidate'], str(bleurtscore), str(session['miscore']), str(session['dollars'])]) + '\n')
         session['final_amt'] += session['dollars']
-    if session['final_amt'] >= 10:
+    if session['final_amt'] >= 20:
         return end()
     return start()
 
@@ -141,7 +142,7 @@ def end():
     print('in end')
     print(session['token'])
     print(session['final_amt'])
-    if session['final_amt'] < 1:
+    if session['final_amt'] < 2:
         session['final_amt'] = 0
     with open('sentences/ends', 'a+') as f:
         f.write('\t'.join([session['token'], str(session['final_amt'])]) + '\n')

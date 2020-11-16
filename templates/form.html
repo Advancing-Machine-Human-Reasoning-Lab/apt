@@ -152,9 +152,9 @@
                             <li>Sentence complexity: You can increase or decrease the complexity of the sentence.</li>
                         </ul>
                     </p>
-                    <b>Your sentence should be sufficiently different from the given sentence to earn more than $0.05
+                    <b>Your sentence should be sufficiently different from the given sentence to earn more than $0.02
                         per submission. For eg: a simple synonym
-                        substitution would most likely give you less than $0.05.</b>
+                        substitution would most likely give you less than $0.02.</b>
                     <p>
                         <p>Given sentence: <i>They found molecules that can only be produced when ozone breaks down cholesterol.</i></p>
                         <p>Bad example ($0.00): <i>They found molecules that can be produced only when ozone breaks down cholesterol.</i></p>
@@ -168,12 +168,12 @@
                             <li>You revise your sentence if needed and go to step 2 again.</li>
                             <li>Once you are satisfied with your sentence, you may choose to "Submit".
                                 <p>Note that you don't get any amount for unsubmitted attempts. It's highly recommended to check even your modified version right before you submit, in case the dollar value reduces. You can spend as much time as you want
-                                    on each sentence, but the maximum per sentence you can earn is $0.50.</p>
+                                    on each sentence, but the maximum per sentence you can earn is $1.00.</p>
                             </li>
                             <li>You get a new sentence when you click on "Submit".</li>
                             <li>Please be patient after clicking on "Check" and "Submit" as it may take a while.</li>
-                            <li>The study ends automatically once you reach a total of $10. You can choose to end it before you reach $10, but in order to receive any compensation for your contribution, you need to have contributed at least worth $1. Any
-                                amount you earn over $1 will be sent to you in a bonus payment later.</li>
+                            <li>The study ends automatically once you reach a total of $20. You can choose to end it before you reach $20, but in order to receive any compensation for your contribution, you need to have contributed at least worth $2. Any
+                                amount you earn over $2 will be sent to you in a bonus payment later.</li>
                             <li>You'll see a code once your study ends which needs to be copied and pasted on mTurk so that you receive compensation.</li>
                             <li>You may re-take this HIT as many times as you want, as long as it's still available. It will continue to show up occasionally, so check back on mTurk often.</li>
                             <li>If you have any questions about this study, you may contact the study organizer, <a href="mailto: licato@usf.edu">Dr. Licato</a>.</li>
@@ -212,7 +212,11 @@
                     console.log(data);
                     $("#dollars").html(data['dollars']);
                     if (data['dollars'] == 0) {
-                        $("#suremsg").html('Either the sentences do not mean the same, or they are not sufficiently different. If you submit, you would not get any reward for this submission. Please retry and check.');
+                        if (data['miscore'] == 0) {
+                            $("#suremsg").html('The sentences do not appear to be logically equivalent. Paraphrase the sentence, but do not change its logical meaning. If you submit, you would not get any reward for this submission. Please retry and check.');
+                        } else {
+                            $("#suremsg").html('The sentences are too similar. Try rephrasing in your own words or use the tips listed above. If you submit, you would not get any reward for this submission. Please retry and check.');
+                        }
                     } else {
                         $('#suremsg').hide();
                     }
@@ -245,7 +249,7 @@
             });
         });
         $('#end_task').click(function() {
-            var e = confirm("Do you want to end? You won't get any money for the study if your final amount at this point is below $1.00")
+            var e = confirm("Do you want to end? You won't get any reward for the study if your final amount at this point is below $2.00")
             if (e == true) {
                 $.ajax({
                     type: "GET",
