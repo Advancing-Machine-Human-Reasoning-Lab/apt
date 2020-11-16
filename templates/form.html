@@ -186,6 +186,7 @@
                 <input type="submit" id="check" name='check' value="Check" class="submit" align="center">
                 <div id="suremsg" class="sen" align="center" style="color:darkred; font-weight:bold;"></div>
                 <input type="button" id="submit_reload" name='submit' value="Submit" class="submit" align="center" style="opacity:0.7;" disabled=true>
+                <input type="button" id="skip" name='skip' value="Skip" class="submit" align="center">
             </form>
             <p></p>
             <p class="sen" align="center">Amount for this submission: $
@@ -240,6 +241,16 @@
             $.ajax({
                 type: "POST",
                 url: "http://mi.amhrlab.com:5000/submit",
+                crossDomain: true,
+                data: $('#study').serialize(),
+                success: function(data) {
+                    console.log('The request was a success');
+                    window.location.href = '/start';
+                },
+            });
+        });
+        $('#skip').click(function() {
+            $.ajax({
                 crossDomain: true,
                 data: $('#study').serialize(),
                 success: function(data) {
