@@ -142,10 +142,11 @@ def end():
     print('in end')
     print(session['token'])
     print(session['final_amt'])
-    if session['final_amt'] < 2:
-        session['final_amt'] = 0
     with open('sentences/ends', 'a+') as f:
         f.write('\t'.join([session['token'], str(session['final_amt'])]) + '\n')
+    if session['final_amt'] < 2:
+        session['final_amt'] = 0
+        session['token'] = '-'
     return render_template("end.html", data=session)
 
 # app.run(host='0.0.0.0')

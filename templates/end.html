@@ -70,11 +70,13 @@
     <div class="main">
         <div class="container">
             <p class="sign" align="center">Thanks for participating in the study.</p>
-            <p class="sen1" align="center">Your final amount for this study session is:
+            <p class="sen1" align="center">Your final reward for this study session is:
                 <mark1>${{data["final_amt"]}}</mark1>
             </p>
-            <p class="sen1" align="center">Please copy and paste the following token in your mTurk interface to get the promised amount:
+            <p class="sen1" align="center">If your final reward is more than $0, please copy and paste the following token in your mTurk interface to get the promised amount:
                 <mark>{{data["token"]}}</mark>
+            </p>
+            <p class="sen1" align="center">Please do not submit the mTurk task if your amount is $0 because we'll have to reject it.
             </p>
             <p class="sen1" align="center">Close this window when done.</p>
         </div>
