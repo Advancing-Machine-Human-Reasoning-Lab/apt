@@ -76,6 +76,8 @@ def init():
 @app.route('/start', methods=['GET', 'POST'])
 @cross_origin()
 def start():
+    if session['final_amt'] >= 20:
+        return end()
     print('in start')
     session['dataset'] = choice(['mrpc', 'ppnmt'])
     if session['dataset'] == 'mrpc':
@@ -93,6 +95,8 @@ def start():
 @app.route('/check', methods=['POST'])
 @cross_origin()
 def check_candidate():
+    if session['final_amt'] >= 20:
+        return end()
     session['candidate'] = request.form.get('candidate').strip()
     print(session['token'])
     print("Candidate:", str(session['candidate']))
@@ -114,6 +118,8 @@ def check_candidate():
 @app.route('/submit', methods=['POST'])
 @cross_origin()
 def submit_candidate():
+    if session['final_amt'] >= 20:
+        return end()
     session['candidate'] = request.form.get('candidate').strip()
     print(session['token'])
     print("Candidate:", str(session['candidate']))
