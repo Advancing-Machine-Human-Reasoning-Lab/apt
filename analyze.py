@@ -35,6 +35,6 @@ def print_sent_cand(d): # a list of dict of sentences and candidates
     for r in d:
         pprint({'sentence':r['sentence'], 'candidate':r['candidate'], 'bleurt':r['bleurt']})
 
-person = get_submits('DJJ837E5CW')
-print(len(person), person[-1]['timestamp']/60)
-print_sent_cand(person)
+person = get_submits('BVZ2UNUUSH')
+print(len(person), person[-1]['timestamp']/60, sum(_['dollars'] for _ in person))
+# print_sent_cand(person)

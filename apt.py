@@ -97,10 +97,10 @@ def start():
 def check_candidate():
     if session['final_amt'] >= 20:
         return end()
-    session['candidate'] = request.form.get('candidate').strip()
+    session['candidate'] = request.form.get('candidate').strip().replace('\n', ' ')
     print(session['token'])
     print("Candidate:", str(session['candidate']))
-    if session['candidate'] == session['sentence']:
+    if session['sentence'] in session['candidate']:
         session['miscore'] = 1
         session['dollars'] = 0
     else:
@@ -120,11 +120,11 @@ def check_candidate():
 def submit_candidate():
     if session['final_amt'] >= 20:
         return end()
-    session['candidate'] = request.form.get('candidate').strip()
+    session['candidate'] = request.form.get('candidate').strip().replace('\n', ' ')
     print(session['token'])
     print("Candidate:", str(session['candidate']))
     print("Sentence:", str(session['sentence']))
-    if session['candidate'] == session['sentence']:
+    if session['sentence'] in session['candidate']:
         session['dollars'] = 0
     else:
         if session['dataset'] == 'mrpc':
