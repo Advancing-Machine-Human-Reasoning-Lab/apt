@@ -35,6 +35,25 @@ def print_sent_cand(d): # a list of dict of sentences and candidates
     for r in d:
         pprint({'sentence':r['sentence'], 'candidate':r['candidate'], 'bleurt':r['bleurt']})
 
-person = get_submits('BVZ2UNUUSH')
-print(len(person), person[-1]['timestamp']/60, sum(_['dollars'] for _ in person))
+# person = get_submits('BVZ2UNUUSH')
+# print(len(person), person[-1]['timestamp']/60, sum(_['dollars'] for _ in person))
 # print_sent_cand(person)
+
+F = open('sentences/final_submits', 'w+')
+F.write('\t'.join(['token', 'time', 'duration', 'dataset', 'index', 'sentence', 'candidate', 'BLEURT', 'MI', 'dollar']) + '\n')
+with open('sentences/submits', 'r') as f:
+    for l in f.readlines():
+        l = l.split('\t')
+        try:
+            q = float(l[1])
+            if l[0] != 'NFIPX9BDAS':
+                for _ in range(len(l)):
+                    if l[_] == 'mrpc':
+                        l[_] = 'msrp'
+                    if l[_] == 'True':
+                        l[_] = '1'
+                    if l[_] == 'False':
+                        l[_] = '0'
+                F.write('\t'.join(l))
+        except:
+            continue
