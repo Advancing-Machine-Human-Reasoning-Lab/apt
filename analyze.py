@@ -46,7 +46,7 @@ with open('sentences/submits', 'r') as f:
         l = l.split('\t')
         try:
             q = float(l[1])
-            if l[0] != 'NFIPX9BDAS':
+            if l[0] != 'NFIPX9BDAS' and len(l[0]) == 10:
                 for _ in range(len(l)):
                     if l[_] == 'mrpc':
                         l[_] = 'msrp'
