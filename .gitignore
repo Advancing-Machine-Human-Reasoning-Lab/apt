@@ -1,7 +1,7 @@
 asset
 bleurt
 **cache_dir**
-**models**
+models
 **runs**
 **templates**
 mrpc
