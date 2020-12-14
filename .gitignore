@@ -1,6 +1,9 @@
 asset
 bleurt
-cache_dir
+**cache_dir**
+**models**
+**runs**
+**templates**
 mrpc
 outputs
 roberta_nli
