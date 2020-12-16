@@ -144,12 +144,12 @@ def write_paraphrases(input_file, app_output_file, mi_output_file, nmi_output_fi
 
 
 if sys.argv[7] == "msrp1":  # [quality, id1, id2, s1, s2]
-    write_paraphrases("/raid/datasets/msrp/msr_paraphrase_train.txt", "nap/msrp1-app", "nap/msrp1-mi", "nap/msrp1-nmi", 3)
+    write_paraphrases("/raid/datasets/msrp/msr_paraphrase_train.txt", "nap/msrp1-apt", "nap/msrp1-mi", "nap/msrp1-nmi", 3)
 elif sys.argv[7] == "msrp2":
-    write_paraphrases("/raid/datasets/msrp/msr_paraphrase_train.txt", "nap/msrp2-app", "nap/msrp2-mi", "nap/msrp2-nmi", 4)
+    write_paraphrases("/raid/datasets/msrp/msr_paraphrase_train.txt", "nap/msrp2-apt", "nap/msrp2-mi", "nap/msrp2-nmi", 4)
 elif sys.argv[7] == "ppnmt1":  # [c1, s1, s2]
-    write_paraphrases("/home/animesh/MIforSE/czeng/czeng_test_engeng.txt", "nap/ppnmt1-app", "nap/ppnmt1-mi", "nap/ppnmt1-nmi", 1)
+    write_paraphrases("/home/animesh/MIforSE/czeng/czeng_test_engeng.txt", "nap/ppnmt1-apt", "nap/ppnmt1-mi", "nap/ppnmt1-nmi", 1)
 elif sys.argv[7] == "ppnmt2":
-    write_paraphrases("/home/animesh/MIforSE/czeng/czeng_test_engeng.txt", "nap/ppnmt2-app", "nap/ppnmt2-mi", "nap/ppnmt2-nmi", 2)
+    write_paraphrases("/home/animesh/MIforSE/czeng/czeng_test_engeng.txt", "nap/ppnmt2-apt", "nap/ppnmt2-mi", "nap/ppnmt2-nmi", 2)
 else:
     print("!!! Wrong dataset name !!!")
