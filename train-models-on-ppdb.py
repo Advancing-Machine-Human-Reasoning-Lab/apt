@@ -1,16 +1,21 @@
 '''
 COMMAND LINE ARGUMENTS -
-1. Dataset name (ppdb or twitter-ppdb). Path is set below as data_path
+1. Dataset path
 2. Model family
 3. Model name (or path for a saved model)
+4. Output dir
+5. bool: Train with APP?
 '''
 
+import os
 import sys
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from simpletransformers.classification import ClassificationModel
 
-output_base_dir = 'models/'
+if not os.path.exists(sys.argv[4]):
+    os.makedirs(sys.argv[4])
+
 dataset = sys.argv[1]
 data_path = '/raid/datasets/'+dataset+'/'
 
@@ -42,6 +47,15 @@ else:
     )
     train, test = train_test_split(df, test_size=0.1)
 
+print(train.shape)
+if bool(sys.argv[5]): # if add APP to training data
+    train = train.append(pd.read_csv('sentences/train', sep='\t'))
+print(train.shape)
+
+# shuffle
+train = train.sample(frac=1).reset_index(drop=True)
+test = test.sample(frac=1).reset_index(drop=True)
+
 model = ClassificationModel(
     sys.argv[2],
     sys.argv[3],
@@ -49,8 +63,8 @@ model = ClassificationModel(
     use_cuda=True,
     cuda_device=2,
     args={
-        'output_dir':output_base_dir+dataset+'/'+sys.argv[3]+,
-        'overwrite_output_dir':False,
+        'output_dir':sys.argv[4],
+        'overwrite_output_dir':True,
         'fp16':True, # uses apex
         'num_train_epochs':5,
         'train_batch_size':32,
