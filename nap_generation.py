@@ -97,7 +97,8 @@ def generate_paraphrases(sentence, top_k, top_p):
     return final_outputs
 
 
-def write_paraphrases(input_file, mi_output_file, nmi_output_file, position):  # position of sentence in the input tsv
+def write_paraphrases(input_file, app_output_file, mi_output_file, nmi_output_file, position):  # position of sentence in the input tsv
+    app = open(app_output_file, "w+")
     mi = open(mi_output_file, "w+")
     nmi = open(nmi_output_file, "w+")
     with open(input_file, "r") as f:
@@ -112,43 +113,43 @@ def write_paraphrases(input_file, mi_output_file, nmi_output_file, position):  #
             )
             for p in generate_paraphrases(sentence, top_k, top_p):
                 if p not in bad_sentences:
-                    bleurt = get_bleurt(sentence, p)
-                    if get_mi_score(sentence, p):
+                    bleurt, miscore = get_bleurt(sentence, p), get_mi_score(sentence, p)
+                    if miscore:
                         if bleurt < bleurt_threshold:
-                            mi.write(sentence + "\t" + p + "\t" + str(bleurt) + "\n")
+                            app.write(sentence + "\t" + p + "\t" + str(bleurt) + "\t" + str(miscore) + "\n")
                             written = True
                         else:
                             bad_sentences.add(p)
-                            nmi.write(sentence + "\t" + p + "\t" + str(bleurt) + "\n")
+                            mi.write(sentence + "\t" + p + "\t" + str(bleurt) + "\t" + str(miscore) + "\n")
                     else:
                         bad_sentences.add(p)
-                        nmi.write(sentence + "\t" + p + "\t" + str(bleurt) + "\n")
+                        nmi.write(sentence + "\t" + p + "\t" + str(bleurt) + "\t" + str(miscore) + "\n")
             while not written and c <= 10:
                 top_k += offset_top_k
                 top_p -= offset_top_p
                 for p in generate_paraphrases(sentence, top_k, top_p):
                     if p not in bad_sentences:
-                        bleurt = get_bleurt(sentence, p)
-                        if get_mi_score(sentence, p):
+                        bleurt, miscore = get_bleurt(sentence, p), get_mi_score(sentence, p)
+                        if miscore:
                             if bleurt < bleurt_threshold:
-                                mi.write(sentence + "\t" + p + "\t" + str(bleurt) + "\n")
+                                app.write(sentence + "\t" + p + "\t" + str(bleurt) + "\t" + str(miscore) + "\n")
                                 written = True
                             else:
                                 bad_sentences.add(p)
-                                nmi.write(sentence + "\t" + p + "\t" + str(bleurt) + "\n")
+                                mi.write(sentence + "\t" + p + "\t" + str(bleurt) + "\t" + str(miscore) + "\n")
                         else:
                             bad_sentences.add(p)
-                            nmi.write(sentence + "\t" + p + "\t" + str(bleurt) + "\n")
+                            nmi.write(sentence + "\t" + p + "\t" + str(bleurt) + "\t" + str(miscore) + "\n")
                 c += 1
 
 
-if sys.argv[7] == "msrp1": # [quality, id1, id2, s1, s2]
-    write_paraphrases("/raid/datasets/msrp/msr_paraphrase_train.txt", "nap/msrp1-mi", "nap/msrp1-nmi", 3)
+if sys.argv[7] == "msrp1":  # [quality, id1, id2, s1, s2]
+    write_paraphrases("/raid/datasets/msrp/msr_paraphrase_train.txt", "nap/msrp1-app", "nap/msrp1-mi", "nap/msrp1-nmi", 3)
 elif sys.argv[7] == "msrp2":
-    write_paraphrases("/raid/datasets/msrp/msr_paraphrase_train.txt", "nap/msrp2-mi", "nap/msrp2-nmi", 4)
-elif sys.argv[7] == "ppnmt1": # [c1, s1, s2]
-    write_paraphrases("/home/animesh/MIforSE/czeng/czeng_test_engeng.txt", "nap/ppnmt1-mi", "nap/ppnmt1-nmi", 1)
+    write_paraphrases("/raid/datasets/msrp/msr_paraphrase_train.txt", "nap/msrp2-app", "nap/msrp2-mi", "nap/msrp2-nmi", 4)
+elif sys.argv[7] == "ppnmt1":  # [c1, s1, s2]
+    write_paraphrases("/home/animesh/MIforSE/czeng/czeng_test_engeng.txt", "nap/ppnmt1-app", "nap/ppnmt1-mi", "nap/ppnmt1-nmi", 1)
 elif sys.argv[7] == "ppnmt2":
-    write_paraphrases("/home/animesh/MIforSE/czeng/czeng_test_engeng.txt", "nap/ppnmt2-mi", "nap/ppnmt2-nmi", 2)
+    write_paraphrases("/home/animesh/MIforSE/czeng/czeng_test_engeng.txt", "nap/ppnmt2-app", "nap/ppnmt2-mi", "nap/ppnmt2-nmi", 2)
 else:
     print("!!! Wrong dataset name !!!")
