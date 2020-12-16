@@ -97,8 +97,8 @@ def generate_paraphrases(sentence, top_k, top_p):
     return final_outputs
 
 
-def write_paraphrases(input_file, app_output_file, mi_output_file, nmi_output_file, position):  # position of sentence in the input tsv
-    app = open(app_output_file, "w+")
+def write_paraphrases(input_file, apt_output_file, mi_output_file, nmi_output_file, position):  # position of sentence in the input tsv
+    apt = open(apt_output_file, "w+")
     mi = open(mi_output_file, "w+")
     nmi = open(nmi_output_file, "w+")
     with open(input_file, "r") as f:
@@ -116,7 +116,7 @@ def write_paraphrases(input_file, app_output_file, mi_output_file, nmi_output_fi
                     bleurt, miscore = get_bleurt(sentence, p), get_mi_score(sentence, p)
                     if miscore:
                         if bleurt < bleurt_threshold:
-                            app.write(sentence + "\t" + p + "\t" + str(bleurt) + "\t" + str(miscore) + "\n")
+                            apt.write(sentence + "\t" + p + "\t" + str(bleurt) + "\t" + str(miscore) + "\n")
                             written = True
                         else:
                             bad_sentences.add(p)
@@ -132,7 +132,7 @@ def write_paraphrases(input_file, app_output_file, mi_output_file, nmi_output_fi
                         bleurt, miscore = get_bleurt(sentence, p), get_mi_score(sentence, p)
                         if miscore:
                             if bleurt < bleurt_threshold:
-                                app.write(sentence + "\t" + p + "\t" + str(bleurt) + "\t" + str(miscore) + "\n")
+                                apt.write(sentence + "\t" + p + "\t" + str(bleurt) + "\t" + str(miscore) + "\n")
                                 written = True
                             else:
                                 bad_sentences.add(p)
