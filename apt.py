@@ -120,10 +120,7 @@ def check_candidate():
         session["miscore"] = 1
         session["dollars"] = 0
     else:
-        bleurtscore = (
-            bleurt_scorer.score([session["sentence"]], [session["candidate"]])[0]
-            + bleurt_scorer.score([session["candidate"]], [session["sentence"]])[0]
-        ) / 2
+        bleurtscore = (bleurt_scorer.score([session["sentence"]], [session["candidate"]])[0] + bleurt_scorer.score([session["candidate"]], [session["sentence"]])[0]) / 2
         print("BLEURT:", str(bleurtscore))
         session["miscore"] = get_mi_score(session["sentence"], session["candidate"])
         print("MI:", str(session["miscore"]))
@@ -167,10 +164,7 @@ def submit_candidate():
             del mrpc[session["sentence_index"]]
         else:
             del ppnmt[session["sentence_index"]]
-        bleurtscore = (
-            bleurt_scorer.score([session["sentence"]], [session["candidate"]])[0]
-            + bleurt_scorer.score([session["candidate"]], [session["sentence"]])[0]
-        ) / 2
+        bleurtscore = (bleurt_scorer.score([session["sentence"]], [session["candidate"]])[0] + bleurt_scorer.score([session["candidate"]], [session["sentence"]])[0]) / 2
         session["miscore"] = get_mi_score(session["sentence"], session["candidate"])
         # session['dollars'] = round(max(0, (miscore - (1 / (1 + exp(-bleurtscore)))) / 2), 2)
         session["dollars"] = round(session["miscore"] / ((1 + exp(5 * bleurtscore)) ** 2), 2)

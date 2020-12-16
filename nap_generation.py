@@ -7,6 +7,8 @@ COMMAND LINE ARGUMENTS -
 3. Initial top_p = 0.95
 4. Offset top_k = 10
 5. Offset top_p = 0.05
+6. CUDA device number
+7. Dataset to run on: 'msrp1', 'msrp2', 'ppnmt1', 'ppnmt2'
 (refer https://huggingface.co/blog/how-to-generate)
 """
 
@@ -22,15 +24,16 @@ from transformers import (
 from bleurt.score import BleurtScorer
 from tqdm import tqdm
 
-bleurt_threshold = float(sys.argv[1])
-initial_top_k, initial_top_p, offset_top_k, offset_top_p = (
+bleurt_threshold, initial_top_k, initial_top_p, offset_top_k, offset_top_p, device = (
+    float(sys.argv[1]),
     int(sys.argv[2]),
     float(sys.argv[3]),
     int(sys.argv[4]),
     float(sys.argv[5]),
+    "cuda:" + sys.argv[6],
 )
 
-paraphrasing_model = T5ForConditionalGeneration.from_pretrained("ramsrigouthamg/t5_paraphraser").to("cuda:2")
+paraphrasing_model = T5ForConditionalGeneration.from_pretrained("ramsrigouthamg/t5_paraphraser").to(device)
 paraphrasing_tokenizer = T5Tokenizer.from_pretrained("ramsrigouthamg/t5_paraphraser")
 bleurt_scorer = BleurtScorer("/home/animesh/MIforSE/bleurt-score/bleurt/bleurt-base-128/")
 mi_tokenizer = AutoTokenizer.from_pretrained("ynie/roberta-large-snli_mnli_fever_anli_R1_R2_R3-nli")
@@ -73,8 +76,8 @@ def generate_paraphrases(sentence, top_k, top_p):
     text = "paraphrase: " + sentence + " </s>"
     encoding = paraphrasing_tokenizer.encode_plus(text, max_length=256, padding="max_length", return_tensors="pt")
     input_ids, attention_masks = (
-        encoding["input_ids"].to("cuda:2"),
-        encoding["attention_mask"].to("cuda:2"),
+        encoding["input_ids"].to(device),
+        encoding["attention_mask"].to(device),
     )
     beam_outputs = paraphrasing_model.generate(
         input_ids=input_ids,
@@ -94,47 +97,58 @@ def generate_paraphrases(sentence, top_k, top_p):
     return final_outputs
 
 
-def write_paraphrases(input_file, output_file, position):  # position of sentence in the input tsv
-    op = open(output_file, "w+")  # [quality, id1, id2, s1, s2]
+def write_paraphrases(input_file, mi_output_file, nmi_output_file, position):  # position of sentence in the input tsv
+    mi = open(mi_output_file, "w+")
+    nmi = open(nmi_output_file, "w+")
     with open(input_file, "r") as f:
         for l in tqdm(f.readlines()[1:]):
-            sentence, paraphrases, bad_sentences, top_k, top_p, c = (
+            sentence, bad_sentences, written, top_k, top_p, c = (
                 l.strip().split("\t")[position],
-                [],
                 set(),
+                False,
                 initial_top_k,
                 initial_top_p,
                 1,
             )
             for p in generate_paraphrases(sentence, top_k, top_p):
                 if p not in bad_sentences:
+                    bleurt = get_bleurt(sentence, p)
                     if get_mi_score(sentence, p):
-                        bleurt = get_bleurt(sentence, p)
                         if bleurt < bleurt_threshold:
-                            paraphrases.append((p, bleurt))
+                            mi.write(sentence + "\t" + p + "\t" + str(bleurt) + "\n")
+                            written = True
                         else:
                             bad_sentences.add(p)
+                            nmi.write(sentence + "\t" + p + "\t" + str(bleurt) + "\n")
                     else:
                         bad_sentences.add(p)
-            while not paraphrases and c <= 10:
+                        nmi.write(sentence + "\t" + p + "\t" + str(bleurt) + "\n")
+            while not written and c <= 10:
                 top_k += offset_top_k
                 top_p -= offset_top_p
                 for p in generate_paraphrases(sentence, top_k, top_p):
                     if p not in bad_sentences:
+                        bleurt = get_bleurt(sentence, p)
                         if get_mi_score(sentence, p):
-                            bleurt = get_bleurt(sentence, p)
                             if bleurt < bleurt_threshold:
-                                paraphrases.append((p, bleurt))
+                                mi.write(sentence + "\t" + p + "\t" + str(bleurt) + "\n")
+                                written = True
                             else:
                                 bad_sentences.add(p)
+                                nmi.write(sentence + "\t" + p + "\t" + str(bleurt) + "\n")
                         else:
                             bad_sentences.add(p)
+                            nmi.write(sentence + "\t" + p + "\t" + str(bleurt) + "\n")
                 c += 1
-            for paraphrase, bleurt in paraphrases:
-                op.write(sentence + "\t" + paraphrase + "\t" + str(bleurt) + "\n")
 
 
-write_paraphrases("/raid/datasets/msrp/msr_paraphrase_train.txt", "nap/msrp1", 3)
-write_paraphrases("/raid/datasets/msrp/msr_paraphrase_train.txt", "nap/msrp2", 4)
-write_paraphrases("/home/animesh/MIforSE/czeng/czeng_test_engeng.txt", "nap/ppnmt1", 1)
-write_paraphrases("/home/animesh/MIforSE/czeng/czeng_test_engeng.txt", "nap/ppnmt2", 2)
+if sys.argv[7] == "msrp1": # [quality, id1, id2, s1, s2]
+    write_paraphrases("/raid/datasets/msrp/msr_paraphrase_train.txt", "nap/msrp1-mi", "nap/msrp1-nmi", 3)
+elif sys.argv[7] == "msrp2":
+    write_paraphrases("/raid/datasets/msrp/msr_paraphrase_train.txt", "nap/msrp2-mi", "nap/msrp2-nmi", 4)
+elif sys.argv[7] == "ppnmt1": # [c1, s1, s2]
+    write_paraphrases("/home/animesh/MIforSE/czeng/czeng_test_engeng.txt", "nap/ppnmt1-mi", "nap/ppnmt1-nmi", 1)
+elif sys.argv[7] == "ppnmt2":
+    write_paraphrases("/home/animesh/MIforSE/czeng/czeng_test_engeng.txt", "nap/ppnmt2-mi", "nap/ppnmt2-nmi", 2)
+else:
+    print("!!! Wrong dataset name !!!")
