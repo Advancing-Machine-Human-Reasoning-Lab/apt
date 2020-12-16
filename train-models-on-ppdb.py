@@ -37,9 +37,7 @@ if "twitter" in dataset:
         }
     )
 else:
-    train_df = pd.read_csv(
-        data_path + "train-preprocessed.txt", sep=" ||| ", header=None
-    )
+    train_df = pd.read_csv(data_path + "train-preprocessed.txt", sep=" ||| ", header=None)
     df = pd.DataFrame(
         {
             "text_a": train_df.iloc[:, 0],
