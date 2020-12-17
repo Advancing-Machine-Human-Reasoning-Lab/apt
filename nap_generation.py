@@ -97,12 +97,12 @@ def generate_paraphrases(sentence, top_k, top_p):
     return final_outputs
 
 
-def write_paraphrases(input_file, apt_output_file, mi_output_file, nmi_output_file, position):  # position of sentence in the input tsv
-    apt = open(apt_output_file, "w+")
-    mi = open(mi_output_file, "w+")
-    nmi = open(nmi_output_file, "w+")
+def write_paraphrases(input_file, apt_output_file, mi_output_file, nmi_output_file, position, startFrom=1):  # position of sentence in the input tsv
+    apt = open(apt_output_file, "a+")
+    mi = open(mi_output_file, "a+")
+    nmi = open(nmi_output_file, "a+")
     with open(input_file, "r") as f:
-        for l in tqdm(f.readlines()[1:]):
+        for l in tqdm(f.readlines()[startFrom:]):
             sentence, bad_sentences, written, top_k, top_p, c = (
                 l.strip().split("\t")[position],
                 set(),
@@ -144,11 +144,11 @@ def write_paraphrases(input_file, apt_output_file, mi_output_file, nmi_output_fi
 
 
 if sys.argv[7] == "msrp1":  # [quality, id1, id2, s1, s2]
-    write_paraphrases("/raid/datasets/msrp/msr_paraphrase_train.txt", "nap/msrp1-apt", "nap/msrp1-mi", "nap/msrp1-nmi", 3)
+    write_paraphrases("/raid/datasets/msrp/msr_paraphrase_train.txt", "nap/msrp1-apt", "nap/msrp1-mi", "nap/msrp1-nmi", 3)#, startFrom=2668) # startFrom is the 0-based index of the line you want to start processing from
 elif sys.argv[7] == "msrp2":
     write_paraphrases("/raid/datasets/msrp/msr_paraphrase_train.txt", "nap/msrp2-apt", "nap/msrp2-mi", "nap/msrp2-nmi", 4)
 elif sys.argv[7] == "ppnmt1":  # [c1, s1, s2]
-    write_paraphrases("/home/animesh/MIforSE/czeng/czeng_test_engeng.txt", "nap/ppnmt1-apt", "nap/ppnmt1-mi", "nap/ppnmt1-nmi", 1)
+    write_paraphrases("/home/animesh/MIforSE/czeng/czeng_test_engeng.txt", "nap/ppnmt1-apt", "nap/ppnmt1-mi", "nap/ppnmt1-nmi", 1, startFrom=4748) # startFrom is the 0-based index of the line you want to start processing from
 elif sys.argv[7] == "ppnmt2":
     write_paraphrases("/home/animesh/MIforSE/czeng/czeng_test_engeng.txt", "nap/ppnmt2-apt", "nap/ppnmt2-mi", "nap/ppnmt2-nmi", 2)
 else:
