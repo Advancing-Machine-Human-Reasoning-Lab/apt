@@ -2,37 +2,21 @@
 Referred from https://huggingface.co/ramsrigouthamg/t5_paraphraser
 
 COMMAND LINE ARGUMENTS -
-1. BLEURT threshold
-2. Initial top_k = 120
-3. Initial top_p = 0.95
-4. Offset top_k = 10
-5. Offset top_p = 0.05
-6. CUDA device number
-7. Dataset to run on: 'msrp1', 'msrp2', 'ppnmt1', 'ppnmt2'
+1. CUDA device number
+2. Dataset to run on: 'msrp1', 'msrp2', 'ppnmt1', 'ppnmt2'
+3. Number of parts
+3. Portion
 (refer https://huggingface.co/blog/how-to-generate)
 """
 
 import sys
 from numpy import argmax
 import torch
-from transformers import (
-    T5ForConditionalGeneration,
-    T5Tokenizer,
-    AutoTokenizer,
-    AutoModelForSequenceClassification,
-)
+from transformers import T5ForConditionalGeneration, T5Tokenizer, AutoTokenizer, AutoModelForSequenceClassification
 from bleurt.score import BleurtScorer
 from tqdm import tqdm
 
-bleurt_threshold, initial_top_k, initial_top_p, offset_top_k, offset_top_p, device = (
-    float(sys.argv[1]),
-    int(sys.argv[2]),
-    float(sys.argv[3]),
-    int(sys.argv[4]),
-    float(sys.argv[5]),
-    "cuda:" + sys.argv[6],
-)
-
+bleurt_threshold, initial_top_k, initial_top_p, offset_top_k, offset_top_p, device = 0.5, 120, 0.95, 20, 0.05, "cuda:" + sys.argv[1]
 paraphrasing_model = T5ForConditionalGeneration.from_pretrained("ramsrigouthamg/t5_paraphraser").to(device)
 paraphrasing_tokenizer = T5Tokenizer.from_pretrained("ramsrigouthamg/t5_paraphraser")
 bleurt_scorer = BleurtScorer("/home/animesh/MIforSE/bleurt-score/bleurt/bleurt-base-128/")
@@ -75,10 +59,7 @@ def get_bleurt(s1, s2):
 def generate_paraphrases(sentence, top_k, top_p):
     text = "paraphrase: " + sentence + " </s>"
     encoding = paraphrasing_tokenizer.encode_plus(text, max_length=256, padding="max_length", return_tensors="pt")
-    input_ids, attention_masks = (
-        encoding["input_ids"].to(device),
-        encoding["attention_mask"].to(device),
-    )
+    input_ids, attention_masks = encoding["input_ids"].to(device), encoding["attention_mask"].to(device)
     beam_outputs = paraphrasing_model.generate(
         input_ids=input_ids,
         attention_mask=attention_masks,
@@ -98,19 +79,14 @@ def generate_paraphrases(sentence, top_k, top_p):
 
 
 def write_paraphrases(input_file, apt_output_file, mi_output_file, nmi_output_file, position, startFrom=1):  # position of sentence in the input tsv
-    apt = open(apt_output_file, "a+")
-    mi = open(mi_output_file, "a+")
-    nmi = open(nmi_output_file, "a+")
+    n, i = int(sys.argv[3]), int(sys.argv[4])
+    apt = open(apt_output_file + str(i), "w+")
+    mi = open(mi_output_file + str(i), "w+")
+    nmi = open(nmi_output_file + str(i), "w+")
     with open(input_file, "r") as f:
-        for l in tqdm(f.readlines()[startFrom:]):
-            sentence, bad_sentences, written, top_k, top_p, c = (
-                l.strip().split("\t")[position],
-                set(),
-                False,
-                initial_top_k,
-                initial_top_p,
-                1,
-            )
+        allLines = f.readlines()[startFrom:]
+        for l in tqdm(allLines[i * len(allLines) // n : (i + 1) * len(allLines) // n]):
+            sentence, bad_sentences, written, top_k, top_p, c = l.strip().split("\t")[position], set(), False, initial_top_k, initial_top_p, 1
             for p in generate_paraphrases(sentence, top_k, top_p):
                 if p not in bad_sentences:
                     bleurt, miscore = get_bleurt(sentence, p), get_mi_score(sentence, p)
@@ -124,7 +100,7 @@ def write_paraphrases(input_file, apt_output_file, mi_output_file, nmi_output_fi
                     else:
                         bad_sentences.add(p)
                         nmi.write(sentence + "\t" + p + "\t" + str(bleurt) + "\t" + str(miscore) + "\n")
-            while not written and c <= 10:
+            while not written and c <= 5:
                 top_k += offset_top_k
                 top_p -= offset_top_p
                 for p in generate_paraphrases(sentence, top_k, top_p):
@@ -143,13 +119,13 @@ def write_paraphrases(input_file, apt_output_file, mi_output_file, nmi_output_fi
                 c += 1
 
 
-if sys.argv[7] == "msrp1":  # [quality, id1, id2, s1, s2]
-    write_paraphrases("/raid/datasets/msrp/msr_paraphrase_train.txt", "nap/msrp1-apt", "nap/msrp1-mi", "nap/msrp1-nmi", 3)#, startFrom=2668) # startFrom is the 0-based index of the line you want to start processing from
-elif sys.argv[7] == "msrp2":
+if sys.argv[2] == "msrp1":  # [quality, id1, id2, s1, s2]
+    write_paraphrases("/raid/datasets/msrp/msr_paraphrase_train.txt", "nap/msrp1-apt", "nap/msrp1-mi", "nap/msrp1-nmi", 3)  # , startFrom=2668) # startFrom is the 0-based index of the line you want to start processing from
+elif sys.argv[2] == "msrp2":
     write_paraphrases("/raid/datasets/msrp/msr_paraphrase_train.txt", "nap/msrp2-apt", "nap/msrp2-mi", "nap/msrp2-nmi", 4)
-elif sys.argv[7] == "ppnmt1":  # [c1, s1, s2]
-    write_paraphrases("/home/animesh/MIforSE/czeng/czeng_test_engeng.txt", "nap/ppnmt1-apt", "nap/ppnmt1-mi", "nap/ppnmt1-nmi", 1, startFrom=4748) # startFrom is the 0-based index of the line you want to start processing from
-elif sys.argv[7] == "ppnmt2":
+elif sys.argv[2] == "ppnmt1":  # [c1, s1, s2]
+    write_paraphrases("/home/animesh/MIforSE/czeng/czeng_test_engeng.txt", "nap/ppnmt1-apt", "nap/ppnmt1-mi", "nap/ppnmt1-nmi", 1, startFrom=4748)  # startFrom is the 0-based index of the line you want to start processing from
+elif sys.argv[2] == "ppnmt2":
     write_paraphrases("/home/animesh/MIforSE/czeng/czeng_test_engeng.txt", "nap/ppnmt2-apt", "nap/ppnmt2-mi", "nap/ppnmt2-nmi", 2)
 else:
     print("!!! Wrong dataset name !!!")
