@@ -28,13 +28,13 @@ model = ClassificationModel(
     },
 )
 app = pd.DataFrame(columns=["text_a", "text_b", "labels"])
-with open("sentences/final_checks", "r") as f:
+with open("app/final_checks", "r") as f:
     lines = f.readlines()[1:]
     for i in range(len(lines)):
         l = lines[i].strip().split("\t")
         app.loc[i] = [l[5], l[6], int(l[8])]
 print(app.shape)
-test = pd.read_csv("sentences/test", sep="\t")
+test = pd.read_csv("app/test", sep="\t")
 print(test.shape)
 
 result_app, model_outputs_app, wrong_predictions_app = model.eval_model(app, acc=accuracy_score)

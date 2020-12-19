@@ -4,7 +4,7 @@ COMMAND LINE ARGUMENTS -
 2. Model family
 3. Model name (or path for a saved model)
 4. Output dir
-5. bool: Train with APP?
+5. Additional dataset name(s) comma separated
 """
 
 import os
@@ -48,9 +48,13 @@ else:
     train, test = train_test_split(df, test_size=0.1)
 
 print(train.shape)
-if bool(sys.argv[5]):  # if add APP to training data
-    train = train.append(pd.read_csv("sentences/train", sep="\t"))
-print(train.shape)
+try: # in case there is no additional dataset
+    datasets = sys.argv[5].split(',')
+    for dataset in datasets:
+        train = train.append(pd.read_csv(dataset, sep="\t"))
+    print(train.shape)
+except:
+    pass
 
 # shuffle
 train = train.sample(frac=1).reset_index(drop=True)

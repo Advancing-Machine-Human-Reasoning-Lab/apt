@@ -80,13 +80,25 @@ def generate_paraphrases(sentence, top_k, top_p):
 
 def write_paraphrases(input_file, apt_output_file, mi_output_file, nmi_output_file, position, startFrom=1):  # position of sentence in the input tsv
     n, i = int(sys.argv[3]), int(sys.argv[4])
-    apt = open(apt_output_file + str(i), "w+")
-    mi = open(mi_output_file + str(i), "w+")
-    nmi = open(nmi_output_file + str(i), "w+")
+    written_sentences = set()
+    with open(apt_output_file + str(i), 'r') as f:
+        for l in f.readlines():
+            written_sentences.add(l.strip().split('\t')[0])
+    with open(mi_output_file + str(i), 'r') as f:
+        for l in f.readlines():
+            written_sentences.add(l.strip().split('\t')[0])
+    with open(nmi_output_file + str(i), 'r') as f:
+        for l in f.readlines():
+            written_sentences.add(l.strip().split('\t')[0])
+    apt = open(apt_output_file + str(i), "a+")
+    mi = open(mi_output_file + str(i), "a+")
+    nmi = open(nmi_output_file + str(i), "a+")
     with open(input_file, "r") as f:
         allLines = f.readlines()[startFrom:]
         for l in tqdm(allLines[i * len(allLines) // n : (i + 1) * len(allLines) // n]):
             sentence, bad_sentences, written, top_k, top_p, c = l.strip().split("\t")[position], set(), False, initial_top_k, initial_top_p, 1
+            if sentence in written_sentences:
+                continue
             for p in generate_paraphrases(sentence, top_k, top_p):
                 if p not in bad_sentences:
                     bleurt, miscore = get_bleurt(sentence, p), get_mi_score(sentence, p)
