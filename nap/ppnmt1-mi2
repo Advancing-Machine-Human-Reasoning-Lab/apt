@@ -733,3 +733,910 @@ Please?	Please please?	0.7633811831474304	1
 We keep the flags.	We keep the flag.	0.7906168699264526	1
 We keep the flags.	We keep flags.	0.7592574954032898	1
 He is eager without being obnoxiously chipper, he clasps his hands behind his back, rocks forward slightly on the balls of his feet, raises his eyebrows expectantly over his half-glasses.	He is cheerful without being obnoxiously chipper, he clasps his hands behind his back, rocks forward slightly on the balls of his feet, raises his eyebrows expectantly over his half-glasses.	0.7244207262992859	1
+He is eager without being obnoxiously chipper, he clasps his hands behind his back, rocks forward slightly on the balls of his feet, raises his eyebrows expectantly over his half-glasses.	He is eager without being obnoxious chipper, he clasps his hands behind his back, rocks forward slightly on the balls of his feet, raises his eyebrows expectantly over his half-glasses.	0.8083971738815308	1
+"It was a legendary city," the Librarian says.	"It was a legendary city," says the Librarian.	0.874423623085022	1
+"It was a legendary city," the Librarian says.	In fact it was a "legendary" city, says the Librarian.	0.591653048992157	1
+"It was a legendary city," the Librarian says.	"It was a legend city," the Librarian says.	0.7101426720619202	1
+"It was a legendary city," the Librarian says.	It was a legendary city," the Librarian says.	0.8669721484184265	1
+"It was a legendary city," the Librarian says.	'It was a legendary city', the Librarian says.	0.8577401041984558	1
+"It was a legendary city," the Librarian says.	It was a legendary city, the Librarian says.	0.8091204762458801	1
+"It was a legendary city," the Librarian says.	The city was "a legendary city," says the Librarian.	0.5934336185455322	1
+"It was a legendary city," the Librarian says.	It was a legendary city, says the Librarian.	0.8022321462631226	1
+"It was a legendary city," the Librarian says.	It was a legendary city, according to the Librarian.	0.7390425801277161	1
+"Babel is a Biblical term for Babylon.	The term "Babel" is a Biblical term for Babylon.	0.7400220036506653	1
+"Babel is a Biblical term for Babylon.	Babel is a biblical term for Babylon.	0.8196327090263367	1
+The word is Semitic; Bab means gate and El means Cod, so Babel means 'Gate of God.'	The word is Semitic; Bab means gate and El means cod, so Babel means gate of God.	0.8616275787353516	1
+The word is Semitic; Bab means gate and El means Cod, so Babel means 'Gate of God.'	The word is Semitic; Bab means gate and El means cod, so Babel means 'gate of God'.	0.8879978060722351	1
+The word is Semitic; Bab means gate and El means Cod, so Babel means 'Gate of God.'	The word is semitic; Bab means gate and El means cod, so Babel means Gate of God.	0.8616275787353516	1
+The word is Semitic; Bab means gate and El means Cod, so Babel means 'Gate of God.'	The word is Semitic; Bab means gate and El means cod, so Babel means gate of god.	0.8616275787353516	1
+The word is Semitic; Bab means gate and El means Cod, so Babel means 'Gate of God.'	The word is Semitic; Bab means gate and El means Cod, so Babel means gate of god.	0.8616275787353516	1
+But it is probably also somewhat onomatopoeic, imitating someone who speaks in an incomprehensible tongue.	But it is also probably somewhat onomatopoeic, imitating someone who speaks in an incomprehensible tongue.	0.8821367621421814	1
+But it is probably also somewhat onomatopoeic, imitating someone who speaks in an incomprehensible tongue.	It is probably also somewhat onomatopoeic, imitating someone who speaks in an incomprehensible tongue.	0.854839563369751	1
+But it is probably also somewhat onomatopoeic, imitating someone who speaks in an incomprehensible tongue.	It is probably also somewhat onomatopoeic, imitating somebody who speaks in an uncomprehensible tongue.	0.7594956755638123	1
+"They built a tower to Heaven and God knocked it down."	'They built a tower to heaven and God knocked it down'.	0.7792961001396179	1
+"They built a tower to Heaven and God knocked it down."	"They built a tower to heaven and God knocked it down".	0.8615483045578003	1
+"They built a tower to Heaven and God knocked it down."	'They built a tower to heaven and god knocked it down'	0.8096216917037964	1
+"They built a tower to Heaven and God knocked it down."	"They built a tower to Heaven and God knocked it down.	0.8664301633834839	1
+Stop it, come on!	Stop it, come on?	0.8556827306747437	1
+Stop it, come on!	Stop it come on!	0.7541304230690002	1
+Stop it, come on!	Stop it, come on, stop it!	0.8452090620994568	1
+Kyle. Stop it!	Stop this, Kyle!	0.5080002546310425	1
+Kyle. Stop it!	Kyle, stop it!	0.9219333529472351	1
+Yo, stop it now!	Yo, stop it now?	0.9056181311607361	1
+Kyle, come on.	Kyle, come on, come on, come on.	0.8176401853561401	1
+Kyle, come on.	Kyle, come on!	0.7768504619598389	1
+Kyle, come on.	Kyle, come on, come on.	0.8854331970214844	1
+It's over.	It's over, it's over.	0.650644063949585	1
+Kyle, it's over!	Kyle, this is already over!	0.8502082228660583	1
+Kyle, it's over!	Kyle: It's over!	0.9781338572502136	1
+There ain't no train out of Nashville	There ain't no train out of Nashville.	1.0011732578277588	1
+Once you get here You can't go anywhere	Once you get here you can't go anywhere.	0.9367578625679016	1
+Once you get here You can't go anywhere	Once you get here, you can't go anywhere else.	0.8489348292350769	1
+Once you get here You can't go anywhere	Once you get here, you can't go anywhere.	0.9452704787254333	1
+Once you get here You can't go anywhere	If you get here you can't go anywhere.	0.7257354259490967	1
+Once you get here You can't go anywhere	After you get here You can't go anywhere.	0.7957965731620789	1
+Once you get here You can't go anywhere	Once you get here you're not going anywhere. Once you get here you can't go anywhere.	0.7012501358985901	1
+Once you get here You can't go anywhere	Once you get here you can't go anywhere else.	0.8375968337059021	1
+Once you get here You can't go anywhere	If you get here, you can't go anywhere.	0.7416201829910278	1
+Once you get here You can't go anywhere	Once you've got here, you can't go anywhere.	0.5952754616737366	1
+Once you get here You can't go anywhere	Once you get here you can't go anywhere. You can't go anywhere.	0.7180635929107666	1
+Persons covered by the basic Regulation shall be required to forward to the relevant institution the information , documents or supporting evidence necessary to establish their situation or that of their families , to establish or maintain their rights and obligations and to determine the applicable legislation and their obligations under it.	Persons covered by the basic Regulation shall be required to forward to the relevant institution the information, documents or supporting evidence necessary to establish their situation or that of their families, to establish or maintain their rights and obligations and to determine the applicable legislation and their obligations under it.	0.7764273285865784	1
+Persons covered by the basic Regulation shall be required to forward to the relevant institution the information , documents or supporting evidence necessary to establish their situation or that of their families , to establish or maintain their rights and obligations and to determine the applicable legislation and their obligations under it.	Persons covered by the basic Regulation shall be required to forward to the relevant institution the information, documents or supporting evidence necessary to establish their situation or that of their families, to establish or maintain their rights and obligations, and to determine the applicable legislation and their obligations under it.	0.7827814221382141	1
+You really started something.	You really started something?	0.6544926762580872	1
+Hope on the streets.	Hope in the streets.	0.8371617197990417	1
+I can barely stand.	I could barely stand.	1.017732858657837	1
+I can barely stand.	I can barely stand up.	0.532368004322052	1
+Death does not wait for you to be ready!	Death doesn't wait for you to be ready for it.	0.5012778043746948	1
+I've told...	I've told you...	0.5395190119743347	1
+I've told...	I have told...	0.9613730907440186	1
+I've told...	I have told you...	0.5858113169670105	1
+Took quite a fall, didn't we, Master Bruce?	Took quite a fall, didn't we Master Bruce?	0.7538939714431763	1
+And why do we fall?	Why do we fall?	0.8113694190979004	1
+Let's go.	Let’s go.	1.0163249969482422	1
+Let's go.	Let's go, let's go.	0.5630955100059509	1
+She found none, but stayed behind the staggering brute, bolting away as the giant tried to turn and grab her.	When she found none, she stayed behind the staggering brute, bolting away as the giant tried to turn and grab her.	0.7550252079963684	1
+She found none, but stayed behind the staggering brute, bolting away as the giant tried to turn and grab her.	She found none but stayed behind the staggering brute, bolting away as the giant tried to turn and grab her.	0.9077003598213196	1
+Elbryan didn't know what to make of this armored foe, and especially of its glowing spike.	Elbryan didn't know what to make of the armored foe, and especially of its glowing spike.	0.8128318190574646	1
+Elbryan knew that he had to get up higher, within striking distance of the giant's head.	Elbryan knew that he had to get high, within striking distance of the giant's head.	0.7605790495872498	1
+Tempest snapped in, level with the giant's eyes.	Tempest snapped in level with the giant's eyes.	0.8080127239227295	1
+The ranger leaped ahead and launched a vicious sidelong swipe as the heavy, awkward spike retracted.	The ranger leaped forward and launched a vicious sidelong swipe as the heavy, awkward spike retracted.	0.8414279818534851	1
+The ranger leaped ahead and launched a vicious sidelong swipe as the heavy, awkward spike retracted.	As the ranger leaped ahead and launched a vicious sidelong swipe as the heavy, awkward spike retracted.	0.5212910771369934	1
+"The next will not be so blocked!" the ranger promised.	"The next will not be blocked!" the ranger promised.	0.7968795895576477	1
+"The next will not be so blocked!" the ranger promised.	"The next will not be so blocked," the ranger promised.	0.8940561413764954	1
+The giant plunged the spear down low instead, right into the boulder, and Elbryan was too surprised to seize the momentary opening and charge ahead.	The giant plunged the spear down low instead, right into the boulder, and Elbryan was too surprised to seize the momentary opening and charge ahead	0.8312046527862549	1
+The giant plunged the spear down low instead, right into the boulder, and Elbryan was too surprised to seize the momentary opening and charge ahead.	The giant plunged the spear down lower instead, right into the boulder, and Elbryan was too surprised to seize the momentary opening and charge ahead.	0.8077846169471741	1
+The giant plunged the spear down low instead, right into the boulder, and Elbryan was too surprised to seize the momentary opening and charge ahead.	A giant plunged the spear down low instead, right into the boulder, and Elbryan was too surprised to seize the momentary opening and charge ahead.	0.7391812801361084	1
+The giant plunged the spear down low instead, right into the boulder, and Elbryan was too surprised to seize the momentary opening and charge ahead.	When the giant plunged the spear down low instead, right into the boulder, and Elbryan was too surprised to seize the momentary opening and charge ahead.	0.5236802101135254	1
+It was as if the majesty of the universe had opened to him, so many things he had not previously understood... so many things Omnius kept the slaves from knowing.	As if the majesty of the universe had opened to him, so many things he had not previously understood. so many things Omnius kept the slaves from knowing.	0.6896616816520691	1
+It was as if the majesty of the universe had opened to him, so many things he had not previously understood... so many things Omnius kept the slaves from knowing.	The majesty of the universe had opened to him, so many things he had not previously understood... so many things Omnius kept the slaves from knowing.	0.5748046636581421	1
+It was as if the majesty of the universe had opened to him, so many things he had not previously understood... so many things Omnius kept the slaves from knowing.	I think it was as if the majesty of the universe had opened to him, so many things he had not previously understood... so many things Omnius kept the slaves from knowing.	0.745392382144928	1
+'You are not alone."	"You are not alone!"	0.6920450329780579	1
+Eklo's words reverberated to his very soul.	Eklo's words reverberated to his soul.	0.8883132338523865	1
+Eklo's words reverberated to his very soul.	The words of Eklo reverberated to his very soul.	0.7529129981994629	1
+"I can help.	"I can help. "	1.0326350927352905	1
+"I can help.	"I can help"	0.932100772857666	1
+"I can help.	"I can help."	1.0326350927352905	1
+"I can help.	I can help.	0.8894892930984497	1
+"I can help.	I can help."	0.9840773940086365	1
+"I can help.	"I can help. I can help.	0.9091213941574097	1
+"I can help.	"I can help.' "	0.8814327716827393	1
+"I can help.	I can help. "	0.9840773940086365	1
+Aquim can help."	Aquim can help.	0.9493140578269958	1
+For several moments, Iblis gazed toward the horizon as the golden sun rose, casting light on enslaved Earth.	For several seconds, Iblis gazed at the horizon as the golden sun rose, casting light on enslaved Earth.	0.7410336136817932	1
+For several moments, Iblis gazed toward the horizon as the golden sun rose, casting light on enslaved Earth.	blis  looked at the horizon for a few moments as the golden sun rose, casting light on enslaved Earth.	0.6240013837814331	1
+For several moments, Iblis gazed toward the horizon as the golden sun rose, casting light on enslaved Earth.	For several moments, Iblis gazed at the horizon as the golden sun rose, casting light on enslaved Earth.	0.8433055877685547	1
+For several moments, Iblis gazed toward the horizon as the golden sun rose, casting light on enslaved Earth.	For several moments, Iblis gazed towards the horizon as the golden sun rose, casting light on enslaved earth.	0.8461518883705139	1
+A better' organized revolt might succeed, given proper guidance and proper plan-ning.	If an organized revolt were to succeed, a better' organized revolt might succeed, given proper guidance and proper plan-ning.	0.7312198877334595	1
+The assessment shows that the conditions laid down in Article 9e(1) of Directive 70/524/EEC for such authorisation are satisfied.	The assessment shows that the conditions laid down in Article 9e(1) of Directive 70/524/EEC for such authorisation are fulfilled.	0.8178903460502625	1
+Accordingly, the use of that micro-organism preparation as specified in Annex III, should be provisionally authorised for four years.	Accordingly, the use of micro-organism preparation as specified in Annex III, should be provisionally authorised for four years.	0.8115930557250977	1
+Accordingly, the use of that micro-organism preparation as specified in Annex III, should be provisionally authorised for four years.	Consequently, the use of that micro-organism preparation as specified in Annex III, should be provisionally authorised for four years.	0.8096387982368469	1
+The assessment of those applications shows that certain procedures should be required to protect workers from exposure to the additives set out in the Annexes.	It has been determined that the assessment of those applications shows that certain procedures should be required to protect workers from exposure to the additives set out in the Annexes.	0.6240515112876892	1
+The assessment of those applications shows that certain procedures should be required to protect workers from exposure to the additives set out in the Annexes.	The assessment of those applications shows that certain procedures should be required to protect workers from exposure to additives set out in the Annexes.	0.8232958912849426	1
+The assessment of those applications shows that certain procedures should be required to protect workers from exposure to the additives set out in the Annexes.	On review of applications, the assessment shows that certain procedures are required to protect workers from exposure to the additives set out in the Annexes.	0.549444854259491	1
+Such protection should be assured by the application of Council Directive 89/391/EEC of 12 June 1989 on the introduction of measures to encourage improvements in the safety and health of workers at work ( 6 ) .	Such protection should be assured by application of Council Directive 89/391/EEC of 12 June 1989 on the introduction of measures to promote improvements in safety and health of workers at work ( 6 ).	0.7521669864654541	1
+Such protection should be assured by the application of Council Directive 89/391/EEC of 12 June 1989 on the introduction of measures to encourage improvements in the safety and health of workers at work ( 6 ) .	() Such protection should be assured by the application of Council Directive 89/391/EEC of 12 June 1989 on the introduction of measures to encourage improvements in the safety and health of workers at work ( 6 ).	0.6602871417999268	1
+Such protection should be assured by the application of Council Directive 89/391/EEC of 12 June 1989 on the introduction of measures to encourage improvements in the safety and health of workers at work ( 6 ) .	The need for such protection is ensured by the application of the directive 89/391/EEC of 12 June 1989 on the introduction of measures to encourage improvements in the safety and health of workers at work ( 6 ).	0.5948479771614075	1
+The measures provided for in this Regulation are in accordance with the opinion of the Standing Committee on the Food Chain and Animal Health, HAS ADOPTED THIS REGULATION:	The measures provided for in this Regulation are in accordance with the opinion of the Standing Committee on Food Chain and Animal Health HAS ADOPTED THIS REGULATION:	0.7519768476486206	1
+Article 1 The preparation belonging to the group ‘Enzymes’, as specified in Annex I, is authorised for use without a time limit as an additive in animal nutrition under the conditions laid down in that Annex.	Article 1 The preparation belonging to the group Enzymes, as specified in Annex I, is authorised for use without a time limit as an additive in animal nutrition under the conditions laid down in that Annex.	0.7365164756774902	1
+Article 1 The preparation belonging to the group ‘Enzymes’, as specified in Annex I, is authorised for use without a time limit as an additive in animal nutrition under the conditions laid down in that Annex.	Article 1 The preparation belonging to the group "Enzymes”, as specified in Annex I, is authorised for use without a time limit as an additive in animal nutrition under the conditions laid down in that Annex.	0.7770699858665466	1
+Article 1 The preparation belonging to the group ‘Enzymes’, as specified in Annex I, is authorised for use without a time limit as an additive in animal nutrition under the conditions laid down in that Annex.	Article 1 An enzyme preparation, as defined in Annex I, is authorised for use without time limit as an additive in animal nutrition under the conditions laid down in that Annex.	0.5159724354743958	1
+Article 1 The preparation belonging to the group ‘Enzymes’, as specified in Annex I, is authorised for use without a time limit as an additive in animal nutrition under the conditions laid down in that Annex.	Article 1 The preparation belonging to the group 'enzymes', as specified in Annex I, is authorised for use without a time limit as an additive in animal nutrition under the conditions laid down in that Annex.	0.7617576122283936	1
+Article 1 The preparation belonging to the group ‘Enzymes’, as specified in Annex I, is authorised for use without a time limit as an additive in animal nutrition under the conditions laid down in that Annex.	Article 1 The preparation belonging to the group 'Enzymes', as specified in Annex I, is authorised for use without a time limit as an additive in animal nutrition under the conditions laid down in that Annex.	0.7617576122283936	1
+Article 1 The preparation belonging to the group ‘Enzymes’, as specified in Annex I, is authorised for use without a time limit as an additive in animal nutrition under the conditions laid down in that Annex.	Article 1 The preparation belonging to the group Enzymes’, as specified in Annex I, is authorised for use without a time limit as an additive in animal nutrition under the conditions laid down in that Annex.	0.7785094380378723	1
+Article 1 The preparation belonging to the group ‘Enzymes’, as specified in Annex I, is authorised for use without a time limit as an additive in animal nutrition under the conditions laid down in that Annex.	Article 1 A preparation belonging to the group enzymes, as specified in Annex I, is authorised for use without a time limit as an additive in animal nutrition under the conditions laid down in that Annex.	0.7026265263557434	1
+Article 1 The preparation belonging to the group ‘Enzymes’, as specified in Annex I, is authorised for use without a time limit as an additive in animal nutrition under the conditions laid down in that Annex.	Article 1 The preparation belonging to the group "Enzymes", as specified in Annex I, is authorised for use without a time limit as an additive in animal nutrition under the conditions laid down in that Annex.	0.7663172483444214	1
+Article 2 The preparation belonging to the group ‘Enzymes’, as specified in Annex II, is provisionally authorised for four years as an additive in animal nutrition under the conditions laid down in that Annex.	Article 2 The preparation belonging to the group Enzymes, as specified in Annex II, is provisionally authorised for four years as an additive in animal nutrition under the conditions laid down in that Annex.	0.7352807521820068	1
+Article 2 The preparation belonging to the group ‘Enzymes’, as specified in Annex II, is provisionally authorised for four years as an additive in animal nutrition under the conditions laid down in that Annex.	Article 2 The preparation belonging to the group 'Enzymes', as specified in Annex II, is provisionally authorised for four years as an additive in animal nutrition under the conditions laid down in that Annex.	0.7566812634468079	1
+Article 2 The preparation belonging to the group ‘Enzymes’, as specified in Annex II, is provisionally authorised for four years as an additive in animal nutrition under the conditions laid down in that Annex.	Article 2 The preparation belonging to the group ‘Enzymes’, as specified in Annex II, is provisionally authorised for four years as an additive in animal nutrition under the conditions laid down in that Annex. Article	0.7954922914505005	1
+Article 2 The preparation belonging to the group ‘Enzymes’, as specified in Annex II, is provisionally authorised for four years as an additive in animal nutrition under the conditions laid down in that Annex.	Article 2 The preparation belonging to the group "Enzymes", as specified in Annex II, is provisionally authorised for four years as an additive in animal nutrition under the conditions laid down in that Annex.	0.7608911991119385	1
+Article 2 The preparation belonging to the group ‘Enzymes’, as specified in Annex II, is provisionally authorised for four years as an additive in animal nutrition under the conditions laid down in that Annex.	Article 2 A preparation belonging to the group Enzymes, as specified in Annex II, is provisionally authorised for four years as an additive in animal nutrition under the conditions laid down in that Annex.	0.7033307552337646	1
+Article 3 The preparation belonging to the group ‘Micro-organisms’, as specified in Annex III, is authorised provisionally for four years as an additive in animal nutrition under the conditions laid down in that Annex.	Article 3 The preparation belonging to the group "Microorganisms", as specified in Annex III, is authorised provisionally for four years as an additive in animal nutrition under the conditions laid down in that Annex.	0.6705443263053894	1
+Article 3 The preparation belonging to the group ‘Micro-organisms’, as specified in Annex III, is authorised provisionally for four years as an additive in animal nutrition under the conditions laid down in that Annex.	Article 3 The preparation belonging to the group ‘Microorganisms’, as specified in Annex III, is authorised provisionally for four years as an additive in animal nutrition under the conditions laid down in that Annex.	0.7502149343490601	1
+Article 3 The preparation belonging to the group ‘Micro-organisms’, as specified in Annex III, is authorised provisionally for four years as an additive in animal nutrition under the conditions laid down in that Annex.	Article 3 The preparation belonging to the group 'Microorganisms', as specified in Annex III, is authorised provisionally for four years as an additive in animal nutrition under the conditions laid down in that Annex.	0.678422212600708	1
+Article 3 The preparation belonging to the group ‘Micro-organisms’, as specified in Annex III, is authorised provisionally for four years as an additive in animal nutrition under the conditions laid down in that Annex.	Article 3 The preparation belonging to the group ‘Micro-organisms’, as specified in Annex III, is authorised provisionally for four years as an additive in animal nutrition under the conditions laid down in that Annex. Article 3	0.7630326151847839	1
+Article 3 The preparation belonging to the group ‘Micro-organisms’, as specified in Annex III, is authorised provisionally for four years as an additive in animal nutrition under the conditions laid down in that Annex.	Article 3 The preparation belonging to the group “Micro-organisms”, as specified in Annex III, is authorised provisionally for four years as an additive in animal nutrition under the conditions laid down in that Annex.	0.7979573607444763	1
+Article 3 The preparation belonging to the group ‘Micro-organisms’, as specified in Annex III, is authorised provisionally for four years as an additive in animal nutrition under the conditions laid down in that Annex.	Article 3 The preparation belonging to the group 'Micro-organisms', as specified in Annex III, is authorised provisionally for four years as an additive in animal nutrition under the conditions laid down in that Annex.	0.7751914262771606	1
+Article 3 The preparation belonging to the group ‘Micro-organisms’, as specified in Annex III, is authorised provisionally for four years as an additive in animal nutrition under the conditions laid down in that Annex.	Article 3 The preparation belonging to the group "Micro-organisms", as specified in Annex III, is authorised provisionally for four years as an additive in animal nutrition under the conditions laid down in that Annex.	0.7732149958610535	1
+Article 3 The preparation belonging to the group ‘Micro-organisms’, as specified in Annex III, is authorised provisionally for four years as an additive in animal nutrition under the conditions laid down in that Annex.	Article 3 The preparation belonging to the group “Microorganisms”, as specified in Annex III, is authorised provisionally for four years as an additive in animal nutrition under the conditions laid down in that Annex.	0.7030133008956909	1
+Article 3 The preparation belonging to the group ‘Micro-organisms’, as specified in Annex III, is authorised provisionally for four years as an additive in animal nutrition under the conditions laid down in that Annex.	Article 3 A preparation belonging to the group "Micro-organisms", as specified in Annex III, is authorised provisionally for four years as an additive in animal nutrition under the conditions laid down in that Annex.	0.7349727749824524	1
+Article 4 This Regulation shall enter into force on the third day following that of its publication in the Official Journal of the European Union .	Article 4 This Regulation shall enter into force on the third day following that of its publication in the Official Journal of the European Union. Article 2	0.5724213719367981	1
+Article 4 This Regulation shall enter into force on the third day following that of its publication in the Official Journal of the European Union .	Article 4 Article 4 This Regulation shall enter into force on the third day following that of its publication in the Official Journal of the European Union.	0.8068116903305054	1
+Article 4 This Regulation shall enter into force on the third day following that of its publication in the Official Journal of the European Union .	Article 4 This Regulation shall enter into force on the third day following that of its publication in the Official Journal of the European Union.	0.8260728716850281	1
+Article 4 This Regulation shall enter into force on the third day following that of its publication in the Official Journal of the European Union .	Article 4 This Regulation shall enter into force on the third day following its publication in the Official Journal of the European Union.	0.7829915881156921	1
+Done at Brussels, 1 April 2005.	Did at Brussels, 1 April 2005.	0.501779317855835	1
+Done at Brussels, 1 April 2005.	Done in Brussels, 1 April 2005.	0.9375240206718445	1
+Hornblower pulled his cloak about him and rebuttoned the collar.	Hornblower pulled his cloak round him and rebuttoned the collar.	0.7793778777122498	1
+Hornblower pulled his cloak about him and rebuttoned the collar.	Hornblower pulled his cloak over him and rebuttoned the collar.	0.8113250136375427	1
+Hornblower pulled his cloak about him and rebuttoned the collar.	Hornblower pulled his cloak up about him and rebuttoned his collar.	0.7842397093772888	1
+Hornblower pulled his cloak about him and rebuttoned the collar.	Hornblower pulled his cloak around him and rebuttoned the collar.	0.8352956175804138	1
+148–156 , EU-China relations: role of civil society , rapporteur: Mr Sharma.	148 -156, EU-China relations: role of civil society, rapporteur: Mr. Sharma.	0.8013816475868225	1
+148–156 , EU-China relations: role of civil society , rapporteur: Mr Sharma.	148-156,, EU-China relations: role of civil society, rapporteur: M. Sharma.	0.6452212929725647	1
+148–156 , EU-China relations: role of civil society , rapporteur: Mr Sharma.	148-156, EU-China relations: role of civil society, rapporteur: Mr Sharma.	0.8360960483551025	1
+148–156 , EU-China relations: role of civil society , rapporteur: Mr Sharma.	148–156, EU-China relations: role of civil society, rapporteur: Mr Sharma.	0.9398452639579773	1
+148–156 , EU-China relations: role of civil society , rapporteur: Mr Sharma.	148–156, EU-China relations: role of civil society, rapporteur: Mr. Sharma.	0.8972460627555847	1
+148–156 , EU-China relations: role of civil society , rapporteur: Mr Sharma.	148-156, European-China relations: role of civil society, rapporteur: Mr Sharma.	0.7045370936393738	1
+148–156 , EU-China relations: role of civil society , rapporteur: Mr Sharma.	148-156, EU-China relations: role of civil society, rapporteur: Mr. Sharma.	0.8013816475868225	1
+148–156 , EU-China relations: role of civil society , rapporteur: Mr Sharma.	148–156, EU-China relations: role of civil society, rapporteur: Mr. Mr. Sharma.	0.8370034694671631	1
+Look at me.	Look at me?	0.6144240498542786	1
+Look at me.	Look at me, look at me.	0.6242327094078064	1
+Hey,annie,I haven't seen you around.	Hey annie, I haven't seen you around.	0.875813364982605	1
+Hey,annie,I haven't seen you around.	Hello,annie,I haven't seen you around.	0.7970675230026245	1
+Hey,annie,I haven't seen you around.	Hey annie,I haven't seen you around.	0.875813364982605	1
+Busy with the play.	Busy with play.	0.8182094097137451	1
+So how's naomi?	How is Naomi?	0.627420961856842	1
+So how's naomi?	How is naomi?	0.627420961856842	1
+So how's naomi?	How's naomi?	0.6499208211898804	1
+Yeah.	Yes.	0.8774393796920776	1
+Yeah.	Oh yeah.	1.0505187511444092	1
+Yeah.	Yes, yeah.	1.0583521127700806	1
+Yeah.	Yeah. Yeah.	0.777076005935669	1
+So are you guys like...?	Are you guys really like...?	0.562526285648346	1
+No,uh... she was just flipping out and I know how to deal with her.	No,uh...She was flipping out. I know how to deal with her.	0.7465516924858093	1
+No,uh... she was just flipping out and I know how to deal with her.	No,uh...she was just flipping out and I know how to deal with her.	0.9413763880729675	1
+No,uh... she was just flipping out and I know how to deal with her.	No.uh she was just flipping out and I know how to deal with her.	0.7541730403900146	1
+Well,I had a lot of fun hanging out with you the other night.	I had a lot of fun hanging out with you the other night.	0.8834736347198486	1
+Me,too.	My,too.	0.5299805998802185	1
+Testing button Emergency stop reset Release button (together with ‘Signum’ release button)	Testing button Emergency stop reset Release button (together with ‘Signum’ release button)..	0.708622932434082	1
+Testing button Emergency stop reset Release button (together with ‘Signum’ release button)	Testing button Emergency stop reset (together with ’Signum’ release button)	0.6852983236312866	1
+Testing button Emergency stop reset Release button (together with ‘Signum’ release button)	Testing button Emergency stop reset (together with ‘Signum’ release button)	0.7184645533561707	1
+Testing button Emergency stop reset Release button (together with ‘Signum’ release button)	Testing button Emergency stop Reset release button (together with ‘Signum’ release button).	0.9231563806533813	1
+Testing button Emergency stop reset Release button (together with ‘Signum’ release button)	Testing button Emergency stop Reset (together with ‘Signum’ release button)	0.7184645533561707	1
+Testing button Emergency stop reset Release button (together with ‘Signum’ release button)	Testing button Emergency stop reset Release button (together with ‘Signum’ release button) (in English)	0.5791676640510559	1
+Tim: Sorry to interrupt, but I just received an alert via Ultra's mainframe.	Tim: Sorry to interrupt, but I received an alert via Ultra's mainframe.	0.8358590006828308	1
+What's wrong?	What is wrong?	0.9269697070121765	1
+Because I'm not human.	I'm not human.	0.5362597107887268	1
+Well, see uh, I can only guess that the pervasive anti-vampire hatred that has persisted since the heinous crime perpetrated by Russell Edgington had something to do with it. Mmm.	I can only guess that the pervasive anti-vampire hatred that has persisted since the heinous crime perpetrated by Russell Edgington had something to do with it. Mmmmm.	0.6089525818824768	1
+Well, see uh, I can only guess that the pervasive anti-vampire hatred that has persisted since the heinous crime perpetrated by Russell Edgington had something to do with it. Mmm.	How, see uh, I can only guess that the pervasive anti-vampire hatred that has persisted since the heinous crime perpetrated by Russell Edgington had something to do with it. Mmm.	0.7100893259048462	1
+Well, see uh, I can only guess that the pervasive anti-vampire hatred that has persisted since the heinous crime perpetrated by Russell Edgington had something to do with it. Mmm.	I can only guess that the pervasive anti-vampire hatred that has persisted since the heinous crime perpetrated by Russell Edgington had something to do with it. Mmm.	0.653531014919281	1
+And that hate is a powerful force, but hate never wins out.	And hate is a powerful force. But hate never wins out.	0.7695680856704712	1
+And that hate is a powerful force, but hate never wins out.	And that hatred is a powerful force, but hate never wins out.	0.9238986372947693	1
+And that hate is a powerful force, but hate never wins out.	And hate is a powerful force, but hate never wins out.	0.8064703941345215	1
+And that hate is a powerful force, but hate never wins out.	That hate is a powerful force, but hate never wins out.	0.8499045372009277	1
+Now they walk among us, shameless in their lust, their hunger.	And now they walk among us, shameless in their lust, their hunger.	0.8240579962730408	1
+The signing of the code of conduct by an establishment is expressly regarded by the Netherlands Government as a condition for issuing a residence permit for study purposes (recital 8 to that code).	The signature of the code of conduct by an establishment is expressly regarded by the Netherlands Government as a condition for issuing a residence permit for study purposes (recital 8 to that code).	0.77223140001297	1
+The signing of the code of conduct by an establishment is expressly regarded by the Netherlands Government as a condition for issuing a residence permit for study purposes (recital 8 to that code).	In the Netherlands the signing of the code of conduct by an establishment is expressly regarded by the Dutch Government as a condition for issuing a residence permit for study purposes (recital 8 to that code).	0.6403874158859253	1
+What's goin' on?	What's going on?	0.7979633212089539	1
+What's goin' on?	What's going on here?	0.6169148087501526	1
+What's goin' on?	What is going on now?	0.6453516483306885	1
+Since his wedding, Relg's expression had been one of almost perpetual astonishment, while Taiba's had that same smugness that marked Ariana's.	Since his wedding, Relg's expression had been one of almost perpetual astonishment, while Taiba's had the same smugness that marked Ariana's.	0.8531460762023926	1
+Since his wedding, Relg's expression had been one of almost perpetual astonishment, while Taiba's had that same smugness that marked Ariana's.	Since his wedding, Relg had been one of almost perpetual astonishment, while Taiba's had that same smugness that marked Ariana's.	0.6674118041992188	1
+Since his wedding, Relg's expression had been one of almost perpetual astonishment, while Taiba's had that same smugness that marked Ariana's.	Since his wedding Relg's expression had been one of almost perpetual astonishment, while Taiba's had that same smugness that marked Ariana's.	0.888302743434906	1
+Since his wedding, Relg's expression had been one of almost perpetual astonishment, while Taiba's had that same smugness that marked Ariana's.	After Relg's wedding, Relg's expression had been one of almost perpetual astonishment, while Taiba's had the same smugness that marked Ariana's.	0.722893476486206	1
+Seemed bigger in my mind.	Seemed larger in my mind.	0.9671652317047119	1
+Seemed bigger in my mind.	Looked bigger in my mind.	0.5181639194488525	1
+Seemed bigger in my mind.	It seemed bigger in my mind.	0.7261284589767456	1
+Seemed bigger in my mind.	Felt bigger in my mind.	0.547768235206604	1
+In seconds, the wall was deserted.	In under a minute, the wall was deserted.	0.7440372109413147	1
+In seconds, the wall was deserted.	The wall was deserted within seconds.	0.6315582394599915	1
+In seconds, the wall was deserted.	In a few seconds, the walls were deserted.	0.7942138910293579	1
+In seconds, the wall was deserted.	In seconds the wall was deserted.	0.9165815114974976	1
+In seconds, the wall was deserted.	Within seconds the wall was deserted.	0.7813004851341248	1
+In seconds, the wall was deserted.	In a few seconds, the wall was deserted.	0.9559716582298279	1
+In seconds, the wall was deserted.	In seconds, the walls became deserted.	0.8203642964363098	1
+In seconds, the wall was deserted.	After a second, the walls were completely deserted.	0.5604265332221985	1
+In seconds, the wall was deserted.	In a few seconds, the walls turned deserted.	0.6113442778587341	1
+In seconds, the wall was deserted.	Within seconds, the wall was deserted.	0.8129640221595764	1
+In seconds, the wall was deserted.	In seconds the walls were deserted.	0.8288434147834778	1
+The brightness grew rapidly to white fire, flaring outward until the queen was enveloped.	At one point, the brightness grew rapidly to white fire, flaring outward until the queen was enveloped.	0.7855280637741089	1
+Wren tried to watch what was happening, but the intensity of the light grew until it blinded her and she was forced to look away.	Wren tried to watch what was happening, but the intensity of the light grew until it blinded her and forced her to look away.	0.7891013622283936	1
+Wren tried to watch what was happening, but the intensity of the light grew until it blinded her and she was forced to look away.	Wren tried to watch, but the intensity of the light grew until it blinded her and she was forced to look away from the scene.	0.5393820405006409	1
+Wren tried to watch what was happening, but the intensity of the light grew until it blinded her and she was forced to look away.	Wren tried to observe what was happening but the intensity of the light grew until it blinded her and she was forced to look away from the scene.	0.64561527967453	1
+Wren tried to watch what was happening, but the intensity of the light grew until it blinded her and she was forced to look away.	Wren tried to watch what was happening, but the intensity of the light grew until it blinded her and she was forced to look away from the light.	0.681053876876831	1
+Wren tried to watch what was happening, but the intensity of the light grew until it blinded her and she was forced to look away.	Wren tried to watch what was happening but the intensity of the light grew until it blinded her and she was forced to look away.	0.8998966813087463	1
+Wren tried to watch what was happening, but the intensity of the light grew until it blinded her and she was forced to look away.	Wren tried to see what was happening, but the intensity of the light grew until it blinded her and she was forced to look away.	0.8773601651191711	1
+Wren dropped to her knees, feeling Garth's strong arm come up about her shoulders and hearing Gavilan's voice call to her.	Wren dropped to her knees, feeling Garth's strong arm come up around her shoulders and hearing Gavilan's voice call to her.	0.8676953315734863	1
+Wren dropped to her knees, feeling Garth's strong arm come up about her shoulders and hearing Gavilan's voice call to her.	Wren dropped her knees, feeling Garth's strong arm come up around her shoulders and hearing Gavilan's voice call to her.	0.8188577890396118	1
+Wren dropped to her knees, feeling Garth's strong arm come up about her shoulders and hearing Gavilan's voice call to her.	Wren dropped to her knees, feeling Garth's strength arm come up over her shoulders and hearing Gavilan's voice call to her.	0.7762381434440613	1
+Wren dropped to her knees, feeling Garth's strong arm come up about her shoulders and hearing Gavilan's voice call to her.	Wren fell to her knees, feeling Garth's strong arm come up about her shoulders and hearing Gavilan's voice call to her.	0.8699484467506409	1
+Wren dropped to her knees, feeling Garth's strong arm come up about her shoulders and hearing Gavilan's voice call to her.	Wren fell to her knees, feeling Garth's strong arm come up over her shoulders and hearing Gavilan's voice call to her.	0.8212326765060425	1
+Wren dropped to her knees, feeling Garth's strong arm come up about her shoulders and hearing Gavilan's voice call to her.	Wren fell to her knees, feeling Garth's strong arm come up around her shoulders and hearing Gavilan's voice call to her.	0.8322938680648804	1
+What? I was just thinking about how beautiful you are.	What? Was I just thinking about how beautiful you are?	0.789868950843811	1
+What? I was just thinking about how beautiful you are.	What? I just was thinking about how beautiful you are?	0.7674672603607178	1
+What? I was just thinking about how beautiful you are.	What happened? I just thought about how beautiful you are.	0.5333908200263977	1
+Our son.	- Our son.	0.604521632194519	1
+I've never read a nicer suicide note.	I've never seen a nicer suicide note before.	0.6769580245018005	1
+I've never read a nicer suicide note.	I have never read a nicer suicide note.	0.9332295656204224	1
+In the past ten years almost 15 000 teachers and other staff have received in-service training or carried out a teaching assignment with the support of Grundtvig.	In the past 10 years almost 15 000 teachers and other staff have received in-service training or carried out a teaching assignment with the support of Grundtvig.	0.8287188410758972	1
+In the past ten years almost 15 000 teachers and other staff have received in-service training or carried out a teaching assignment with the support of Grundtvig.	In the past 10 years nearly 15 000 teachers and other staff have received in-service training or carried out a teaching assignment with the support of Grundtvig.	0.8032443523406982	1
+In the past ten years almost 15 000 teachers and other staff have received in-service training or carried out a teaching assignment with the support of Grundtvig.	In the last ten years almost 15 000 teachers and other staff have received in-service training or carried out a teaching assignment with the support of Grundtvig.	0.8207106590270996	1
+In the past ten years almost 15 000 teachers and other staff have received in-service training or carried out a teaching assignment with the support of Grundtvig.	In the past ten years nearly 15 000 teachers and other staff have received in-service training or carried out a teaching assignment with the support of Grundtvig.	0.8264039158821106	1
+This figure is expected to reach over 20 000 by the end of 2013.	Currently, this figure is expected to reach over 20 000 by the end of 2013.	0.9080684781074524	1
+This figure is expected to reach over 20 000 by the end of 2013.	20 000  by end of 2013 This figure is expected to reach over 20 000  by end of 2013.	0.5338112115859985	1
+This figure is expected to reach over 20 000 by the end of 2013.	At present, this figure is expected to reach over 20 000 by the end of 2013.	0.8446506261825562	1
+This figure is expected to reach over 20 000 by the end of 2013.	As per projection, this figure will reach over 20 000 by the end of 2013.	0.5170853137969971	1
+This figure is expected to reach over 20 000 by the end of 2013.	The figure will be more than 20 000 by the end of 2013.	0.6989840865135193	1
+The programme emphasises on support for co-operation projects and networks to develop and disseminate innovative approaches to adult learning.	In the Programme the programme emphasizes on support for co-operation projects and networks to develop and disseminate innovative approaches to adult learning.	0.543006956577301	1
+The programme emphasises on support for co-operation projects and networks to develop and disseminate innovative approaches to adult learning.	The programme emphasizes on support for co-operation projects and networks to develop and disseminate innovative approaches to adult learning.	0.8261820077896118	1
+The programme emphasises on support for co-operation projects and networks to develop and disseminate innovative approaches to adult learning.	The programme emphasis on support for co-operation projects and networks to develop and disseminate innovative approaches to adult learning.	0.7504067420959473	1
+It's good to have you back on board.	It's good to be back on board.	0.5177523493766785	1
+You must be Lance Hunter.	You must be Lance Hunter!	0.7239673733711243	1
+I assure you, none of us wanted this.	I guarantee you none of us wanted this.	0.894494354724884	1
+I assure you, none of us wanted this.	I assure you that none of us wanted this.	0.8774586319923401	1
+This is not about blindly following orders, Mr. Hunter.	Is this not about blindly following orders, Mr. Hunter?	0.6647374033927917	1
+We should throw him in the brig.	Should we throw him in the brig?	0.5725811123847961	1
+We at least owe him an explanation.	We owe him an explanation.	0.7338508367538452	1
+We at least owe him an explanation.	We owe it to him an explanation.	0.5774669051170349	1
+We at least owe him an explanation.	We owe him a bit of explanation.	0.7349945902824402	1
+Nick Fury simply kept too many secrets. Got it.	Nick Fury kept too many secrets to keep. Got it.	0.7221846580505371	1
+Thanks to one of those secrets.	Thank you for one of those secrets.	0.5278412699699402	1
+Thanks to one of those secrets.	One of those secrets. Thanks to one of those secrets.	0.6027084589004517	1
+Yes.	Yes?	0.7552474737167358	1
+Please answer the phone, Dad.	Please answer the phone please, dad.	0.8504878878593445	1
+Please answer the phone, Dad.	Please answer the phone please, Dad.	0.8504878878593445	1
+Please answer the phone, Dad.	Please answer the phone Dad.	0.6193608045578003	1
+Please answer the phone, Dad.	If you can answer the phone please, dad.	0.5477891564369202	1
+as Selection Mask...	As Selection Mask....	0.9566087126731873	1
+as Selection Mask...	As selection masks...	0.6914608478546143	1
+as Selection Mask...	As Selection Masks...	0.6914608478546143	1
+Import Image	Import Image image.	0.969000518321991	1
+Trim to Current Layer	Trim to Current Layer.	0.9520583152770996	1
+Trim to Image Size	Trim to Image Size.	0.9568265080451965	1
+Layer Style...	Layer Style..	0.9467679262161255	1
+Filter Layer Properties	Filter layer properties for filter layers.	0.606139600276947	1
+New Filter Layer	New filter layer!	0.5673437714576721	1
+Could not add layer to image.	Can't add layer to an image.	0.7529328465461731	1
+Could not add layer to image.	Can't add layer to an image?	0.5048756003379822	1
+Could not add layer to image.	Can't add layer to image.	0.851252555847168	1
+Foreign contaminant.	Foreign contaminants.	0.9301038384437561	1
+I don't want to do that.	I don't want to do this.	0.8783869743347168	1
+I don't want to hear this.	I don't want to hear anything.	0.6305956840515137	1
+I don't want to hear this.	I do not want to hear.	0.7698549628257751	1
+I don't want to hear this.	I don't want to hear it.	0.8916876316070557	1
+I don't want to hear this.	I don't want to hear this. I don't want to hear this.	0.8929886221885681	1
+I don't want to hear this.	I don't want to hear anything like that.	0.6908952593803406	1
+I would like you to respect my decision.	I want you to respect my decision.	0.7475885152816772	1
+What have you decided?	What decision have you made?	0.6855084896087646	1
+What have you decided?	What have you decided on?	0.7781155109405518	1
+And did you see the totals?	Did you see the totals?	0.7652568817138672	1
+Hey! You won by over a half million votes.	Hey! You won by over half a million votes.	0.8886523842811584	1
+Hey! You won by over a half million votes.	Hey! You won more than a half million votes!	0.6515948176383972	1
+Hey! You won by over a half million votes.	Hey, you won by over a half million votes!	0.7778046131134033	1
+I have to find Alicia.	I have to find Alicia. I have to find Alicia.	0.9118961691856384	1
+I have to find Alicia.	I have to find Alicia. I need to find her.	0.6616752743721008	1
+No. You got to be downstairs in the ballroom in 15 minutes.	You got to be downstairs in the ballroom in 15 minutes. No.	0.6937836408615112	1
+No. You got to be downstairs in the ballroom in 15 minutes.	No, you got to be downstairs in the ballroom within 15 minutes.	0.7954956293106079	1
+No. You got to be downstairs in the ballroom in 15 minutes.	No. You got to be downstairs in the ballroom within 15 minutes.	0.8643023371696472	1
+No. You got to be downstairs in the ballroom in 15 minutes.	No, you got to be downstairs in the ballroom in 15 minutes.	0.8893643021583557	1
+No. You got to be downstairs in the ballroom in 15 minutes.	No. You get to be downstairs in the ballroom in 15 minutes.	0.8528590202331543	1
+No. You got to be downstairs in the ballroom in 15 minutes.	No, you get to be downstairs in the ballroom in 15 minutes.	0.7794383764266968	1
+And you-know-who's here.	And you know-who's here.	0.8538280129432678	1
+And you-know-who's here.	And you know-who's here?	0.6316909790039062	1
+And you-know-who's here.	And you-know-who's here?	0.7203419208526611	1
+And you-know-who's here.	You know-who is here.	0.5926334261894226	1
+Yeah, yeah, he's here for a meeting of his, uh, reduce gun violence coalition.	Okay, yeah, he's here for a meeting of his, uh, reduce gun violence coalition.	0.8803246021270752	1
+Yeah, yeah, he's here for a meeting of his, uh, reduce gun violence coalition.	Hey, yeah, he's here for a meeting of his, uh, reduce gun violence coalition.	0.8755847215652466	1
+Or should I say condolences?	Or can I say condolences?	0.8365291953086853	1
+Or should I say condolences?	Should I say condolences?	0.605575442314148	1
+Eli, nice to see you.	Eli, nice to meet you.	0.8125605583190918	1
+That's a pretty safe thing to offer.	This is a safe thing to offer.	0.7587951421737671	1
+That's a pretty safe thing to offer.	This is a safe offer.	0.5361140370368958	1
+Thank you. Thank you very much.	Thank you very much.	0.7182268500328064	1
+Thank you. Thank you very much.	Thanks a lot. Thank you very much.	0.6976748704910278	1
+Thank you. Thank you very much.	Thank you very much. Thank you.	0.7399054169654846	1
+Thank you. Thank you very much.	Thank you very much. Thank you very much.	0.821213960647583	1
+Yeah, I heard about Tampa.	I have heard about Tampa. Yeah, I heard about it.	0.7479948997497559	1
+Yeah, I heard about Tampa.	I heard about Tampa.	0.6657553911209106	1
+Yeah, I heard about Tampa.	I heard about Tampa. Yeah, I heard about Tampa.	0.8410689830780029	1
+We won.	We won!	0.7819758057594299	1
+We won.	We won. We won. We won!	0.53626549243927	1
+We won.	We won. We won.	0.8512228727340698	1
+We won.	We have won.	0.9041105508804321	1
+We won.	We won. We have won.	0.7555757164955139	1
+We won.	We won. We won. We won.	0.5959177613258362	1
+What else did you hear?	What else have you heard?	0.7292766571044922	1
+What else did you hear?	What else do you hear?	0.9836800694465637	1
+Maybe youdon't realize how you came off.	Maybe you don't realize how you came off.	0.5966222882270813	1
+To humiliate him in front of everybody?	To humiliate him in front of everyone?	0.9512232542037964	1
+Oh, so you speak for him now?	"Oh, so you speak for him now"?	0.5783819556236267	1
+Oh, so you speak for him now?	Oh, so you speak for him?	0.6925554275512695	1
+Please, you hardly know him.	Please, you don't know him.	0.7781071066856384	1
+Please, you hardly know him.	Please, you barely know him.	0.8717597126960754	1
+Thank you.	Thank you. Thank you.	0.9289253354072571	1
+You enjoy your lunch, Jackie.	You enjoy lunch, Jackie.	0.7851130366325378	1
+You enjoy your lunch, Jackie.	Jackie, you really enjoy your lunch.	0.5832700133323669	1
+What's your doctor's name?	What is your doctor's name?	0.8878737688064575	1
+Yes.	Yes, yes.	0.9669302105903625	1
+Yes.	Yes. Yes. Yes.	0.9367452263832092	1
+You tell Dr. Thurmanwhatever you want.	You tell Dr. Thurman what you want.	0.5570704340934753	1
+Maybe tomorrow.	Maybe tomorrow. Maybe.	0.5790727734565735	1
+Maybe tomorrow.	Maybe tomorrow?	0.69258713722229	1
+What did she say to you?	What did the woman say to you?	0.6829328536987305	1
+What did she say to you?	What has she said to you?	0.5098945498466492	1
+I made a new friend.	I have made a new friend.	0.7287994623184204	1
+I made a new friend.	I met a new friend.	0.5031784176826477	1
+Real or imaginary?	Is real life or imaginary?	0.5376874804496765	1
+Real or imaginary?	Is real or imaginary?	0.8617615103721619	1
+Would you like to talk about this friend?	Would you like to talk to this friend?	0.7678388357162476	1
+Would you like to talk about this friend?	Do you want to talk about this friend?	0.659352719783783	1
+I got football, I'm running the student council elections, and you got me doing that musical.	I got football, I'm running the student council elections, and you got me doing that musical. You got me doing that musical?	0.6461286544799805	1
+I got football, I'm running the student council elections, and you got me doing that musical.	I got football, I'm running the student council elections, and you got me doing the musical.	0.7985894680023193	1
+She's a hard worker.	She is a hard worker.	0.9072737693786621	1
+You should be really proud of her.	You should be proud of her.	0.8915600776672363	1
+Because of your slaves. Not my slaves, my ancestors'.	And because of your slaves. Not my slaves, my ancestors'.	0.7247312664985657	1
+Because of your slaves. Not my slaves, my ancestors'.	Because of your slaves, not mine, my ancestors'.	0.5571857690811157	1
+Probably not.	Most likely not.	0.7652899026870728	1
+Probably not.	Nope, probably not.	0.6674097776412964	1
+That you're learning a made-up language from HBO's Game of Thrones?	Is it true that you are learning a made up language from HBO's Game of Thrones?	0.6665478348731995	1
+That you're learning a made-up language from HBO's Game of Thrones?	That you're learning a made up language from HBO's Game of Thrones?	0.9293684363365173	1
+I have a lot going on today, but this was a great nerd-out.	I have a lot going on today, but this was a great nerd out.	0.9299555420875549	1
+I have a lot going on today, but this was a great nerd-out.	I have a lot going on today but this was a great nerd-out.	0.9517815113067627	1
+I have a lot going on today, but this was a great nerd-out.	I had a lot going on today, but this was a great nerd-out.	0.860090970993042	1
+Dwight, you didn't tell me you were teaching me a fake language.	Dwight, you didn't tell me that you were teaching me a fake language.	0.892975926399231	1
+Dwight, you didn't tell me you were teaching me a fake language.	Dwight, you didn't tell me you were teaching me fake languages?	0.5977576375007629	1
+Hey, boss. I am so thirsty, can I have a scoop of water?	Hey, boss, I am so thirsty, can I have a scoop of water?	0.971641480922699	1
+Hey, boss. I am so thirsty, can I have a scoop of water?	Hey, boss, I'm so thirsty, can I get a scoop of water?	0.8349187970161438	1
+Hey, boss. I am so thirsty, can I have a scoop of water?	Hey, boss. I am so thirsty can I have a scoop of water?	0.9502071738243103	1
+Hey, boss. I am so thirsty, can I have a scoop of water?	Hey, boss, I'm thirsty, can I get a scoop of water?	0.7815839648246765	1
+Hey, boss. I am so thirsty, can I have a scoop of water?	Hey boss, I am so thirsty can I have a scoop of water?	0.8708086609840393	1
+Hey, boss. I am so thirsty, can I have a scoop of water?	Hey, boss, I am thirsty, can I have a scoop of water?	0.8757126331329346	1
+Yeah.	Yes.	0.8774393796920776	1
+I get it. Just because my ancestors happened to be...	Just because I got it. Just because my ancestors happened to be...	0.6820806264877319	1
+Very funny, Kevin changed my ringtone.	Kevin changed my ringtone. Very funny.	0.6072649955749512	1
+Very funny, Kevin changed my ringtone.	Kevin has changed my ringtone. Very funny.	0.5094813704490662	1
+No,the other monitors are fine.	No,other monitors are fine too.	0.7119855880737305	1
+No,the other monitors are fine.	No the other monitors are fine.	0.75869220495224	1
+No,the other monitors are fine.	No,other monitors are fine.	0.876711368560791	1
+I'm in the woman's brain.	I am in the woman's brain.	0.9209261536598206	1
+I'm in the woman's brain.	I'm in woman's brain.	0.8026131391525269	1
+Are you kidding me?	Are you kidding?	0.5596776008605957	1
+Are you kidding me?	Do you think you're kidding me?	0.5736656785011292	1
+Are you kidding me?	Are you kidding me, really?	0.6681357026100159	1
+Tell them to get over here as quickly as possible.	Tell them to go over here as quickly as possible.	0.8697509169578552	1
+Tell them to get over here as quickly as possible.	Tell them to get over here as fast as possible.	0.9793679118156433	1
+Tell them to get over here as quickly as possible.	Tell them to get over here as soon as possible.	0.908419668674469	1
+Tell them to get over here as quickly as possible.	Tell them to get over here quickly as possible.	0.8904340863227844	1
+Tell them to get over here as quickly as possible.	Tell them to get over here so quickly as possible.	0.916844367980957	1
+Tell them to get over here as quickly as possible.	Tell them to get over here quickly.	0.720072865486145	1
+Tell them to get over here as quickly as possible.	Tell them to get over here. As quickly as possible.	0.7748116850852966	1
+There's...there's glass all around you.	There is...there is glass all around you.	0.7841126322746277	1
+Oh,I'm so sorry.	Oh, I'm sorry!	0.6635434031486511	1
+Oh,I'm so sorry.	Oh my God, I'm sorry.	0.5382952690124512	1
+Oh,I'm so sorry.	Oh, I'm sorry.	0.8185933232307434	1
+Oh,I'm so sorry.	Oh, I am so sorry.	1.0238866806030273	1
+He's okay.	He is okay.	1.031172752380371	1
+Hey.	Hey!	0.7816670536994934	1
+Hey.	Hey. Hey.	1.1075125932693481	1
+In truth, of all the Styrics who have ever lived in the forty eons of the history of their race, Zalasta is pre-eminent.	In truth, of all the Styrics who have ever lived in the 40 eons of the history of their race, Zalasta is pre-eminent.	0.8174260854721069	1
+In truth, of all the Styrics who have ever lived in the forty eons of the history of their race, Zalasta is pre-eminent.	In truth, of all Styrics who have ever lived in the forty eons of their race, Zalasta is the most pre-eminent.	0.5492526888847351	1
+In truth, of all the Styrics who have ever lived in the forty eons of the history of their race, Zalasta is pre-eminent.	In truth, of all the Styrists who have ever lived in the forty eons of the history of their race, Zalasta is preeminent.	0.6017876267433167	1
+In truth, of all the Styrics who have ever lived in the forty eons of the history of their race, Zalasta is pre-eminent.	In truth, of all the Styrics who have ever lived in the 40 eons of their race, Zalasta is pre-eminent.	0.65581876039505	1
+But knowledge alone consoled him not.	But knowledge alone didn't console him.	0.6859990358352661	1
+Aphrael lived still, and Sephrenia was ever bound to her.	Aphrael lived still and Sephrenia was ever bound to her.	0.9251276254653931	1
+Aphrael lived still, and Sephrenia was ever bound to her.	Aphrael lived still, and Sephrenia was always bound to her.	0.7579246163368225	1
+Aphrael lived still, and Sephrenia was ever bound to her.	Aphrael was still alive, and Sephrenia was ever bound to her.	0.6728408932685852	1
+Aphrael lived still, and Sephrenia was ever bound to her.	Aphrael was alive, and Sephrenia was ever bound to her.	0.5077781081199646	1
+Aphrael lived still, and Sephrenia was ever bound to her.	Aphrael lived, and Sephrenia was always bound to her.	0.5809643864631653	1
+Aphrael lived still, and Sephrenia was ever bound to her.	Aphrael lived, and Sephrenia was ever bound to her.	0.7416085004806519	1
+'But the knowledge of Zalasta, which is beyond measure, did suggest to him a means by which he might break those bonds.	"But the knowledge of Zalasta, which is beyond measure, did suggest to him a means by which he might break those bonds.	0.8237015604972839	1
+'But the knowledge of Zalasta, which is beyond measure, did suggest to him a means by which he might break those bonds.	The knowledge of Zalasta, which is beyond measure, did suggest to him a means by which he would break those bonds.	0.66649329662323	1
+'But the knowledge of Zalasta, which is beyond measure, did suggest to him a means by which he might break those bonds.	In fact, the knowledge of Zalasta, which is beyond measure, suggested to him a means by which he might break those bonds.	0.6059545874595642	1
+'But the knowledge of Zalasta, which is beyond measure, did suggest to him a means by which he might break those bonds.	And the knowledge of Zalasta, which is beyond measure, did suggest to him a means by which he might break those bonds.	0.695024311542511	1
+'But the knowledge of Zalasta, which is beyond measure, did suggest to him a means by which he might break those bonds.	"But the knowledge of Zalasta, which is beyond measure, did suggest to him a means by which he might break those bonds."	0.8089146018028259	1
+'But the knowledge of Zalasta, which is beyond measure, did suggest to him a means by which he might break those bonds.	The knowledge of Zalasta, which is beyond measure, did suggest to him a means by which he might break those bonds.	0.6911664009094238	1
+At the dawn of time in far Thalesia had the Troll-dwarf Ghwerig wrought Bhelliom, and Zalasta knew that with Bhelliom's aid might he gain his heart's desire.	At the dawn of time in far far Thalesia had the Troll-dwarf Ghwerig wrought Bhelliom, and Zalasta knew that with Bhelliom's aid might he gain his heart's desire.	0.800143837928772	1
+At the dawn of time in far Thalesia had the Troll-dwarf Ghwerig wrought Bhelliom, and Zalasta knew that with Bhelliom's aid might he gain his heart's desire.	At the dawn of time in far away Thalesia had the Troll-dwarf Ghwerig wrought Bhelliom, and Zalasta knew that with Bhelliom's aid might he gain his heart's desire.	0.743984580039978	1
+At the dawn of time in far Thalesia had the Troll-dwarf Ghwerig wrought Bhelliom, and Zalasta knew that with Bhelliom's aid might he gain his heart's desire.	At the dawn of time in far far Thalesia had the Troll-dwarf Ghwerig wrought Bhelliom, and Zalasta knew that with Bhelliom's help might he gain his heart's desire.	0.8044666647911072	1
+At the dawn of time in far Thalesia had the Troll-dwarf Ghwerig wrought Bhelliom, and Zalasta knew that with Bhelliom's aid might he gain his heart's desire.	At the dawn of time in far distant Thalesia had the Troll-dwarf Ghwerig wrought Bhelliom, and Zalasta knew that with Bhelliom's aid might he gain his heart's desire.	0.7648029923439026	1
+At the dawn of time in far Thalesia had the Troll-dwarf Ghwerig wrought Bhelliom, and Zalasta knew that with Bhelliom's aid might he gain his heart's desire.	At the dawn of time in faraway Thalesia had the Troll-dwarf Ghwerig wrought Bhelliom, and Zalasta knew that with Bhelliom's aid might he gain his heart's desire.	0.7173113226890564	1
+At the dawn of time in far Thalesia had the Troll-dwarf Ghwerig wrought Bhelliom, and Zalasta knew that with Bhelliom's aid might he gain his heart's desire.	At the dawn of time in far Thalesia had the Troll-dwarf Ghwerig wrought Bhelliom, and Zalasta knew that with Bhelliom's help might he gain his heart's desire.	0.8081602454185486	1
+'Then came the birth of Anakha, signaling that Bhelliom itself would soon emerge from the place where it had lain hidden, and by signs and oracles and diverse other means did outcast Styrics perceive his birth, and counseled they Zalasta, instructing him to journey straightway to Eosia to observe Anakha throughout his childhood and youth that he might know him better, for it was the hope of Zalasta that in the day that Anakha did bring the flower-gem to light, might he wrest it from him and thereby gain the means to prevail over the Child Goddess.	"So came the birth of Anakha, signaling that Bhelliom would soon emerge from the place where it had lain hidden, and by signs and oracles and diverse other means did outcast Styrics perceive his birth, and counseled them Zalasta, instructing him to journey straightway to Eosia to observe Anakha throughout his childhood and youth, so he might know him better," he said, 'For it was the hope of Zalasta that in the day that Ana	0.6580562591552734	1
+'Then came the birth of Anakha, signaling that Bhelliom itself would soon emerge from the place where it had lain hidden, and by signs and oracles and diverse other means did outcast Styrics perceive his birth, and counseled they Zalasta, instructing him to journey straightway to Eosia to observe Anakha throughout his childhood and youth that he might know him better, for it was the hope of Zalasta that in the day that Anakha did bring the flower-gem to light, might he wrest it from him and thereby gain the means to prevail over the Child Goddess.	'Then came the birth of Anakha, signaling that Bhelliom would soon emerge from the place where it had lain hidden, and by signs and oracles and diverse other means did outcast Styrics perceive his birth, and counseled them Zalasta, instructing him to journey straightway to Eosia to observe Anakha throughout his childhood and youth to get to know him better, for it was the hope of Zalasta that in the day that Anakha did bring the flower-	0.7365117073059082	1
+Article 1 For the purposes of automated searching of dactyloscopic data, Hungary has fully implemented the general provisions on data protection of Chapter 6 of Decision 2008/615/JHA and is entitled to receive and supply personal data pursuant to Article 9 of that Decision as from the date of the entry into force of this Decision.	Article 1 For the purposes of automated searching of dactyloscopic data, Hungary has fully implemented the general provisions on data protection of Chapter 6 of Decision 2008/615/JHA and is entitled to receive and supply personal data pursuant to Article 9 of that Decision as from the date of entry into force of this Decision.	0.832184910774231	1
+Article 2 This Decision shall enter into force on the day of its adoption.	Article 2 The present Decision shall enter into force on the day of its adoption.	0.7502644658088684	1
+Article 2 This Decision shall enter into force on the day of its adoption.	Article 2 The decision shall enter into force on the day of its adoption.	0.8341464400291443	1
+Article 2 This Decision shall enter into force on the day of its adoption.	Article 2 The Decision enters into force on the day of its adoption.	0.7069255113601685	1
+Article 2 This Decision shall enter into force on the day of its adoption.	Article 2 The decision entered into force on the day of its adoption.	0.6882116198539734	1
+Done at Brussels, 24 July 2012.	Done at Brussels 24 July 2012.	0.9361500144004822	1
+The man whose stick they had all feared, as boys.	The man whose stick they all feared, as boys.	0.8324083685874939	1
+The man whose stick they had all feared, as boys.	The man whose stick they all feared as boys.	0.734294056892395	1
+His jeers when they were weak, his contempt when they complained or tried whining about their lot.	His detractors when they were weak, his contempt when they complained or tried whining about their lot.	0.5207323431968689	1
+His jeers when they were weak, his contempt when they complained or tried whining about their lot.	His mockery when they were weak, his contempt when they complained or tried whining about their lot.	0.6738303303718567	1
+If you are, you better get ready.	If you're ready, you better get ready.	0.8058252334594727	1
+Roland opened his eyes again and turned his head to the left again.	Roland turned his head to the left and opened his eyes again.	0.6494278311729431	1
+Roland opened his eyes again and turned his head to the left again.	Roland opened his eyes again, and turned his head to the left again.	0.7838286757469177	1
+Roland opened his eyes again and turned his head to the left again.	Roland turns his head to the left and opens his eyes again.	0.529079794883728	1
+Roland opened his eyes again and turned his head to the left again.	Roland opened his eyes and turned his head to the left again.	0.8521388173103333	1
+Roland opened his eyes again and turned his head to the left again.	Roland turned his head to the left then opened his eyes again.	0.5915985107421875	1
+Roland opened his eyes again and turned his head to the left again.	Roland opened his eyes again and turned his head back to the left again.	0.8420138955116272	1
+As he did, he felt something shift against his chest.	As he did he felt something shift against his chest.	0.9058405160903931	1
+Moving very slowly, he raised his right hand out of the sling that held it.	Moving very slowly, he raised his right hand out of the sling.	0.6499339938163757	1
+Moving very slowly, he raised his right hand out of the sling that held it.	Moving slowly, he raised his right hand out of the sling that held him.	0.6058976650238037	1
+Moving very slowly, he raised his right hand out of the sling that held it.	Moving very slowly, he raised his right hand out of the sling that held him.	0.639548122882843	1
+Moving very slowly, he raised his right hand out of the sling that held it.	The man raised his hand out of the sling that held it. Moving very slowly, he raised his right hand out of the sling that held it.	0.6832309365272522	1
+The pain in his back stirred and muttered.	The pain in his back muttered and stirred.	0.7213359475135803	1
+He stopped moving until he decided the pain was going to get no worse (if he was careful, at least), then lifted the hand the rest of the way to his chest.	He stop moving until he decided the pain was going to get no worse (if he was careful, at least) and then lifted the hand the rest of the way to his chest.	0.7678390741348267	1
+He stopped moving until he decided the pain was going to get no worse (if he was careful, at least), then lifted the hand the rest of the way to his chest.	He stopped moving until he decided the pain was going to get no worse (if he was careful), then lifted the hand the rest of the way to his chest.	0.7881002426147461	1
+He stopped moving until he decided the pain was going to get no worse (if he was careful, at least), then lifted the hand the rest of the way to his chest.	He stopped moving till he decided the pain was going to get no worse (if he was careful, at least), then lifted the hand the rest of the way to his chest.	0.8382859230041504	1
+He stopped moving until he decided the pain was going to get no worse (if he was careful, at least), then lifted the hand the rest of the way to his chest.	He stopped moving until he decided that the pain was going to get no worse (if he was careful), then lifted the hand the rest of the way to his chest.	0.7764208316802979	1
+He stopped moving until he decided the pain was going to get no worse (if he was careful, at least), then lifted the hand the rest of the way to his chest.	Then he stopped moving until he decided the pain was going to get no worse (if he was careful), then lifted the hand the rest of the way to his chest.	0.6704468727111816	1
+He moved his chin to his breastbone and saw that he was wearing a bed-dress like the one draped on the body of the bearded man.	As he moved his chin to his breastbone, he saw that he was wearing a bed-dress like the one draped on the body of the bearded man.	0.7682042717933655	1
+He moved his chin to his breastbone and saw that he was wearing a bed-dress like the one draped on the body of the bearded man.	He then moved his chin to his breastbone and saw that he was wearing a bed-dress like the one draped on the body of the bearded man.	0.8288747668266296	1
+He moved his chin to his breastbone and saw that he was wearing a bed-dress like the one draped on the body of the bearded man.	He lowered his chin to his breastbone and saw that he was wearing a bed-dress like the one draped on the body of the bearded man.	0.790253758430481	1
+He moved his chin to his breastbone and saw that he was wearing a bed-dress like the one draped on the body of the bearded man.	Then he put his chin under his breastbone and saw that he was wearing a bed-dress similar to the one draped on the body of the bearded man.	0.6274329423904419	1
+He moved his chin to his breastbone and saw that he was wearing a bed-dress like the one draped on the body of the bearded man.	When he moved his chin to his breastbone, he saw that he was wearing a bed-dress like the one draped on the body of the bearded man.	0.7599889039993286	1
+Roland reached beneath the neck of the gown and felt a fine chain.	Roland reached underneath the neck of the gown and felt a fine chain.	0.9310800433158875	1
+Roland reached beneath the neck of the gown and felt a fine chain.	Roland reached under the neck of the gown and felt a fine chain.	0.8809242844581604	1
+Roland reached beneath the neck of the gown and felt a fine chain.	Roland reaches under the neck of the gown and felt a fine chain.	0.6794832944869995	1
+It's weird that the house looks like a box...	It's strange that the house looks like a box...	0.8788995742797852	1
+It's weird that the house looks like a box...	It is weird that the house looks like a box...	0.9436671137809753	1
+It's weird that the house looks like a box...	Is it weird that the house looks like a box?	0.5402958393096924	1
+It's weird that the house looks like a box...	It's weird that the house looks like a box....	0.9980233311653137	1
+Beautiful!	Gorgeous!	1.056797742843628	1
+If this fails, you could die.	If this fails, you could die!	0.809137225151062	1
+If this fails, you could die.	If you fail this, you can die!	0.615806519985199	1
+If this fails, you could die.	If this fails you could die.	0.9088094830513	1
+If this fails, you could die.	If this fails, you can die.	0.9458343982696533	1
+If this fails, you could die.	If you failed at this, you could die.	0.6598473787307739	1
+If this fails, you could die.	If you cannot do this, you could die.	0.7080308794975281	1
+If this fails, you could die.	If this fails you can die.	0.896605908870697	1
+If I die, Friend wins...	When I die, a Friend wins...!	0.5139994025230408	1
+If I die, Friend wins...	If I die, my Friend will win..	0.6911856532096863	1
+If I die, Friend wins...	If I die, Friend wins!	0.6017158031463623	1
+If I die, Friend wins...	If I die, my Friend wins...	0.8610334992408752	1
+If I live, mankind wins!	If I live, humanity wins!	0.8761596083641052	1
+If I live, mankind wins!	If I live, the world wins!	0.7502152919769287	1
+Incubation period is 12 hours.	Incubation period: 12 hours.	0.8441570401191711	1
+Incubation period is 12 hours.	Incubation time: 12 hours.	0.7537546753883362	1
+If someone prays for patience, you think God gives them patience?	If someone prays for patience, do you think God gives them patience?	0.9265202879905701	1
+Or does he give them the opportunity to be patient?	Does he give them an opportunity to be patient?	0.5646114945411682	1
+Or does he give them the opportunity to be patient?	Does he give them the opportunity to be patient?	0.5805286765098572	1
+JON: Guess this comes as no surprise to those who remember his campaign promise,	JON: Guess this comes as no surprise to those who remember his campaign promise?	0.809850811958313	1
+Pick any three for me and put 'em in paper bags.	Choose any three for me and put 'em in paper bags.	0.8291221857070923	1
+Hey, listen.	Hey listen, listen.	0.8118771314620972	1
+Hey, listen.	Hey listen, listen!	0.6472628116607666	1
+Hey, listen.	Hey listen.	0.7895258069038391	1
+Hey, listen.	Hey, listen, listen.	0.8886839747428894	1
+She's not gonna sleep with you.	She is not gonna sleep with you.	0.8885704278945923	1
+She's not gonna sleep with you.	She's not gonna sleep with you. She's not gonna sleep with you.	0.8354964256286621	1
+She's not gonna sleep with you.	She is not going to sleep with you.	0.7575975060462952	1
+She's not gonna sleep with you.	She isn't gonna sleep with you.	0.8811084032058716	1
+Who here wants to wager a little money that this Mexican... son of an immigrant field hand... can't guess what kind of grapes are in these wines... that our kind bartender has personally selected?	Who wants to wager a little money that this Mexican... son of an immigrant field hand... can't guess what kind of grapes are in these wines that our kind bartender has personally selected?	0.7578203082084656	1
+Who here wants to wager a little money that this Mexican... son of an immigrant field hand... can't guess what kind of grapes are in these wines... that our kind bartender has personally selected?	Who here wants to wager a little money that this Mexican, son of an immigrant field hand... can't guess what kind of grapes are in these wines... that our kind bartender has personally selected?	0.806965172290802	1
+Who here wants to wager a little money that this Mexican... son of an immigrant field hand... can't guess what kind of grapes are in these wines... that our kind bartender has personally selected?	Who here wants to wager a little money that this Mexican... son of an immigrant field hand... can't guess what kind of grapes are in these wines that our kind bartender has personally selected?	0.8273229002952576	1
+Who here wants to wager a little money that this Mexican... son of an immigrant field hand... can't guess what kind of grapes are in these wines... that our kind bartender has personally selected?	Who wants to wager a little money that this Mexican... son of an immigrant field hand... can't guess what kind of grapes are in these wines... that our kind bartender has personally selected?	0.8669241666793823	1
+If I ever catch you robbing again, shitburger, I'mma go Saudi Arabia on your ass and cut your hand off.	If I ever catch you robbing again, shitburger, I'm sure go Saudi Arabia on your ass and cut your hand off.	0.5195066928863525	1
+If I ever catch you robbing again, shitburger, I'mma go Saudi Arabia on your ass and cut your hand off.	If I ever catch you robbing again, shitburger, I'mma go Saudi Arabia on your ass and cut off your hand off.	0.8949078321456909	1
+If I ever catch you robbing again, shitburger, I'mma go Saudi Arabia on your ass and cut your hand off.	If I ever catch you robbing again, shitburger, I'm going to go Saudi Arabia on your ass and cut your hand off.	0.6709144115447998	1
+If I ever catch you robbing again, shitburger, I'mma go Saudi Arabia on your ass and cut your hand off.	If I ever catch you robbing again, shitburger, I'm gonna go Saudi Arabia on your ass and cut your hand off.	0.7071645259857178	1
+Promise me you're done with the life of crime?	I promise you're done with the life of crime?	0.8082112669944763	1
+I promise.	I promise. I promise. I promise.	0.9265680909156799	1
+I promise.	I promise, I promise. I promise.	0.6625311374664307	1
+I promise.	I promise. I promise.	1.0482252836227417	1
+I promise.	I promise. I have a promise.	0.8351046442985535	1
+"At least that's something," the President said.	At least that's something,' the president said.	0.8293747901916504	1
+"At least that's something," the President said.	At least that's something," the President said.	0.838697075843811	1
+"At least that's something," the President said.	At least, that's something, the president said.	0.693056046962738	1
+He is right.	He is correct.	0.750438392162323	1
+This is sacred ground.	This is sacred land.	0.6172325015068054	1
+This is sacred ground.	This is a sacred place.	0.7344470620155334	1
+You know, if you had any balls, you'd smoke this in your own house.	If you had balls, you'd smoke this at your own house.	0.5346589684486389	1
+You know, if you had any balls, you'd smoke this in your own house.	If you had balls, you'd smoke this in your own house.	0.5243625640869141	1
+You know, if you had any balls, you'd smoke this in your own house.	If you had any balls you would smoke this in your own house.	0.5940819382667542	1
+You know, if you had any balls, you'd smoke this in your own house.	If you had balls, you'd smoke this in your own house. You know, if you had any balls, you'd smoke this in your own house.	0.6253949403762817	1
+Keep it that way.	Keep it that way. Keep it that way.	0.9889760613441467	1
+Whatever scam you're running is doomed to fail, so, no thank you.	What scam you're running is doomed to fail, so, no thank you.	0.6444850564002991	1
+But...	But...........	0.8702236413955688	1
+But...	But...?	0.8920177221298218	1
+You must show the Margrave your lovely creation.	You must show the margrave your wonderful creation.	0.8557687401771545	1
+You must show the Margrave your lovely creation.	You must show Margrave your beautiful creation.	0.7935402989387512	1
+You must show the Margrave your lovely creation.	You must show the Margrave your beautiful creation!	0.7305439114570618	1
+You must show the Margrave your lovely creation.	You must show the Margrave your beautiful creation.	0.8728047609329224	1
+While deficient, perhaps, in the making of lace, she has mastered the arts of the hunt and the chase.	When deficient, perhaps, in making of lace, she has mastered the arts of the hunt and the chase.	0.6033372282981873	1
+While deficient, perhaps, in the making of lace, she has mastered the arts of the hunt and the chase.	Though deficient, perhaps, in the making of lace, she has mastered the arts of the hunt and the chase.	0.8133320212364197	1
+While deficient, perhaps, in the making of lace, she has mastered the arts of the hunt and the chase.	Although deficient, perhaps, in the making of lace, she has mastered the arts of the hunt and the chase.	0.8345991969108582	1
+While deficient, perhaps, in the making of lace, she has mastered the arts of the hunt and the chase.	She has mastered the art of the hunt and chase. While deficient, perhaps, in the making of lace, she has mastered the arts of the hunt and the chase.	0.5465878248214722	1
+While deficient, perhaps, in the making of lace, she has mastered the arts of the hunt and the chase.	While lacking in the making of lace, she has mastered the arts of the hunt and the chase.	0.5709911584854126	1
+Would it be asking a favor too terribly blunt, if I begged you to give us the thrill of a hunt?	Would you ask a favor too terribly blunt, if I begged you to give us the thrill of a hunt?	0.5240907073020935	1
+Would it be asking a favor too terribly blunt, if I begged you to give us the thrill of a hunt?	Would it be asking for a favor too terribly blunt, if I begged you to give us the thrill of a hunt?	0.9288437962532043	1
+A wife I could hunt with.	A wife I could hunt.	0.7001984119415283	1
+Now, that would be something worth having.	Now that's something worth having.	0.8369911909103394	1
+Now, that would be something worth having.	Now, this would be something worth having.	0.8747649192810059	1
+Now, that would be something worth having.	This would be something worth having.	0.6673846244812012	1
+Under Article 26 of Regulation No 1896/2006, which is entitled ‘Relationship with national procedural law’:	By Article 26 of Regulation No 1896/2006, which is entitled ‘Relationship with national procedural law’:	0.7003844380378723	1
+Under Article 26 of Regulation No 1896/2006, which is entitled ‘Relationship with national procedural law’:	According Article 26 of Regulation n° 1896/2006 which is entitled ‘Relationship with national procedural law’:	0.5668438673019409	1
+Under Article 26 of Regulation No 1896/2006, which is entitled ‘Relationship with national procedural law’:	Under article 26 of Regulation No 1896/2006, which is entitled ‘Relationship with national procedural law’: "	0.8445332646369934	1
+‘All procedural issues not specifically dealt with in this Regulation shall be governed by national law.’	All procedural issues not specifically dealt with in this Regulation shall be governed by national law.’	0.8065192699432373	1
+‘All procedural issues not specifically dealt with in this Regulation shall be governed by national law.’	(A) “All procedural issues not specifically dealt with in this Regulation shall be governed by national law.’	0.598717212677002	1
+‘All procedural issues not specifically dealt with in this Regulation shall be governed by national law.’	All procedural issues not specifically dealt with in this Regulation shall be governed by national law.'	0.8069716095924377	1
+‘All procedural issues not specifically dealt with in this Regulation shall be governed by national law.’	Any procedural issues not specifically dealt with in this Regulation shall be governed by national law.'	0.6895929574966431	1
+‘All procedural issues not specifically dealt with in this Regulation shall be governed by national law.’	“All procedural issues not specifically dealt with in this Regulation shall be governed by national law.’	0.8543708324432373	1
+‘All procedural issues not specifically dealt with in this Regulation shall be governed by national law.’	“All procedural issues not specifically dealt with in this Regulation shall be governed by national law”.	0.7991818785667419	1
+‘All procedural issues not specifically dealt with in this Regulation shall be governed by national law.’	"All procedural issues not specifically dealt with in this Regulation shall be governed by national law."	0.7734047174453735	1
+‘All procedural issues not specifically dealt with in this Regulation shall be governed by national law.’	"All procedural issues not specifically dealt with in this Regulation shall be governed by national law.'	0.7823217511177063	1
+‘All procedural issues not specifically dealt with in this Regulation shall be governed by national law.’	‘All procedural issues not specifically dealt with in this Regulation shall be governed by national law’.	0.821374237537384	1
+‘All procedural issues not specifically dealt with in this Regulation shall be governed by national law.’	All procedural issues not specifically dealt with in this Regulation shall be governed by national law.	0.7843230962753296	1
+‘All procedural issues not specifically dealt with in this Regulation shall be governed by national law.’	Any procedural issues not specifically dealt with in this Regulation shall be governed by national law.	0.6628713011741638	1
+‘All procedural issues not specifically dealt with in this Regulation shall be governed by national law.’	'All procedural issues not specifically dealt with in this Regulation shall be governed by national law.'	0.7989011406898499	1
+Honolulu.	Honolulu, Hawaii.	0.8983830213546753	1
+Honolulu.	Honolulu. Hawaii.	0.6109990477561951	1
+What's the flight time?	What is the flight time?	0.9564146995544434	1
+What's the flight time?	What is the time of flight?	0.6967266201972961	1
+What's the flight time?	What is flight time?	0.8222589492797852	1
+What's the flight time?	What is the time of a flight?	0.5880168676376343	1
+Destruct codes are on the Missouri.	The Destruct code are on the Missouri.	0.5726422071456909	1
+Destruct codes are on the Missouri.	Destruct code are on the Missouri.	0.6507102251052856	1
+Destruct codes are on the Missouri.	Destruct codes are in the Missouri.	0.8745495080947876	1
+Scramble Navy and Air Force fighters from Pearl.	Scramble Air Force and Navy fighter jets from Pearl.	0.6020320057868958	1
+What are the consequences of missiles dropping on Honolulu?	What are the implications of a missile that hits Honolulu?	0.5554184317588806	1
+What are the consequences of missiles dropping on Honolulu?	What are the consequences of a missile strike on Honolulu?	0.6528353691101074	1
+What are the consequences of missiles dropping on Honolulu?	What are the effects of dropping missiles in Honolulu?	0.6488452553749084	1
+What are the consequences of missiles dropping on Honolulu?	What are the consequences of missiles dropped on Honolulu?	0.8857394456863403	1
+About a million people will reach 1 0,000 degrees Fahrenheit. . . . . .in less than a second.	About a million people will reach 1 0,000 degrees Fahrenheit....in less than a second.	0.8936427235603333	1
+About a million people will reach 1 0,000 degrees Fahrenheit. . . . . .in less than a second.	About a million people will reach 1 0,000 degrees Fahrenheit.... in less than a second.	0.8936427235603333	1
+About a million people will reach 1 0,000 degrees Fahrenheit. . . . . .in less than a second.	Around a million people will reach 1 0,000 degrees Fahrenheit... in less than a second.	0.7919676899909973	1
+Mr. Secretary. . . .	Mr. Secretary...	0.8984663486480713	1
+Mr. Secretary. . . .	Mr. Secretary....	0.9245302081108093	1
+Absolutely.	Yes, absolutely.	0.9679139852523804	1
+Absolutely.	Yes.	0.6426694989204407	1
+Absolutely.	Yes, in fact.	0.591818630695343	1
+My caterer gets them from the French Caribbean.	My caterer get them from the French Caribbean.	0.6538659930229187	1
+My caterer gets them from the French Caribbean.	My caterer buys them from the French Caribbean.	0.7578373551368713	1
+Now,when you get home... you take both pills and then go to bed.	Now,when you get home, you take both pills and then go to bed.	0.7828466892242432	1
+Now,when you get home... you take both pills and then go to bed.	Now, when you get home... you take both pills and then go to bed.	0.9446544051170349	1
+Now,when you get home... you take both pills and then go to bed.	Now,when you get home... you take two pills and go to bed.	0.6827478408813477	1
+It's gonna be quite a bit of vile crampin'... but as soon as you start spottin'... it goes realfast.	Is it gonna be quite a bit of vile crampin'... but as soon as you start spottin'... it goes realfast.	0.6969760060310364	1
+It's gonna be quite a bit of vile crampin'... but as soon as you start spottin'... it goes realfast.	"It's gonna be quite a bit of vile crampin', but as soon as you start spottin'... it goes realfast."	0.707525372505188	1
+And Spencer won't know?	Spencer will not know?	0.7884840965270996	1
+And Spencer won't know?	But Spencer won't know?	0.8289983868598938	1
+And Spencer won't know?	Spencer Will Not Know?	0.7884840965270996	1
+If he's anything like the rest... he'll think you had a miscarriage... and he'll go out and buy you a bracelet.	If he's anything like the rest... he'll think you had a miscarriage and he'll go out and buy you a bracelet.	0.7636792063713074	1
+If he's anything like the rest... he'll think you had a miscarriage... and he'll go out and buy you a bracelet.	If he's anything like the rest... he'll think you had a miscarriage... and he'll go out and buy you a bracelet..	0.8096572756767273	1
+If he's anything like the rest... he'll think you had a miscarriage... and he'll go out and buy you a bracelet.	If he's anything like the rest of the population... he'll believe you had a miscarriage... and he'll go out and buy you a bracelet.	0.6400028467178345	1
+If he's anything like the rest... he'll think you had a miscarriage... and he'll go out and buy you a bracelet.	If he's anything like the rest... he'll think you had a miscarriage and then go out and buy you a bracelet.	0.6303643584251404	1
+If he's anything like the rest... he'll think you had a miscarriage... and he'll go out and buy you a bracelet.	If he's like the rest... he'll think you had a miscarriage... and he'll go out and buy you a bracelet.	0.6758370995521545	1
+If he's anything like the rest... he'll think you had a miscarriage... and he'll go out and buy you a bracelet.	If he's anything like the rest... he'll think you had a miscarriage and go out and buy you a bracelet.	0.6911709904670715	1
+If he's anything like the rest... he'll think you had a miscarriage... and he'll go out and buy you a bracelet.	If he's like the rest... he'll think you had a miscarriage and he'll go out and buy you a bracelet.	0.5534151196479797	1
+If he's anything like the rest... he'll think you had a miscarriage... and he'll go out and buy you a bracelet.	If he's anything like the rest, he'll think you had a miscarriage... and he'll go out and buy you a bracelet.	0.7998415231704712	1
+If he's anything like the rest... he'll think you had a miscarriage... and he'll go out and buy you a bracelet.	If he's anything like the rest of the time... he'll think you had a miscarriage... and he'll go out and buy you a bracelet.	0.7721708416938782	1
+If he's anything like the rest... he'll think you had a miscarriage... and he'll go out and buy you a bracelet.	If he's anything like the rest of the world... he'll think you had a miscarriage and will go out and buy you a bracelet.	0.5608747005462646	1
+If he's anything like the rest... he'll think you had a miscarriage... and he'll go out and buy you a bracelet.	If he's anything like the rest... he'll think you had a miscarriage...and he'll go out and buy you a bracelet.	0.882230281829834	1
+If he's anything like the rest... he'll think you had a miscarriage... and he'll go out and buy you a bracelet.	If he's anything like the rest... he'll think you've had a miscarriage... and he'll go out and buy you a bracelet.	0.7796889543533325	1
+If he's anything like the rest... he'll think you had a miscarriage... and he'll go out and buy you a bracelet.	If he's anything like the rest of us, he'll think you had a miscarriage and he'll go out and buy you a bracelet.	0.5166082382202148	1
+If he's anything like the rest... he'll think you had a miscarriage... and he'll go out and buy you a bracelet.	If he's anything like the rest of us... he'll think you had a miscarriage... and he'll go out and buy you a bracelet.	0.7454921007156372	1
+If he's anything like the rest... he'll think you had a miscarriage... and he'll go out and buy you a bracelet.	If he's anything like the rest of the rest... he'll think you had a miscarriage... and he'll go out and buy you a bracelet.	0.8400058150291443	1
+If he's anything like the rest... he'll think you had a miscarriage... and he'll go out and buy you a bracelet.	If he's anything like the rest of us... he'll think you had a miscarriage and go out and buy you a bracelet.	0.5805836915969849	1
+There's a little bit of pain... and then it's over.	...there's a little bit of pain...and then it's over.	0.8607398271560669	1
+There's a little bit of pain... and then it's over.	There is a little bit of pain... and then it's over.	0.8846234083175659	1
+Oh, God.	Oh, God. Oh, God!	0.791836678981781	1
+Oh, God.	Oh, God!	0.7468951344490051	1
+Oh, God.	Oh God.	0.905375063419342	1
+Oh, God.	Oh God, God.	0.8814171552658081	1
+I can't.	I can't. I can't. I can't.	0.6290495991706848	1
+I can't.	I can't. I can't.	0.872882604598999	1
+I can't.	I can't. I just can't.	0.8084337711334229	1
+Oh, God.	Oh, God!	0.7468951344490051	1
+Oh, God.	Oh, God, God.	0.8127032518386841	1
+Oh, God.	Oh God.	0.905375063419342	1
+I'm so sorry.	I'm sorry for this.	0.5827193260192871	1
+I'm so sorry.	I'm sorry.	0.8423199653625488	1
+I'm so sorry.	I'm sorry. I'm SO sorry.	0.9001730680465698	1
+I'm so sorry.	I am so sorry for this.	0.7943637371063232	1
+I'm so sorry.	I'm sorry. I'm sorry.	0.5668181777000427	1
+I'm so sorry.	I am so sorry.	1.0971258878707886	1
+I'm so sorry.	I'm so sorry for this.	0.7670987248420715	1
+efficacy concerns.	Effectiveness concerns.	0.7970159649848938	1
+An action plan to further progress the European risk management strategy (ERMS) was published in May 2005, covering a number of key aspects including:	An action plan was published to further progress the European risk management strategy (ERMS) in May 2005, covering a number of key aspects including:	0.8204004168510437	1
+An action plan to further progress the European risk management strategy (ERMS) was published in May 2005, covering a number of key aspects including:	An action plan to further progress the European risk management strategy (ERMS) was published in May 2005. The strategy covers a number of key aspects including:	0.7938601970672607	1
+An action plan to further progress the European risk management strategy (ERMS) was published in May 2005, covering a number of key aspects including:	In May 2005, an action plan to further progress the European risk management strategy (ERMS) was published, covering a number of key aspects including:	0.6832745671272278	1
+An action plan to further progress the European risk management strategy (ERMS) was published in May 2005, covering a number of key aspects including:	In May 2005, an action plan was published to further progress the European risk management strategy (ERMS) covering a number of key aspects including:	0.6760053634643555	1
+Sukyung cut up her face.	Sukyung cut her face up.	0.6558441519737244	1
+She must've hated the result of the surgery.	She must have hated the result of the surgery.	0.9436426162719727	1
+She must've hated the result of the surgery.	She must have hated the results of surgery.	0.8560395240783691	1
+She must've hated the result of the surgery.	She must've hated the result of surgery.	0.8712543249130249	1
+She must've hated the result of the surgery.	She must have hated the outcome of the surgery.	0.8823510408401489	1
+She must've hated the result of the surgery.	I think she hated the result of surgery.	0.5561841726303101	1
+She must've hated the result of the surgery.	She must have hated the result of surgery.	0.887484610080719	1
+I heard she kept saying it wasn't her face.	I heard she kept saying her face wasn't her face.	0.5207213759422302	1
+I heard she kept saying it wasn't her face.	I heard she kept saying that it wasn't her face.	0.9282318949699402	1
+It changed so much she couldn't even recognize it.	It changed so much that she could not even recognize it.	0.8685683012008667	1
+It changed so much she couldn't even recognize it.	It changed so much that she couldn't even recognize it.	0.9462399482727051	1
+It changed so much she couldn't even recognize it.	It changed so much that she couldn't recognize it.	0.8190377354621887	1
+Why yell at me?	Why do people yell at me?	0.6952537298202515	1
+You'll also have to sign a letter of intent with Mr. Al-Masri... ...if that's okay with you.	You'll also have to sign a letter of intent with Mr. Al-Masri....if that's okay with you.	0.8871060609817505	1
+You'll also have to sign a letter of intent with Mr. Al-Masri... ...if that's okay with you.	You'll also have to sign a letter of intent with Mr. Al-Masri...if that's okay with you.	0.844353199005127	1
+You'll also have to sign a letter of intent with Mr. Al-Masri... ...if that's okay with you.	You'll also have to sign a letter of intent with Mr. Al-Masri......if that's okay with you.	0.9017770886421204	1
+You'll also have to sign a letter of intent with Mr. Al-Masri... ...if that's okay with you.	You'll also have to sign a letter of intent with Mr. Al-Masri... if that's okay with you.	0.844353199005127	1
+You'll also have to sign a letter of intent with Mr. Al-Masri... ...if that's okay with you.	You'll have to sign a letter of intent with Mr. Al-Masri... if that's okay with you.	0.7821872234344482	1
+He's fairly low on the map, but he is on the map... ... enough for a photograph to suggest Sadiki's guilt by association. Mm-hm.	He's quite low on the map, but he is on the map...... enough for a photograph to suggest Sadiki's guilt by association. Mm-hm.	0.8505679368972778	1
+He's fairly low on the map, but he is on the map... ... enough for a photograph to suggest Sadiki's guilt by association. Mm-hm.	He's fairly low on the map, but he is on the map... enough for a photograph to suggest Sadiki's guilt by association. Mm-hm.	0.8545265197753906	1
+He's fairly low on the map, but he is on the map... ... enough for a photograph to suggest Sadiki's guilt by association. Mm-hm.	On the map, he's reasonably low, but he is on the map...... enough for a photograph to suggest Sadiki's guilt by association. Mm-hm.	0.6416541337966919	1
+He's fairly low on the map, but he is on the map... ... enough for a photograph to suggest Sadiki's guilt by association. Mm-hm.	He's fairly low on the map, but he is on the map...... enough for a photograph to suggest Sadiki's guilt by association. Mm-hm.	0.905745267868042	1
+He's fairly low on the map, but he is on the map... ... enough for a photograph to suggest Sadiki's guilt by association. Mm-hm.	He's fairly low on the map but he is on the map... enough for a photograph to suggest Sadiki's guilt by association. Mm-hm.	0.8110958337783813	1
+Now, make fake accounts for half a dozen of the brothers... ... and start transferring money to them from Sadiki's fake receiver account.	Now, make fake accounts for half a dozen of the brothers... and start transferring money to them from Sadiki's fake receiver account.	0.8044511675834656	1
+Now, make fake accounts for half a dozen of the brothers... ... and start transferring money to them from Sadiki's fake receiver account.	Now, make fake accounts for half a dozen of the brothers...... and start transferring money to them from Sadiki's fake receiver account.	0.876832902431488	1
+Now, make fake accounts for half a dozen of the brothers... ... and start transferring money to them from Sadiki's fake receiver account.	Now make fake accounts for half a dozen of the brothers... and start transferring money to them from Sadiki's fake receiver account.	0.7532680034637451	1
+I mean the roadside bombings, the assassination of Iraqi police... ...the kidnappings, the crowded marketplaces... ...and innocent families that have been wiped off the face of the Earth.	I mean the roadside bombings, the assassination of Iraqi police......the kidnappings, the crowded marketplaces......and innocent families that have been wiped off the face of the earth.	0.8408878445625305	1
+I mean the roadside bombings, the assassination of Iraqi police... ...the kidnappings, the crowded marketplaces... ...and innocent families that have been wiped off the face of the Earth.	I mean roadside bombings, the assassination of Iraqi police......the kidnappings, the crowded marketplaces... and innocent families that have been wiped off the face of the Earth.	0.7636910080909729	1
+I mean the roadside bombings, the assassination of Iraqi police... ...the kidnappings, the crowded marketplaces... ...and innocent families that have been wiped off the face of the Earth.	I mean the roadside bombings, the assassination of Iraqi police......the kidnappings, the crowded marketplaces......and innocent families that have been wiped off the face of the earth...?	0.6601220369338989	1
+I mean the roadside bombings, the assassination of Iraqi police... ...the kidnappings, the crowded marketplaces... ...and innocent families that have been wiped off the face of the Earth.	The roadside bombings, the assassination of Iraqi police......the kidnappings, the crowded marketplaces......and innocent families that have been wiped off the face of the earth.	0.6505958437919617	1
+I mean the roadside bombings, the assassination of Iraqi police... ...the kidnappings, the crowded marketplaces... ...and innocent families that have been wiped off the face of the Earth.	I mean the roadside bombings, the assassination of Iraqi police......the kidnappings, the crowded marketplaces......and innocent families that have been wiped off the face of the Earth.	0.8408878445625305	1
+And when the strike is done... ...he'll post another message taking responsibility for our little event.	When the strike is over... He'll post another message taking responsibility for our little event.	0.6086776852607727	1
+And when the strike is done... ...he'll post another message taking responsibility for our little event.	And when the strike is done......he'll post another message taking responsibility for our little event.	0.889215350151062	1
+And when the strike is done... ...he'll post another message taking responsibility for our little event.	But when the strike is done... he'll post another message taking responsibility for our little event.	0.7156769633293152	1
+And when the strike is done... ...he'll post another message taking responsibility for our little event.	When the strike is over... he'll post another message taking responsibility for our little event.	0.6086776852607727	1
+After that... ...hopefully a buzz of messages will then pass among jihadists' networks... ... announcing the Brothers of Awareness as a new player.	After that......hopefully a buzz of messages will then pass among jihadists' networks... announcing the Brothers of Awareness as a new player.	0.7811728715896606	1
+Someone died yesterday.	Someone killed yesterday.	0.74483323097229	1
+Couldn't get cover because he had an ineluctable disposition to Ward's Disease.	Can't get cover because he had an ineluctable disposition to Ward's disease.	0.7765988707542419	1
+Couldn't get cover because he had an ineluctable disposition to Ward's Disease.	Couldn't get cover because he had a ineluctable disposition to Ward's Disease.	0.8747554421424866	1
+Couldn't get cover because he had an ineluctable disposition to Ward's Disease.	Can't get cover because he had an ineluctable disposition to Ward's Disease.	0.7765988707542419	1
+The papeles come from the same printer as the ones you investigated.	The papeles came from the same printer as the ones you investigated.	0.8866766095161438	1
+The papeles come from the same printer as the ones you investigated.	Papeles comes from the same printer as the ones you investigated.	0.7587665319442749	1
+The papeles come from the same printer as the ones you investigated.	The papeles come from the same printer as the ones you looked at.	0.6086426377296448	1
+I'm sorry.	I'm sorry for this.	0.612109363079071	1
+I'm sorry.	Sorry.	0.656251847743988	1
+I'm sorry.	I am sorry.	1.1679174900054932	1
+I'm sorry.	I'm sorry. I'm so sorry.	0.8349571824073792	1
+I'm sorry.	I'm sorry. I'm sorry.	0.9807568192481995	1
+So, we began to imagine, "could we replace that idea with something that occurred before The Bang?"	So when we began to imagine, "could we replace that idea with something that occurred before the Bang?"	0.7231963276863098	1
+So, we began to imagine, "could we replace that idea with something that occurred before The Bang?"	So if we started to imagine "can we replace that idea with something that occurred before the Bang?"	0.561650812625885	1
+For the next 18 months, the three men and another physicist, Justin Khoury, worked feverishly to clarify and justify their initial spark of creativity.	For the next 18 months, three men and another physicist, Justin Khoury, worked feverishly to clarify and justify their initial spark of creativity.	0.8341372609138489	1
+For the next 18 months, the three men and another physicist, Justin Khoury, worked feverishly to clarify and justify their initial spark of creativity.	For the next 18 months, the three men and another physicist, Justin Khoury, worked feverishly to explain and justify their initial spark of creativity.	0.7980921268463135	1
+For the next 18 months, the three men and another physicist, Justin Khoury, worked feverishly to clarify and justify their initial spark of creativity.	During the next 18 months, the three men and another physicist, Justin Khoury, worked feverishly to clarify and justify their initial spark of creativity.	0.7926456928253174	1
+For the next 18 months, the three men and another physicist, Justin Khoury, worked feverishly to clarify and justify their initial spark of creativity.	For the next 18 months, the three men and another physicist, Justin Khoury, worked feverishly to explain their initial spark of creativity.	0.7276803851127625	1
+For the next 18 months, the three men and another physicist, Justin Khoury, worked feverishly to clarify and justify their initial spark of creativity.	Over the next 18 months, the three men and another physicist, Justin Khoury, worked feverishly to clarify and justify their initial spark of creativity.	0.8065871000289917	1
+For the next 18 months, the three men and another physicist, Justin Khoury, worked feverishly to clarify and justify their initial spark of creativity.	In the next 18 months, the three men and another physicist, Justin Khoury, worked feverishly to clarify and justify their initial spark of creativity.	0.788707971572876	1
+Now we had to make the mathematics work, and this involved developing a lot of new physics to explain the motion of branes moving along extra dimensions under the influence of a force which is trying to draw them together.	Now we had to make mathematics work, and this involved developing a lot of new physics to explain the motion of branes moving along extra dimensions under the influence of a force which is trying to draw them together.	0.8079189658164978	1
+Now we had to make the mathematics work, and this involved developing a lot of new physics to explain the motion of branes moving along extra dimensions under the influence of a force which is trying to draw them together.	Now we had to make the math work, and this involved developing a lot new physics to explain the motion of branes moving along extra dimensions under the influence of a force which is trying to draw them together.	0.7632623910903931	1
+Now we had to make the mathematics work, and this involved developing a lot of new physics to explain the motion of branes moving along extra dimensions under the influence of a force which is trying to draw them together.	Now we had to make math work, and this involved developing a lot of new physics to explain the motion of branes moving along extra dimensions under the influence of a force which is trying to draw them together.	0.7682883739471436	1
+Now we had to make the mathematics work, and this involved developing a lot of new physics to explain the motion of branes moving along extra dimensions under the influence of a force which is trying to draw them together.	We needed to make math work and this involved developing a lot new physics to explain the motion of branes moving along extra dimensions under the influence of a force which is trying to draw them together.	0.6363603472709656	1
+Now we had to make the mathematics work, and this involved developing a lot of new physics to explain the motion of branes moving along extra dimensions under the influence of a force which is trying to draw them together.	Now we had to make the mathematics work and this involved developing a lot of new physics to explain the motion of branes moving along extra dimensions under the influence of a force which is trying to draw them together.	0.8371747136116028	1
+Now we had to make the mathematics work, and this involved developing a lot of new physics to explain the motion of branes moving along extra dimensions under the influence of a force which is trying to draw them together.	We now had to make the mathematics work and this involved developing a lot of new physics to explain the motion of branes moving along extra dimensions under the influence of a force which is trying to draw them together.	0.821784257888794	1
+Now we had to make the mathematics work, and this involved developing a lot of new physics to explain the motion of branes moving along extra dimensions under the influence of a force which is trying to draw them together.	And now we had to make the mathematics work, and this involved developing a lot of new physics to explain the motion of branes moving along extra dimensions under the influence of a force which is trying to draw them together.	0.7813810110092163	1
+Now we had to make the mathematics work, and this involved developing a lot of new physics to explain the motion of branes moving along extra dimensions under the influence of a force which is trying to draw them together.	We now had to make the mathematics work, and this involved developing a lot of new physics to explain the motion of branes moving along extra dimensions under the influence of a force which is trying to draw them together.	0.826106071472168	1
+Now we had to make the mathematics work, and this involved developing a lot of new physics to explain the motion of branes moving along extra dimensions under the influence of a force which is trying to draw them together.	Now we had to make the math work and this involved developing a lot of new physics to explain the motion of branes moving along extra dimensions under the influence of a force which is trying to draw them together.	0.7923018336296082	1
+Now we had to make the mathematics work, and this involved developing a lot of new physics to explain the motion of branes moving along extra dimensions under the influence of a force which is trying to draw them together.	We have to make the mathematics work, and this involved developing a lot of new physics to explain the motion of branes moving along extra dimensions under the influence of a force which is trying to draw them together.	0.7169933319091797	1
+A new theory of the Universe starts to come alive.	New theory of universe starts to come alive.	0.5601264238357544	1
+A new theory of the Universe starts to come alive.	The new theory of the Universe begins to come alive.	0.7458959221839905	1
+A new theory of the Universe starts to come alive.	A new theory of the universe is beginning to come alive.	0.7836094498634338	1
+The picture we had in mind was two three-dimensional worlds stretching off to infinity but separated from each other by a tiny gap -- a fourth dimension of space.	The picture in mind was two three-dimensional worlds stretching off to infinity but separated from each other by a tiny gap - a fourth dimension of space.	0.7347751259803772	1
+The two three-dimensional worlds are actually pulled together by a very, very weak force.	The two three dimensional worlds are actually pulled together by a very weak force.	0.8544259071350098	1
+The two three-dimensional worlds are actually pulled together by a very, very weak force.	Two three-dimensional worlds are actually pulled together by a very weak force.	0.7677936553955078	1
+The two three-dimensional worlds are actually pulled together by a very, very weak force.	The two three-dimensional worlds are actually pulled together by a very weak force.	0.8740594983100891	1
+The two three-dimensional worlds are actually pulled together by a very, very weak force.	Two Three Dimensional Worlds are pulled together by a very weak force.	0.6364035606384277	1
+The two three-dimensional worlds are actually pulled together by a very, very weak force.	The two three-dimensional worlds are pulled together by a very weak force.	0.7604631185531616	1
+The force has to be very, very weak, otherwise the bang would occur too quickly.	Its force has to be very, very weak, otherwise the bang would occur too quickly.	0.8176078796386719	1
+The force has to be very, very weak, otherwise the bang would occur too quickly.	The force must be very, very weak, otherwise the bang would occur too quickly.	0.826514482498169	1
+As the branes approach, the force gets stronger and stronger.	As branes approach, the force gets stronger and stronger.	0.8889108896255493	1
+As the branes approach, the force gets stronger and stronger.	As the branes approaches the force gets stronger and stronger.	0.8132444024085999	1
+And when they collide, kinetic energy of the branes is then converted into the hot radiation that fills both three-dimensional worlds and looks like the Big Bang.	When branes collide, the kinetic energy of these branes is then converted into the hot radiation that fills both three-dimensional worlds and looks like the Big Bang.	0.6925632953643799	1
+And when they collide, kinetic energy of the branes is then converted into the hot radiation that fills both three-dimensional worlds and looks like the Big Bang.	When these two branes collide, the kinetic energy of the branes is then converted into the hot radiation that fills both three-dimensional worlds and looks like the Big Bang.	0.6938340067863464	1
+And when they collide, kinetic energy of the branes is then converted into the hot radiation that fills both three-dimensional worlds and looks like the Big Bang.	When the branes collide, kinetic energy of the branes is then converted into the hot radiation that fills both three-dimensional worlds and looks like the Big Bang.	0.7172828912734985	1
+So that when the branes move apart again, they're now filled with the matter and radiation that was created at the collision.	If the branes move apart again, they're now filled with the matter and radiation that was created at the collision.	0.6370805501937866	1
+So that when the branes move apart again, they're now filled with the matter and radiation that was created at the collision.	If branes move apart again, they're now filled with the matter and radiation that was created at the collision.	0.5196996927261353	1
+So that when the branes move apart again, they're now filled with the matter and radiation that was created at the collision.	And if the branes move apart again, they're now filled with the matter and radiation that was created at the collision.	0.6336776614189148	1
+So that when the branes move apart again, they're now filled with the matter and radiation that was created at the collision.	When the branes move apart again, they are now filled with the matter and radiation that was created at the collision.	0.7122688889503479	1
+So that when the branes move apart again, they're now filled with the matter and radiation that was created at the collision.	So that when branes move apart again, they're now filled with the material and radiation that was created at the collision.	0.7690359354019165	1
+So that when the branes move apart again, they're now filled with the matter and radiation that was created at the collision.	When branes move apart again, they're now filled with the matter and radiation that was created at the collision.	0.6098127365112305	1
+So that when the branes move apart again, they're now filled with the matter and radiation that was created at the collision.	When the branes are moving apart again, they are now filled with the matter and radiation that was created at the collision.	0.6515204906463623	1
+So that when the branes move apart again, they're now filled with the matter and radiation that was created at the collision.	When the branes move apart again, they're now filled with the matter and radiation that was created at the collision.	0.7084092497825623	1
+So that when the branes move apart again, they're now filled with the matter and radiation that was created at the collision.	So that when branes move apart again, they're now filled with the matter and radiation that was created at the collision.	0.8367793560028076	1
+So that when the branes move apart again, they're now filled with the matter and radiation that was created at the collision.	When branes are split apart again, they are now filled with the matter and radiation that was created at the collision.	0.5698443651199341	1
+So that when the branes move apart again, they're now filled with the matter and radiation that was created at the collision.	If the branes are moving apart again, they are now filled with the matter and radiation that was created at the collision.	0.5701001882553101	1
+Kabaah, show us the milking room.	Kabaah, show us milking room.	0.7212823033332825	1
+Kabaah, show us the milking room.	KABABAAH, show us the milking room.	0.9740860462188721	1
+It's over now.	It's over now..	0.8144785165786743	1
+It's over now.	It's over.	0.736872136592865	1
+My fault.	My fault. My fault.	0.9523406624794006	1
+Do you want kids?	Do you want children?	0.8258385062217712	1
+Do you want kids?	Do you really want kids?	0.9264593124389648	1
+Did he give you that?	Did he give you this?	0.8731869459152222	1
+Yeah.	Yeah. I understand.	0.5716490745544434	1
+Yeah.	Oh, yes.	0.8505393266677856	1
+Ever since the tavi, I keep hearing these things.	Ever since the Tavi I keep hearing these things.	0.8400152325630188	1
+Statues, idols - they keep whispering.	Statues, idols, they keep whispering.	0.8285161256790161	1
+Tiki also guards the entrance to Avaiki - the underworld.	Tiki guards the entrance of Avaiki - the underworld.	0.667335033416748	1
+Tiki also guards the entrance to Avaiki - the underworld.	Tiki also guards the entrance of Avaiki - the underworld.	0.7996411919593811	1
+Tiki also guards the entrance to Avaiki - the underworld.	Tiki guards the entrance to Avaiki - the underworld.	0.7483759522438049	1
+Can't we make some excuse?	Can't we make excuses?	0.648172914981842	1
+Listen, honey, as long as you're mayor and she is head of the Newport Group, you're gonna have to deal with each other.	Listen honey, as long as you're mayor and she is head of the Newport Group, you're gonna have to deal with each other.	0.8498101234436035	1
+Honestly, I don't know how you were ever married to that ice queen.	I don't know how you were ever married to that ice queen. Honestly, I don't know.	0.672662079334259	1
+Well, we were different people back then.	Well, back then we were a different people.	0.716802179813385	1
+Well, we were different people back then.	We were very different people back then.	0.783708393573761	1
+Well, we were different people back then.	Well back then we were totally different people.	0.6593684554100037	1
+Well, we were different people back then.	We were different people back then.	0.8281577229499817	1
+Well, we were different people back then.	Back then, we were very different people.	0.6509913802146912	1
+Well, we were different people back then.	I mean we were different people back then.	0.6777982711791992	1
+Well, we were different people back then.	Well, back then, we were different people.	0.7761435508728027	1
+I'll be home in a couple hours.	I'll be home in a few hours.	1.0001381635665894	1
+(Chester barking) (Julie squealing)	(Julie squealing) (Chester barking) (Julie squealing)	0.7055310606956482	1
+Double-O joinx.	Double O joinx.	0.8612188696861267	1
+CHESTER (groans):	(groans): CHESTER (groans):	0.5657730102539062	1
+"I'm not certain that I do," said Paithan mildly.	"I'm not certain that I do," said Paithan softly.	0.7590991854667664	1
+"I'm not certain that I do," said Paithan mildly.	"I'm not sure that I do," said Paithan softly.	0.7528313994407654	1
+"I'm not certain that I do," said Paithan mildly.	"I'm not certain I do," said Paithan mildly.	0.6606602668762207	1
+"I'm not certain that I do," said Paithan mildly.	"I'm not certain that I do," said Paithan lightly.	0.82210773229599	1
+"I'm not certain that I do," said Paithan mildly.	I'm not certain that I do," said Paithan mildly.	0.8063946962356567	1
+"I'm not certain that I do," said Paithan mildly.	"I'm not certain that I do," said Paithan kindly.	0.7498172521591187	1
+"I'm not certain that I do," said Paithan mildly.	I am not certain that I do," said Paithan slightly.	0.7244436740875244	1
+"I'm not certain that I do," said Paithan mildly.	I am not certain that I do," said Paithan gently.	0.6497896909713745	1
+"I'm not certain that I do," said Paithan mildly.	"I'm not certain that I do," said Paithan slightly.	0.8063907623291016	1
+"Will you have another?"	Will you have another?	0.6161054968833923	1
+Barkeep! Two more."	"Barkeep! Two more."	0.9641672968864441	1
+"It's on me," said the elf, noting the proprietor's frown.	“It's on me,” said the elf, noting the proprietor's frown.	0.8632575869560242	1
+"It's on me," said the elf, noting the proprietor's frown.	Is it on me?" said the elf, noting the proprietor's frown.	0.6316063404083252	1
+The fact that economic operators may rely on the capacities of other entities for purposes of qualifying as prospective tenderers, does not do away with the realities of particular tendering procedures.	The fact that economic operators may rely on the capacities of other entities for purposes of qualifying as prospective tenderers does not do away with the realities of particular tendering procedures.	0.8154946565628052	1
+The fact that economic operators may rely on the capacities of other entities for purposes of qualifying as prospective tenderers, does not do away with the realities of particular tendering procedures.	For economic operators the fact that economic operators may rely on the capacities of other entities for purposes of qualifying as prospective tenderers, does not do away with the realities of particular tendering procedures.	0.6236366629600525	1
+Thus, regardless of whether an economic operator possesses the economic and financial capacity and technical and professional ability by itself or by means of reliance on the capacities of other operators, it will still have to prove that it fulfils the criteria established for the execution of a particular public works contract.	Accordingly, regardless of whether an economic operator has the economic and financial capacity and technical and professional ability by itself or by means of reliance on the capacities of other operators, it will still have to prove that it fulfils the criteria established for the execution of a particular public works contract.	0.7104189991950989	1
+Thus, regardless of whether an economic operator possesses the economic and financial capacity and technical and professional ability by itself or by means of reliance on the capacities of other operators, it will still have to prove that it fulfils the criteria established for the execution of a particular public works contract.	To this end, regardless of whether an economic operator possesses the economic and financial capacity and technical and professional ability by itself or by means of reliance on the capacities of other operators, it will still have to prove that it fulfills the criteria established for the execution of a particular public works contract.	0.602364718914032	1
+Thus, regardless of whether an economic operator possesses the economic and financial capacity and technical and professional ability by itself or by means of reliance on the capacities of other operators, it will still have to prove that it fulfils the criteria established for the execution of a particular public works contract.	Consequently, regardless of whether an economic operator possesses the economic and financial capacity and technical and professional ability by itself or by means of reliance on the capacities of other operators, it will still have to prove that it fulfils the criteria established for the execution of a particular public works contract.	0.7426356077194214	1
+Thus, regardless of whether an economic operator possesses the economic and financial capacity and technical and professional ability by itself or by means of reliance on the capacities of other operators, it will still have to prove that it fulfils the criteria established for the execution of a particular public works contract.	Thus, regardless of whether an economic operator possesses the economic and financial capacity and technical and professional ability by itself or by means of relying on the capacities of other operators, it will still have to prove that it meets the criteria established for the execution of a particular public works contract.	0.7045968174934387	1
+Thus, regardless of whether an economic operator possesses the economic and financial capacity and technical and professional ability by itself or by means of reliance on the capacities of other operators, it will still have to prove that it fulfils the criteria established for the execution of a particular public works contract.	Therefore, regardless of whether an economic operator possesses the economic and financial capacity and technical and professional ability by itself or by means of reliance on the capacities of other operators, it will still have to prove that it fulfils the criteria established for the execution of a particular public works contract.	0.7472531199455261	1
+Thus, regardless of whether an economic operator possesses the economic and financial capacity and technical and professional ability by itself or by means of reliance on the capacities of other operators, it will still have to prove that it fulfils the criteria established for the execution of a particular public works contract.	In each case, regardless of whether an economic operator possesses the economic and financial capacity and technical and professional ability by itself or through relying on the capacities of other operators, it will still have to prove that it fulfils the criteria established for the execution of a particular public works contract.	0.5503289699554443	1
+Thus, regardless of whether an economic operator possesses the economic and financial capacity and technical and professional ability by itself or by means of reliance on the capacities of other operators, it will still have to prove that it fulfils the criteria established for the execution of a particular public works contract.	Thus, regardless of whether an economic operator possesses the economic and financial capacity and technical and professional ability by itself or by means of reliance on the capacities of other operators, it must still have to prove that it fulfils the criteria established for the execution of a particular public works contract.	0.7554517984390259	1
+No, you're not.	No you're not.	0.652508556842804	1
+No, you're not.	No, you are not.	0.8502972722053528	1
+Good. If you're telling the truth, then you won't be retained for very much longer.	If you're telling the truth then you won't be retained for very much longer.	0.6832447052001953	1
+Good. If you're telling the truth, then you won't be retained for very much longer.	Good, if you're telling the truth, then you won't be retained for much longer.	0.7822829484939575	1
+Good. If you're telling the truth, then you won't be retained for very much longer.	Good. If you're telling the truth, then you won't be retained for very long.	0.7895556688308716	1
+Good. If you're telling the truth, then you won't be retained for very much longer.	If you are telling the truth, then you won't be retained for very long. Good.	0.5237115025520325	1
+Good. If you're telling the truth, then you won't be retained for very much longer.	If you are telling the truth, then you won't be retained for very much longer.	0.6922681927680969	1
+Good. If you're telling the truth, then you won't be retained for very much longer.	If you are telling the truth, then you will not be retained for very much longer.	0.6477651000022888	1
+Good. If you're telling the truth, then you won't be retained for very much longer.	If you are telling the truth, you won't be retained for very much longer.	0.640012264251709	1
+Good. If you're telling the truth, then you won't be retained for very much longer.	If you tell the truth, then you won't be retained for very much longer. Good.	0.57343989610672	1
+Good. If you're telling the truth, then you won't be retained for very much longer.	Good. If you are telling the truth, then you won't be retained for very much longer.	0.8656032681465149	1
+Good. If you're telling the truth, then you won't be retained for very much longer.	If you're telling the truth, then you won't be retained for very much longer.	0.7448213696479797	1
+Good. If you're telling the truth, then you won't be retained for very much longer.	If you are telling the truth, then you won't be retained for very much longer. Good.	0.6004793047904968	1
+Good. If you're telling the truth, then you won't be retained for very much longer.	If you're telling the truth, then you won't be retained for very long.	0.6248237490653992	1
+Good. If you're telling the truth, then you won't be retained for very much longer.	If you are telling the truth, you will not be retained for very long.	0.5795320868492126	1
+Good. If you're telling the truth, then you won't be retained for very much longer.	If you are honest and telling the truth, then you will not be retained for much longer.	0.5014255046844482	1
+Good. If you're telling the truth, then you won't be retained for very much longer.	If you're telling the truth, then you won't be retained for very long. Good.	0.5226565599441528	1
+Good. If you're telling the truth, then you won't be retained for very much longer.	If you're telling the truth, then you won't be retained for very much longer. Good.	0.6329359412193298	1
+I'm so sorry, Jack.	I'm really sorry Jack.	0.7234095931053162	1
+I'm so sorry, Jack.	I'm sorry, Jack.	0.8704074621200562	1
+I'm so sorry, Jack.	I'm sorry Jack. I'm sorry.	0.5288243889808655	1
+In the future are we together?	Are we together in the future?	0.6706120371818542	1
+We can't be because one day you're gonna die and I won't.	We can't be because, one day, you're gonna die and I won't.	0.8393316864967346	1
+We can't be because one day you're gonna die and I won't.	We cannot be because one day you're gonna die, I won't.	0.6915284991264343	1
+I'm sorry, Angelo. This is the story of my life.	I'm sorry, Angelo, this is the story of my life.	0.9057111144065857	1
+Captain Harkness, the last mortal man.	Captain Harkness, the last mortal man in human history.	0.8723013401031494	1
+Who's that?	Who is that?	0.8469853401184082	1
+Who's that?	Who is this?	0.6614314913749695	1
+Who's that?	Who's this?	0.6388541460037231	1
+They're with me.	'They're with me.	0.8979999423027039	1
+They're with me.	They are with me.	0.9579504728317261	1
+They're with me.	They're there with me.	0.6941336393356323	1
+They're with me.	They're with me. They're with me.	0.5860618948936462	1
+I have gold.'	I've gold.'	0.7917988896369934	1
+I have gold.'	I have gold. '."	0.6256101131439209	1
+We are not dealing with men of honour.'	"We are not dealing with men of honour."	0.8297778367996216	1
+We are not dealing with men of honour.'	'We are not dealing with men of honour."	0.9749947190284729	1
+'We shall see,' said Kiall.	"We shall see," said Kiall.	0.9473106265068054	1
+'We shall see,' said Kiall.	"We shall see", said Kiall.	0.85597163438797	1
+'We shall see,' said Kiall.	So we shall see, said Kiall.	0.6674476861953735	1
+'We shall see,' said Kiall.	We shall see. 'We shall see ', said Kiall.	0.680036723613739	1
+'We shall see,' said Kiall.	We shall see,' said Kiall.	0.8964922428131104	1
+'We shall see,' said Kiall.	'We shall see', said Kiall.	0.9189844727516174	1
+'When the sun rises, the day has come,' said Chareos.	"When the sun rises, the day has come" says Charoleos.	0.6659707427024841	1
+'When the sun rises, the day has come,' said Chareos.	When the sun rises, the day has come,' says Chareos.	0.8422732353210449	1
+'When the sun rises, the day has come,' said Chareos.	When the sun rises, the day has come, said Chareos.	0.7788866758346558	1
+'When the sun rises, the day has come,' said Chareos.	When the sun rises, the day has come,' said Chareos.	0.8476219177246094	1
+'When the sun rises, the day has come,' said Chareos.	'When the sun rises, the day has come' said Chareos.	0.8720672726631165	1
+'When the sun rises, the day has come,' said Chareos.	When the sun rises, the day has come, says Chareos.	0.793637216091156	1
+'When the sun rises, the day has come,' said Chareos.	When the sun rises, then the day has come, said Chareos.	0.6449170112609863	1
+'When the sun rises, the day has come,' said Chareos.	"When the sun rises, the day has come,' says Chareos.	0.8970410227775574	1
+'When the sun rises, the day has come,' said Chareos.	"When the sun rises, the day has come," said Chareos.	0.8847224712371826	1
+'When the sun rises, the day has come,' said Chareos.	'When the sun rises, the day has come', said Chareos.	0.9119630455970764	1
+'When the sun rises, the day has come,' said Chareos.	"When the sun rises, the day has come", said Chareos.	0.8418384790420532	1
+'When the sun rises, the day has come,' said Chareos.	When the sun rises, the day is come, said Chareos.	0.6537026166915894	1
+'When the sun rises, the day has come,' said Chareos.	When the sun rises, the day is coming, said Chareos.	0.6882357001304626	1
+'When the sun rises, the day has come,' said Chareos.	When the sun rises, the day is here,' said Chareos.	0.6074592471122742	1
+They're not looking to profit in the short term.	They're not looking for profit in the short term.	0.8641100525856018	1
+They're not looking to profit in the short term.	They are not looking for profit in the short term.	0.8268017768859863	1
+They're not looking to profit in the short term.	They are not looking for profits in the short term.	0.7565377950668335	1
+They're not looking to profit in the short term.	In the short term, they are not looking to profit in the short term.	0.6290000677108765	1
+Have you even considered the implications of worldwide sterilization?	Have you considered the implications of worldwide sterilization?	0.7636051774024963	1
+Have you even considered the implications of worldwide sterilization?	Has anyone ever even considered the implications of worldwide sterilization?	0.5717781782150269	1
+Have you even considered the implications of worldwide sterilization?	Have you ever considered the potential impact of worldwide sterilization?	0.7735761404037476	1
+Have you even considered the implications of worldwide sterilization?	Has anyone considered the implications of international sterilization?	0.5006201267242432	1
+Have you even considered the implications of worldwide sterilization?	Have you considered the consequences of worldwide sterilization?	0.7426679134368896	1
+Have you even considered the implications of worldwide sterilization?	Have you considered the consequences of global sterilization?	0.7535117864608765	1
+Have you even considered the implications of worldwide sterilization?	Have you considered the implications of world sterilization?	0.7029280066490173	1
+Have you even considered the implications of worldwide sterilization?	Have you ever considered the implications of worldwide sterilization?	0.8681586384773254	1
+You think you know better, But you don't have the right to make that choice.	You believe you know better, but you don't have the right to make that decision.	0.7589461207389832	1
+You think you know better, But you don't have the right to make that choice.	You think you know better but don't have the right to make your choice.	0.7234435677528381	1
+No one does.	No one does this.	0.7919121980667114	1
+No one does.	No one does it.	0.7944929003715515	1
+We're going to be on this planet for centuries.	We are going to live in this planet for centuries.	0.8152055144309998	1
+We're going to be on this planet for centuries.	We're going to be here for centuries.	0.6306383013725281	1
+We're going to be on this planet for centuries.	We'll be here for centuries.	0.6061501502990723	1
+We're going to be on this planet for centuries.	We are going to be here for centuries.	0.6744793057441711	1
+We're going to be on this planet for centuries.	We're going to be on this planet for centuries to come.	0.7180106043815613	1
+We're going to be on this planet for centuries.	We are going to be on this planet for centuries.	0.9464933276176453	1
+We're going to be on this planet for centuries.	I'm going to be on this planet for centuries.	0.5569897890090942	1
+What rabbits you talkin' about?	What rabbits do you talk about?	0.535029411315918	1
+I don't blame that guy you travel with for keeping you out of sight.	I don't blame the guy you travel with, who keeps you out of sight.	0.5390504598617554	1
+I don't blame that guy you travel with for keeping you out of sight.	I don't blame a guy you travel with who keeps you out of sight.	0.6435133814811707	1
+I don't blame that guy you travel with for keeping you out of sight.	I do not blame that guy you travel with for keeping you out of sight.	0.8999347686767578	1
+I don't blame that guy you travel with for keeping you out of sight.	I do not blame the guy you travel with for keeping you out of sight.	0.8375518918037415	1
+I don't blame that guy you travel with for keeping you out of sight.	I wouldn't blame the guy you travel with for keeping you out of sight.	0.7747851014137268	1
+And sometimes he talk to you and you don't understand what the hell he's talking about.	And sometimes he talk to you and you don't understand what he's talking about.	0.5417031049728394	1
+It don't make no difference if you don't hear or understand, you just... (babbles) ...talking.	Does it make no difference if you don't hear or understand, you just... (babbles)...talking.	0.688688337802887	1
+It don't make no difference if you don't hear or understand, you just... (babbles) ...talking.	Doesn't matter if you don't hear or understand, you just... (babbles)...talking.	0.5730406045913696	1
+It don't make no difference if you don't hear or understand, you just... (babbles) ...talking.	It don't make any difference if you don't hear or understand, you just... (babbles)...talking.	0.8942066431045532	1
+It don't make no difference if you don't hear or understand, you just... (babbles) ...talking.	But it doesn't matter if you don't understand or hear, you just... (babbles)...talking.	0.6737011075019836	1
+The Santyana Club.	Santyana club.	0.6436943411827087	1
+The Santyana Club.	Santyana Club.	0.6436943411827087	1
+I think he will.	I am sure he will.	0.7686224579811096	1
+I think he will.	I believe he will.	0.9447940587997437	1
+I think he will.	He will. I think he will.	0.6060710549354553	1
+I think he will.	I think he'll.	0.6250846982002258	1
+I think he will.	I think he will. I think he will.	0.7331215739250183	1
+He wasn't so sure about it, but....	He wasn't so sure about it, but.....	0.9748550057411194	1
+He wasn't so sure about it, but....	He wasn't sure about it, but....	0.830009937286377	1
+He wasn't so sure about it, but....	He wasn't so sure about it, but....?	0.9031884670257568	1
+He wasn't so sure about it, but....	He wasn't sure about it, but...	0.7892374396324158	1
+He wasn't so sure about it, but....	He was not sure about it, but...	0.8383976817131042	1
+He wasn't so sure about it, but....	He was not sure about it but...	0.7691915035247803	1
+He wasn't so sure about it, but....	He wasn't sure about it but...	0.7021714448928833	1
+He wasn't so sure about it, but....	He wasn't so sure about it, but...	0.9354751110076904	1
+Yeah, I'll bet he wasn't. --has asked President Bush to activate... ...thousands of military reservists.	I'll bet he wasn't. --has asked President Bush to activate... thousands of military reservists.	0.6740047335624695	1
+Yeah, I'll bet he wasn't. --has asked President Bush to activate... ...thousands of military reservists.	I will bet he wasn't. --has asked President Bush to activate......thousands of military reservists.	0.7526340484619141	1
+No 2236/95 of 18 September 1995 laying down general rules for the granting of Community financial aid in the field of trans-European networks ( OJ L 228, 23.9.1995, p. 1 ).	No 2236/95 of 18 September 1995 laying down general rules for the granting of Community financial aid in the field of trans-European networks ( OJ L 228, 23.9.1995 p. 1 )	0.785036563873291	1
+No 2236/95 of 18 September 1995 laying down general rules for the granting of Community financial aid in the field of trans-European networks ( OJ L 228, 23.9.1995, p. 1 ).	No. 2236/95 of 18 September 1995 laying down general rules for the granting of Community financial aid in the field of trans-European networks ( OJ L 228, 23.9.1995, p. 1 ).	0.8737509846687317	1
+No 2236/95 of 18 September 1995 laying down general rules for the granting of Community financial aid in the field of trans-European networks ( OJ L 228, 23.9.1995, p. 1 ).	A Decision No. 2236/95 of 18 September 1995 laying down general rules for the granting of Community financial aid in the field of trans-European networks ( OJ L 228, 23.9.1995, p. 1 ).	0.7248243689537048	1
+No 2236/95 of 18 September 1995 laying down general rules for the granting of Community financial aid in the field of trans-European networks ( OJ L 228, 23.9.1995, p. 1 ).	No 2236/95 of 18 September 1995 laying down general rules for the granting of Community financial aid in the field of trans-European networks ( OJ L 228, 23.9.1995 p. 1).	0.82089763879776	1
+No 2236/95 of 18 September 1995 laying down general rules for the granting of Community financial aid in the field of trans-European networks ( OJ L 228, 23.9.1995, p. 1 ).	No 2236/95 of 18 September 1995 laying down general rules for the granting of Community financial aid in the field of trans-European networks ( OJ L 228, 23.9.1995, p. 1)	0.8480857610702515	1
+No 2236/95 of 18 September 1995 laying down general rules for the granting of Community financial aid in the field of trans-European networks ( OJ L 228, 23.9.1995, p. 1 ).	No 2236/95 of 18 September 1995 laying down general rules for the granting of Community financial aid in the field of trans-European networks ( OJ L 228, 23.9.1995, p.1 ).	0.8778939247131348	1
+No 2236/95 of 18 September 1995 laying down general rules for the granting of Community financial aid in the field of trans-European networks ( OJ L 228, 23.9.1995, p. 1 ).	No 2236/95 of 18 September 1995 laying down general rules for the granting of Community financial aid in the field of trans-European networks ( OJ L 228, 23.9.1995, p.1)	0.8480857610702515	1
+Decision No 2717/95/EC of the European Parliament and of the Council of 9 November 1995 on a set of guidelines for the development of the EURO-ISDN (Integrated Services Digital Network) as a trans-European network ( OJ L 282, 24.11.1995, p. 16 ).	Decision No 2717/95/EC of the European Parliament and of the Council of 9 November 1995 on a set of guidelines for the development of the EURO-ISDN (Integrated Services Digital Network) as a trans-European network ( OJ L 282, 24.11.1995, p.16 ).	0.8832950592041016	1
+Decision No 2717/95/EC of the European Parliament and of the Council of 9 November 1995 on a set of guidelines for the development of the EURO-ISDN (Integrated Services Digital Network) as a trans-European network ( OJ L 282, 24.11.1995, p. 16 ).	Decision no 2717/95/EC of the European Parliament and of the Council of 9 November 1995 on a set of guidelines for the development of the EURO-ISDN (Integrated Services Digital Network) as a trans-European network ( OJ L 282 24.11.1995 p. 16 )	0.7723402380943298	1
+Decision No 2717/95/EC of the European Parliament and of the Council of 9 November 1995 on a set of guidelines for the development of the EURO-ISDN (Integrated Services Digital Network) as a trans-European network ( OJ L 282, 24.11.1995, p. 16 ).	Decision No 2717/95/EC of the European Parliament and of the Council of 9 November 1995 on a set of guidelines for the development of the EURO-ISDN (Integrated Services Digital Network) as a trans-European network ( OJ L 282 24.11.1995 p. 16 ).	0.7601208686828613	1
+Decision No 2717/95/EC of the European Parliament and of the Council of 9 November 1995 on a set of guidelines for the development of the EURO-ISDN (Integrated Services Digital Network) as a trans-European network ( OJ L 282, 24.11.1995, p. 16 ).	Decision No 2717/95/EC of the European Parliament and of the Council of 9 November 1995 on a set of guidelines for the development of the EURO-ISDN (Integrated Services Digital Network) as a trans-European network ( OJ L 282, 24.11.1995, p. 16).	0.8832950592041016	1
+Decision No 2717/95/EC of the European Parliament and of the Council of 9 November 1995 on a set of guidelines for the development of the EURO-ISDN (Integrated Services Digital Network) as a trans-European network ( OJ L 282, 24.11.1995, p. 16 ).	Decision no 2717/95/EC of the European Parliament and of the Council of 9 November 1995 on a set of guidelines for the development of the EURO-ISDN (Integrated Services Digital Network) as a trans-European network ( OJ L 282, 24.11.1995, p.16 )	0.8832950592041016	1
+Decision No 2717/95/EC of the European Parliament and of the Council of 9 November 1995 on a set of guidelines for the development of the EURO-ISDN (Integrated Services Digital Network) as a trans-European network ( OJ L 282, 24.11.1995, p. 16 ).	Decision no 2717/95/EC of the European Parliament and of the Council of 9 November 1995 on a set of guidelines for the development of the EURO-ISDN (Integrated Services Digital Network) as a trans-European network ( OJ L 282, 24.11.1995 p.16).	0.811545729637146	1
+Decision No 2717/95/EC of the European Parliament and of the Council of 9 November 1995 on a set of guidelines for the development of the EURO-ISDN (Integrated Services Digital Network) as a trans-European network ( OJ L 282, 24.11.1995, p. 16 ).	Decision No 2717/95/EC of the European Parliament and of the Council of 9 November 1995 on a set of guidelines for the development of EURO-ISDN (Integrated Services Digital Network) as a trans-European network ( OJ L 282, 24.11.1995, p.16 )	0.8428863883018494	1
+Decision No 2717/95/EC of the European Parliament and of the Council of 9 November 1995 on a set of guidelines for the development of the EURO-ISDN (Integrated Services Digital Network) as a trans-European network ( OJ L 282, 24.11.1995, p. 16 ).	Decision No 2717/95/EC of the European Parliament and of the Council of 9 November 1995 on a set of guidelines for the development of the EURO-ISDN (Integrated Services Digital Network) as a trans-European network ( OJ L 282, 24.11.1995, p. 16 )	0.8832950592041016	1
+Decision No 2717/95/EC of the European Parliament and of the Council of 9 November 1995 on a set of guidelines for the development of the EURO-ISDN (Integrated Services Digital Network) as a trans-European network ( OJ L 282, 24.11.1995, p. 16 ).	Decision no 2717/95/EC of the European Parliament and of the Council of 9 November 1995 on a set of guidelines for the development of EURO-ISDN (Integrated Services Digital Network) as a trans-European network ( OJ L 282, 24.11.1995, p. 16 ).	0.8428863883018494	1
+Decision No 2717/95/EC of the European Parliament and of the Council of 9 November 1995 on a set of guidelines for the development of the EURO-ISDN (Integrated Services Digital Network) as a trans-European network ( OJ L 282, 24.11.1995, p. 16 ).	Decision No 2717/95/EC of the European Parliament and of the Council of 9 November 1995 on a set of guidelines for the development of EURO-ISDN (Integrated Services Digital Network) as a trans-European network ( OJ L 282, 24.11.1995, p. 16 ).	0.8428863883018494	1
+Decision No 2717/95/EC of the European Parliament and of the Council of 9 November 1995 on a set of guidelines for the development of the EURO-ISDN (Integrated Services Digital Network) as a trans-European network ( OJ L 282, 24.11.1995, p. 16 ).	Decision no 2717/95/EC of the European Parliament and of the Council of 9 November 1995 on a set of guidelines for the development of EURO-ISDN (Integrated Services Digital Network) as a trans-European network ( OJ L 282, 24.11.1995, p.16 ).	0.8428863883018494	1
+Decision No 2717/95/EC of the European Parliament and of the Council of 9 November 1995 on a set of guidelines for the development of the EURO-ISDN (Integrated Services Digital Network) as a trans-European network ( OJ L 282, 24.11.1995, p. 16 ).	Decision No 2717/95/EC of the European Parliament and of the Council of 9 November 1995 on a set of guidelines for the development of the EURO-ISDN (Integrated Services Digital Network) as a trans-European network ( OJ L 282, 24.11.1995 p. 16 ).	0.811545729637146	1
+Decision No 2717/95/EC of the European Parliament and of the Council of 9 November 1995 on a set of guidelines for the development of the EURO-ISDN (Integrated Services Digital Network) as a trans-European network ( OJ L 282, 24.11.1995, p. 16 ).	Decision No 2717/95/EC of the European Parliament and of the Council of 9 November 1995 on a set of guidelines for the development of the EURO-ISDN (Integrated Services Digital Network) as a trans-European network ( OJ L 282, 24.11.1995, p. 16 ) ( OJ L 282, 24.11.1995).	0.8832950592041016	1
+Expected result(s) and impact Specify the effects which the proposal/initiative should have on the beneficiaries/groups targeted.	Expected results and impact Specify the effects which the proposal/initiative should have on the beneficiaries/groups targeted.	0.8150247931480408	1
+'Yeah,' said Ron slowly, savouring the words, 'we won.	'Yeah,' said Ron slowly, savouring the words, "we won.	0.8778731822967529	1
+'Yeah,' said Ron slowly, savouring the words, 'we won.	Ron, 'yeah', said slowly, savouring the words, "we won."	0.5612065196037292	1
+'Yeah,' said Ron slowly, savouring the words, 'we won.	"Yeah" 'we won.' said Ron slowly, savouring the words, "We won.'"	0.5343987941741943	1
+'Yeah,' said Ron slowly, savouring the words, 'we won.	'Yes,' said Ron slowly, savouring the words, 'we won.'	0.8329254388809204	1
+'Yeah,' said Ron slowly, savouring the words, 'we won.	"Yes,' said Ron slowly, savouring the words, 'we won.'	0.8139485120773315	1
+'Yeah,' said Ron slowly, savouring the words, 'we won.	'Yeah,' Ron slowly said, savouring the words "we won"	0.6766433715820312	1
+'Yeah,' said Ron slowly, savouring the words, 'we won.	“Yes,' said Ron slowly, savouring the words, 'we won.'	0.8078636527061462	1
+Ah, she's got a better angle than us.	Ah she's got a better angle than us.	0.904147744178772	1
+Ah, she's got a better angle than us.	Ooh, she's got a better angle than us.	0.7383151650428772	1
+Ah, she's got a better angle than us.	She's got better angles than us.	0.6190933585166931	1
+Ah, she's got a better angle than us.	Ah, she has a better angle than us.	0.8638057112693787	1
+That's not even fair.	That's not fair.	0.7118223309516907	1
+His watch is cutting in and out.	In his watch he is cutting in and out.	0.5147729516029358	1
+Who says I wasn't?	Who says I didn't?	0.7818981409072876	1
+Who says I wasn't?	Who says I am not?	0.5499531030654907	1
+This is from Odin?	Is this a piece from Odin?	0.519767701625824	1
+He has to understand mine.	He must understand me.	0.6120661497116089	1
+He has to understand mine.	He must understand my words.	0.6314705610275269	1
+By agreement between the Parties, officials designated by the Community may be present at the inquiries referred to in paragraph 2 above.	By agreement between the Parties, official designated by the Community may be present at the inquiries referred to in paragraph 2 above.	0.740493893623352	1
+By agreement between the Parties, officials designated by the Community may be present at the inquiries referred to in paragraph 2 above.	By agreement between the Parties, representatives designated by the Community may be present at the inquiries referred to in paragraph 2 above.	0.7326524257659912	1
+By agreement between the Parties, officials designated by the Community may be present at the inquiries referred to in paragraph 2 above.	By agreement between the Parties, representatives of the Community may be present at the inquiries referred to in paragraph 2 above.	0.6190401911735535	1
+Well, imagine your drunk dad hitting on college girls with some friends.	Imagine your drunk dad hitting college girls with some friends.	0.6494976878166199	1
+Well, imagine your drunk dad hitting on college girls with some friends.	Well, imagine your drunk dad hitting college girls with friends?	0.5104731321334839	1
+Well, imagine your drunk dad hitting on college girls with some friends.	Imagine your drunk dad hitting on college girls with some friends.	0.8427724242210388	1
+Well, imagine your drunk dad hitting on college girls with some friends.	Well, imagine your drunk dad hitting on college girls with some friends?	0.813728392124176	1
+Well, imagine your drunk dad hitting on college girls with some friends.	Well, imagine your drunk dad hitting a college girl with some friends?	0.615266740322113	1
+Well, imagine your drunk dad hitting on college girls with some friends.	Imagine your drunk dad hitting on college girls with friends.	0.6322659254074097	1
+Well, imagine your drunk dad hitting on college girls with some friends.	Now imagine your drunk dad hitting on a college girl with some friends.	0.6825829148292542	1
