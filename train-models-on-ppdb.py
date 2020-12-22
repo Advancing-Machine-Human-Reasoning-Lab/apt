@@ -11,7 +11,9 @@ import os
 import sys
 import pandas as pd
 from sklearn.model_selection import train_test_split
+from sklearn.utils import resample
 from simpletransformers.classification import ClassificationModel
+from utils import read
 
 if not os.path.exists(sys.argv[4]):
     os.makedirs(sys.argv[4])
@@ -48,13 +50,31 @@ else:
     train, test = train_test_split(df, test_size=0.1)
 
 print(train.shape)
-try: # in case there is no additional dataset
+try:
     datasets = sys.argv[5].split(',')
-    for dataset in datasets:
-        train = train.append(pd.read_csv(dataset, sep="\t"))
-    print(train.shape)
+    new_dataset = read(datasets[0], sep='\t', header=True)
+    for dataset in datasets[1:]:
+        new_dataset = new_dataset.append(read(dataset, sep="\t", header=True))
+    print(new_dataset.shape)
+    try:
+        if sys.argv[6] == 'balanced':
+            new_dataset_mi = new_dataset[new_dataset.iloc[:, -1]==0]
+            new_dataset_nmi = new_dataset[new_dataset.iloc[:, -1]==1]
+            new_dataset = pd.concat([
+                new_dataset_mi,
+                resample(
+                    new_dataset_nmi,
+                    replace=True,
+                    n_samples=len(new_dataset_mi), # to match minority class
+                    random_state=0, # reproducible results
+                ),
+            ])
+    except:
+        pass
+    train = pd.concat([train, new_dataset])
 except:
     pass
+print(train.shape)
 
 # shuffle
 train = train.sample(frac=1).reset_index(drop=True)
