@@ -5,8 +5,10 @@ models
 **runs**
 **templates**
 mrpc
-outputs
+**outputs**
 roberta_nli
 sembert
 wandb
 ppnmt
+**logs**
+paraphraser-for-apt/t5_paraphrase
