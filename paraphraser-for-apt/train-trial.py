@@ -10,7 +10,8 @@ from itertools import chain
 from string import punctuation
 
 import nltk
-nltk.download('punkt')
+
+nltk.download("punkt")
 from nltk.tokenize import sent_tokenize
 
 import pandas as pd
@@ -20,19 +21,16 @@ from torch.utils.data import Dataset, DataLoader
 import pytorch_lightning as pl
 
 
-from transformers import (
-    AdamW,
-    T5ForConditionalGeneration,
-    T5Tokenizer,
-    get_linear_schedule_with_warmup
-)
+from transformers import AdamW, T5ForConditionalGeneration, T5Tokenizer, get_linear_schedule_with_warmup
+
 
 def set_seed(seed):
-  random.seed(seed)
-  np.random.seed(seed)
-  torch.manual_seed(seed)
-  if torch.cuda.is_available():
-    torch.cuda.manual_seed_all(seed)
+    random.seed(seed)
+    np.random.seed(seed)
+    torch.manual_seed(seed)
+    if torch.cuda.is_available():
+        torch.cuda.manual_seed_all(seed)
+
 
 set_seed(42)
 
@@ -48,9 +46,7 @@ class T5FineTuner(pl.LightningModule):
     def is_logger(self):
         return self.trainer.proc_rank <= 0
 
-    def forward(
-            self, input_ids, attention_mask=None, decoder_input_ids=None, decoder_attention_mask=None, labels=None
-    ):
+    def forward(self, input_ids, attention_mask=None, decoder_input_ids=None, decoder_attention_mask=None, labels=None):
         return self.model(
             input_ids,
             attention_mask=attention_mask,
@@ -63,12 +59,7 @@ class T5FineTuner(pl.LightningModule):
         labels = batch["target_ids"]
         labels[labels[:, :] == self.tokenizer.pad_token_id] = -100
 
-        outputs = self(
-            input_ids=batch["source_ids"],
-            attention_mask=batch["source_mask"],
-            labels=labels,
-            decoder_attention_mask=batch['target_mask']
-        )
+        outputs = self(input_ids=batch["source_ids"], attention_mask=batch["source_mask"], labels=labels, decoder_attention_mask=batch["target_mask"])
 
         loss = outputs[0]
 
@@ -83,7 +74,7 @@ class T5FineTuner(pl.LightningModule):
     def training_epoch_end(self, outputs):
         avg_train_loss = torch.stack([x["loss"] for x in outputs]).mean()
         tensorboard_logs = {"avg_train_loss": avg_train_loss}
-        return {"avg_train_loss": avg_train_loss, "log": tensorboard_logs, 'progress_bar': tensorboard_logs}
+        return {"avg_train_loss": avg_train_loss, "log": tensorboard_logs, "progress_bar": tensorboard_logs}
 
     def validation_step(self, batch, batch_idx):
         loss = self._step(batch)
@@ -92,7 +83,7 @@ class T5FineTuner(pl.LightningModule):
     def validation_epoch_end(self, outputs):
         avg_loss = torch.stack([x["val_loss"] for x in outputs]).mean()
         tensorboard_logs = {"val_loss": avg_loss}
-        return {"avg_val_loss": avg_loss, "log": tensorboard_logs, 'progress_bar': tensorboard_logs}
+        return {"avg_val_loss": avg_loss, "log": tensorboard_logs, "progress_bar": tensorboard_logs}
 
     def configure_optimizers(self):
         "Prepare optimizer and schedule (linear warmup and decay)"
@@ -128,16 +119,9 @@ class T5FineTuner(pl.LightningModule):
 
     def train_dataloader(self):
         train_dataset = get_dataset(tokenizer=self.tokenizer, type_path="train", args=self.hparams)
-        dataloader = DataLoader(train_dataset, batch_size=self.hparams.train_batch_size, drop_last=True, shuffle=True,
-                                num_workers=4)
-        t_total = (
-                (len(dataloader.dataset) // (self.hparams.train_batch_size * max(1, self.hparams.n_gpu)))
-                // self.hparams.gradient_accumulation_steps
-                * float(self.hparams.num_train_epochs)
-        )
-        scheduler = get_linear_schedule_with_warmup(
-            self.opt, num_warmup_steps=self.hparams.warmup_steps, num_training_steps=t_total
-        )
+        dataloader = DataLoader(train_dataset, batch_size=self.hparams.train_batch_size, drop_last=True, shuffle=True, num_workers=4)
+        t_total = (len(dataloader.dataset) // (self.hparams.train_batch_size * max(1, self.hparams.n_gpu))) // self.hparams.gradient_accumulation_steps * float(self.hparams.num_train_epochs)
+        scheduler = get_linear_schedule_with_warmup(self.opt, num_warmup_steps=self.hparams.warmup_steps, num_training_steps=t_total)
         self.lr_scheduler = scheduler
         return dataloader
 
@@ -145,37 +129,40 @@ class T5FineTuner(pl.LightningModule):
         val_dataset = get_dataset(tokenizer=self.tokenizer, type_path="val", args=self.hparams)
         return DataLoader(val_dataset, batch_size=self.hparams.eval_batch_size, num_workers=4)
 
+
 logger = logging.getLogger(__name__)
 
+
 class LoggingCallback(pl.Callback):
-  def on_validation_end(self, trainer, pl_module):
-    logger.info("***** Validation results *****")
-    if pl_module.is_logger():
-      metrics = trainer.callback_metrics
-      # Log results
-      for key in sorted(metrics):
-        if key not in ["log", "progress_bar"]:
-          logger.info("{} = {}\n".format(key, str(metrics[key])))
+    def on_validation_end(self, trainer, pl_module):
+        logger.info("***** Validation results *****")
+        if pl_module.is_logger():
+            metrics = trainer.callback_metrics
+            # Log results
+            for key in sorted(metrics):
+                if key not in ["log", "progress_bar"]:
+                    logger.info("{} = {}\n".format(key, str(metrics[key])))
 
-  def on_test_end(self, trainer, pl_module):
-    logger.info("***** Test results *****")
+    def on_test_end(self, trainer, pl_module):
+        logger.info("***** Test results *****")
 
-    if pl_module.is_logger():
-      metrics = trainer.callback_metrics
+        if pl_module.is_logger():
+            metrics = trainer.callback_metrics
 
-      # Log and save results to file
-      output_test_results_file = os.path.join(pl_module.hparams.output_dir, "test_results.txt")
-      with open(output_test_results_file, "w") as writer:
-        for key in sorted(metrics):
-          if key not in ["log", "progress_bar"]:
-            logger.info("{} = {}\n".format(key, str(metrics[key])))
-            writer.write("{} = {}\n".format(key, str(metrics[key])))
+            # Log and save results to file
+            output_test_results_file = os.path.join(pl_module.hparams.output_dir, "test_results.txt")
+            with open(output_test_results_file, "w") as writer:
+                for key in sorted(metrics):
+                    if key not in ["log", "progress_bar"]:
+                        logger.info("{} = {}\n".format(key, str(metrics[key])))
+                        writer.write("{} = {}\n".format(key, str(metrics[key])))
+
 
 args_dict = dict(
-    data_dir="", # path for data files
-    output_dir="", # path to save the checkpoints
-    model_name_or_path='t5-base',
-    tokenizer_name_or_path='t5-base',
+    data_dir="",  # path for data files
+    output_dir="",  # path to save the checkpoints
+    model_name_or_path="t5-base",
+    tokenizer_name_or_path="t5-base",
     max_seq_length=512,
     learning_rate=3e-4,
     weight_decay=0.0,
@@ -187,9 +174,9 @@ args_dict = dict(
     gradient_accumulation_steps=16,
     n_gpu=3,
     early_stop_callback=False,
-    fp_16=True, # if you want to enable 16-bit training then install apex and set this to true
-    opt_level='O1', # you can find out more on optimisation levels here https://nvidia.github.io/apex/amp.html#opt-levels-and-properties
-    max_grad_norm=1.0, # if you enable 16-bit training then set this to a sensible value, 0.5 is a good default
+    fp_16=True,  # if you want to enable 16-bit training then install apex and set this to true
+    opt_level="O1",  # you can find out more on optimisation levels here https://nvidia.github.io/apex/amp.html#opt-levels-and-properties
+    max_grad_norm=1.0,  # if you enable 16-bit training then set this to a sensible value, 0.5 is a good default
     seed=42,
 )
 
@@ -197,14 +184,14 @@ train_path = "paraphrase_data/train.csv"
 val_path = "paraphrase_data/val.csv"
 
 train = pd.read_csv(train_path)
-print (train.head())
+print(train.head())
 
-tokenizer = T5Tokenizer.from_pretrained('t5-base')
+tokenizer = T5Tokenizer.from_pretrained("t5-base")
 
 
 class ParaphraseDataset(Dataset):
     def __init__(self, tokenizer, data_dir, type_path, max_len=256):
-        self.path = os.path.join(data_dir, type_path + '.csv')
+        self.path = os.path.join(data_dir, type_path + ".csv")
 
         self.source_column = "sentence1"
         self.target_column = "sentence2"
@@ -233,68 +220,62 @@ class ParaphraseDataset(Dataset):
         for idx in range(len(self.data)):
             input_, target = self.data.loc[idx, self.source_column], self.data.loc[idx, self.target_column]
 
-            input_ = "paraphrase: "+ input_ + ' </s>'
+            input_ = "paraphrase: " + input_ + " </s>"
             target = target + " </s>"
 
             # tokenize inputs
-            tokenized_inputs = self.tokenizer.batch_encode_plus(
-                [input_], max_length=self.max_len, pad_to_max_length=True, return_tensors="pt"
-            )
+            tokenized_inputs = self.tokenizer.batch_encode_plus([input_], max_length=self.max_len, pad_to_max_length=True, return_tensors="pt")
             # tokenize targets
-            tokenized_targets = self.tokenizer.batch_encode_plus(
-                [target], max_length=self.max_len, pad_to_max_length=True, return_tensors="pt"
-            )
+            tokenized_targets = self.tokenizer.batch_encode_plus([target], max_length=self.max_len, pad_to_max_length=True, return_tensors="pt")
 
             self.inputs.append(tokenized_inputs)
             self.targets.append(tokenized_targets)
 
 
-dataset = ParaphraseDataset(tokenizer, 'paraphrase_data', 'val', 256)
-print("Val dataset: ",len(dataset))
+dataset = ParaphraseDataset(tokenizer, "paraphrase_data", "val", 256)
+print("Val dataset: ", len(dataset))
 
 data = dataset[61]
-print(tokenizer.decode(data['source_ids']))
-print(tokenizer.decode(data['target_ids']))
+print(tokenizer.decode(data["source_ids"]))
+print(tokenizer.decode(data["target_ids"]))
 
-if not os.path.exists('t5_paraphrase'):
-    os.makedirs('t5_paraphrase')
+if not os.path.exists("t5_paraphrase"):
+    os.makedirs("t5_paraphrase")
 
-args_dict.update({'data_dir': 'paraphrase_data', 'output_dir': 't5_paraphrase', 'num_train_epochs':2,'max_seq_length':256})
+args_dict.update({"data_dir": "paraphrase_data", "output_dir": "t5_paraphrase", "num_train_epochs": 2, "max_seq_length": 256})
 args = argparse.Namespace(**args_dict)
 print(args_dict)
 
-checkpoint_callback = pl.callbacks.ModelCheckpoint(
-    filepath=args.output_dir, prefix="checkpoint", monitor="val_loss", mode="min", save_top_k=5
-)
+checkpoint_callback = pl.callbacks.ModelCheckpoint(filepath=args.output_dir, prefix="checkpoint", monitor="val_loss", mode="min", save_top_k=5)
 
 train_params = dict(
     accumulate_grad_batches=args.gradient_accumulation_steps,
     gpus=args.n_gpu,
     max_epochs=args.num_train_epochs,
     early_stop_callback=False,
-    precision= 16 if args.fp_16 else 32,
+    precision=16 if args.fp_16 else 32,
     amp_level=args.opt_level,
     gradient_clip_val=args.max_grad_norm,
     checkpoint_callback=checkpoint_callback,
     callbacks=[LoggingCallback()],
 )
 
+
 def get_dataset(tokenizer, type_path, args):
-  return ParaphraseDataset(tokenizer=tokenizer, data_dir=args.data_dir, type_path=type_path,  max_len=args.max_seq_length)
+    return ParaphraseDataset(tokenizer=tokenizer, data_dir=args.data_dir, type_path=type_path, max_len=args.max_seq_length)
 
 
-
-print ("Initialize model")
+print("Initialize model")
 model = T5FineTuner(args)
 
 trainer = pl.Trainer(**train_params)
 
-print (" Training model")
+print(" Training model")
 trainer.fit(model)
 
-print ("training finished")
+print("training finished")
 
-print ("Saving model")
-model.model.save_pretrained('t5_paraphrase')
+print("Saving model")
+model.model.save_pretrained("t5_paraphrase")
 
-print ("Saved model")
+print("Saved model")

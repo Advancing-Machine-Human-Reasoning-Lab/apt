@@ -51,24 +51,26 @@ else:
 
 print(train.shape)
 try:
-    datasets = sys.argv[5].split(',')
-    new_dataset = read(datasets[0], sep='\t', header=True)
+    datasets = sys.argv[5].split(",")
+    new_dataset = read(datasets[0], sep="\t", header=True)
     for dataset in datasets[1:]:
         new_dataset = new_dataset.append(read(dataset, sep="\t", header=True))
     print(new_dataset.shape)
     try:
-        if sys.argv[6] == 'balanced':
-            new_dataset_mi = new_dataset[new_dataset.iloc[:, -1]==0]
-            new_dataset_nmi = new_dataset[new_dataset.iloc[:, -1]==1]
-            new_dataset = pd.concat([
-                new_dataset_mi,
-                resample(
-                    new_dataset_nmi,
-                    replace=True,
-                    n_samples=len(new_dataset_mi), # to match minority class
-                    random_state=0, # reproducible results
-                ),
-            ])
+        if sys.argv[6] == "balanced":
+            new_dataset_mi = new_dataset[new_dataset.iloc[:, -1] == 0]
+            new_dataset_nmi = new_dataset[new_dataset.iloc[:, -1] == 1]
+            new_dataset = pd.concat(
+                [
+                    new_dataset_mi,
+                    resample(
+                        new_dataset_nmi,
+                        replace=True,
+                        n_samples=len(new_dataset_mi),  # to match minority class
+                        random_state=0,  # reproducible results
+                    ),
+                ]
+            )
     except:
         pass
     train = pd.concat([train, new_dataset])
