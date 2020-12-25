@@ -132,7 +132,7 @@ def write_paraphrases(input_file, apt_output_file, mi_output_file, nmi_output_fi
 
 
 if sys.argv[2] == "msrp1":  # [quality, id1, id2, s1, s2]
-    write_paraphrases("/raid/datasets/msrp/msr_paraphrase_train.txt", "nap/msrp1-apt", "nap/msrp1-mi", "nap/msrp1-nmi", 3)  # , startFrom=2668) # startFrom is the 0-based index of the line you want to start processing from
+    write_paraphrases("/raid/datasets/msrp/msr_paraphrase_train.txt", "nap-t5-apt/msrp1-apt", "nap-t5-apt/msrp1-mi", "nap-t5-apt/msrp1-nmi", 3)  # , startFrom=2668) # startFrom is the 0-based index of the line you want to start processing from
 elif sys.argv[2] == "msrp2":
     write_paraphrases("/raid/datasets/msrp/msr_paraphrase_train.txt", "nap/msrp2-apt", "nap/msrp2-mi", "nap/msrp2-nmi", 4)
 elif sys.argv[2] == "ppnmt1":  # [c1, s1, s2]

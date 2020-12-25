@@ -7,6 +7,7 @@ import torch
 from tqdm import tqdm
 from numpy import argmax
 from math import exp
+from pprint import pprint
 
 logging.basicConfig(level=logging.ERROR)
 
@@ -29,7 +30,7 @@ model = T5Model(
         train_batch_size=192,
         eval_batch_size=192,
         num_train_epochs=10,
-        no_save=True,
+        no_save=False,
         evaluate_generated_text=True,
         evaluate_during_training=True,
         evaluate_during_training_steps=len(train_df)/(192*2),
@@ -97,6 +98,3 @@ model.train_model(train_data=train_df, eval_data=eval_df, show_running_loss=True
 # Evaluate the model
 results = model.eval_model(eval_df, matches=count_matches)
 print(results)
-
-# Use the model for prediction
-print(model.predict(["paraphrase: Tyson is a Cyclops, a son of Poseidon, and Percy Jackson’s half brother. He is the current general of the Cyclopes army."]))
