@@ -89,7 +89,7 @@ class T5FineTuner(pl.LightningModule):
         self.tokenizer = T5Tokenizer.from_pretrained(hparams.tokenizer_name_or_path)
 
     def is_logger(self):
-        return self.trainer.proc_rank <= 0
+        return self.trainer.global_rank <= 0
 
     def forward(
             self, input_ids, attention_mask=None, decoder_input_ids=None, decoder_attention_mask=None, labels=None
@@ -115,12 +115,14 @@ class T5FineTuner(pl.LightningModule):
         )
         # loss = outputs[0]
         dollars = 0
-        for i in tqdm(range(batch_size)):
+        for i in range(batch_size):
             s1 = ''.join(self.tokenizer.convert_ids_to_tokens(batch["source_ids"][i])).replace("<pad>", "").replace("<s>", "").replace("</s>", "").replace("paraphrase:", "").replace(u"\u2581", " ").strip()
             s2 = ''.join(self.tokenizer.convert_ids_to_tokens(batch["target_ids"][i])).replace("<pad>", "").replace("<s>", "").replace("</s>", "").replace(u"\u2581", " ").strip()
             dollars += get_mi_score(s1, s2) / ((1 + exp(5 * get_bleurt(s1, s2))) ** 2)
-        loss = torch.tensor(batch_size / dollars) if dollars else torch.tensor(batch_size)
+        loss = torch.tensor(batch_size / dollars) if dollars >= 1 else torch.tensor(float(batch_size))
         loss = torch.autograd.Variable(loss.to("cuda:0"), requires_grad=True)
+        # print(loss)
+        # sys.exit()
         return loss
 
 
@@ -278,7 +280,7 @@ if __name__=="__main__":
 
     args_dict = dict(
         data_dir="", # path for data files
-        output_dir="", # path to save the checkpoints
+        output_dir="outputs", # path to save the checkpoints
         model_name_or_path='t5-base',
         tokenizer_name_or_path='t5-base',
         max_seq_length=512,
@@ -286,15 +288,15 @@ if __name__=="__main__":
         weight_decay=0.0,
         adam_epsilon=1e-8,
         warmup_steps=0,
-        train_batch_size=8,
-        eval_batch_size=8,
+        train_batch_size=28,
+        eval_batch_size=28,
         num_train_epochs=10,
         gradient_accumulation_steps=16,
         n_gpu=1,
         early_stop_callback=False,
-        fp_16=True, # if you want to enable 16-bit training then install apex and set this to true
+        fp_16=False, # if you want to enable 16-bit training then install apex and set this to true
         opt_level='O1', # you can find out more on optimisation levels here https://nvidia.github.io/apex/amp.html#opt-levels-and-properties
-        max_grad_norm=0.5, # if you enable 16-bit training then set this to a sensible value, 0.5 is a good default
+        max_grad_norm=1.0, # if you enable 16-bit training then set this to a sensible value, 0.5 is a good default
         seed=42,
     )
 
