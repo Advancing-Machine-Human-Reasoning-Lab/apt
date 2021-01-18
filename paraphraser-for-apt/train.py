@@ -214,7 +214,7 @@ class LoggingCallback(pl.Callback):
 args_dict = dict(
     data_dir="paraphrase_data",  # path for data files
     output_dir="t5_paraphrase1",  # path to save the checkpoints
-    model_name_or_path="t5-base",
+    model_name_or_path="t5_paraphrase1/model",
     tokenizer_name_or_path="t5-base",
     max_seq_length=256,
     learning_rate=3e-4,
@@ -223,7 +223,7 @@ args_dict = dict(
     warmup_steps=0,
     train_batch_size=20,
     eval_batch_size=20,
-    num_train_epochs=5,
+    num_train_epochs=4,
     gradient_accumulation_steps=2,
     n_gpu=1,
     early_stop_callback=False,

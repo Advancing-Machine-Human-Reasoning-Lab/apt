@@ -17,4 +17,4 @@ ckpt = torch.load("t5_paraphrase1/checkpointepoch=2.ckpt")
 model.load_state_dict(ckpt["state_dict"])
 
 # save the inner pretrained model
-model.model.save_pretrained("t5_paraphrase1/model")
+model.model.save_pretrained("t5_paraphrase1/model3")

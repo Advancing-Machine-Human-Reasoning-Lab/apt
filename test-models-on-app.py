@@ -21,7 +21,7 @@ model = ClassificationModel(
     sys.argv[2],
     num_labels=2,
     use_cuda=True,
-    cuda_device=2,
+    cuda_device=0,
     args={
         "n_gpu": 1,
         "op_dir": sys.argv[3],
