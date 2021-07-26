@@ -4,9 +4,9 @@ from math import floor
 
 print("Loading data...")
 
-dataset = "app/final_checks-graph"
+# dataset = "app/final_checks-graph"
 # dataset = "nap/msrp1/msrp1-graph"
-# dataset = "nap/twitterppdb1/twitterppdb1-graph"
+dataset = "nap/twitterppdb1/twitterppdb1-graph"
 N = 100
 
 with open(dataset) as F:
@@ -39,7 +39,8 @@ for metric in ["bleurt"]:
 			V1[binNum]+=1
 		else:
 			V0[binNum]+=1
-	biggestBin = max([V0[i]+V1[i]+V2[i] for i in range(N)])
+	# biggestBin = max([V0[i]+V1[i]+V2[i] for i in range(N)])
+	biggestBin = max(V2)
 	
 	print(V0, V1, V2)
 	#graph data
@@ -47,10 +48,10 @@ for metric in ["bleurt"]:
 	ind = np.arange(N)    # the x locations for the groups
 	width = 0.8       # the width of the bars: can also be len(x) sequence
 
-	p1 = plt.bar(ind, V0, width)#, yerr=menStd)
-	p2 = plt.bar(ind, V1, width,
-				 bottom=V0)#, yerr=womenStd)
-	p3 = plt.bar(ind, V2, width, bottom=[V0[i]+V1[i] for i in range(N)])
+	p1 = plt.bar(ind, V2, width, color='tab:green')#, yerr=menStd)
+	# p2 = plt.bar(ind, V1, width,
+	# 			 bottom=V0)#, yerr=womenStd)
+	# p3 = plt.bar(ind, V2, width, bottom=[V0[i]+V1[i] for i in range(N)])
 
 	plt.xlabel(metric)
 	plt.title(dataset)# + ' as predicted by ' + metric)
@@ -59,6 +60,6 @@ for metric in ["bleurt"]:
 	plt.xticks(xticks, [floor(x*(r2-r1)+100.0*r1)/100 for x in xticks])
 	print(r1,r2)
 	plt.yticks([floor(biggestBin*i/10) for i in range(10)])
-	plt.legend((p1[0], p2[0], p3[0]), ('non-MI', 'MI', "APT"))
+	# plt.legend((p1[0], p2[0], p3[0]), ('non-MI', 'MI', "APT"))
 
-	plt.savefig(dataset+'.png')
+	plt.savefig(dataset+'-apt.png')

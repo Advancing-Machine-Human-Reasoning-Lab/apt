@@ -19,7 +19,7 @@
 
 # COUNT MI AND NON-MI IN APP
 # mi, nmi = 0, 0
-# with open('sentences/train', 'r') as f:
+# with open('app/train', 'r') as f:
 #     for line in f.readlines()[1:]:
 #         line = line.strip().split('\t')
 #         mi += int(line[-1] == '1')
@@ -27,7 +27,7 @@
 # print(mi, nmi)
 
 # mi, nmi = 0, 0
-# with open('sentences/test', 'r') as f:
+# with open('app/test', 'r') as f:
 #     for line in f.readlines()[1:]:
 #         line = line.strip().split('\t')
 #         mi += int(line[-1] == '1')
@@ -58,15 +58,30 @@
 #         nmi.add(l[5])
 # print(apt_count, mi_count, nmi_count, len(apt), len(mi), len(nmi), len(apt.union(mi)), len(apt.union(mi).union(nmi)))
 
-data_dir = "app/final_checks"
-opg = open(data_dir + "-graph", "w+")
-opg.write("\t".join(["sentence", "paraphrase", "mi", "apt", "bleurt"]) + "\n")
-with open(data_dir, "r") as f:
+# data_dir = "app/final_checks"
+# opg = open(data_dir + "-graph", "w+")
+# opg.write("\t".join(["sentence", "paraphrase", "mi", "apt", "bleurt"]) + "\n")
+# with open(data_dir, "r") as f:
+#     for l in f.readlines()[1:]:
+#         l = l.strip().split("\t")
+#         if l[9] > "0.0":
+#             opg.write("\t".join([l[5], l[6], '1', '1', l[7]]) + "\n")
+#         elif l[8] == "1":
+#             opg.write("\t".join([l[5], l[6], '1', '0', l[7]]) + "\n")
+#         else:
+#             opg.write("\t".join([l[5], l[6], '0', '0', l[7]]) + "\n")
+
+msrp, ppnmt = 0, 0
+mrpc = set()
+with open("/raid/datasets/msrp/msr_paraphrase_train.txt", "r") as f:
     for l in f.readlines()[1:]:
-        l = l.strip().split("\t")
-        if l[9] > "0.0":
-            opg.write("\t".join([l[5], l[6], '1', '1', l[7]]) + "\n")
-        elif l[8] == "1":
-            opg.write("\t".join([l[5], l[6], '1', '0', l[7]]) + "\n")
-        else:
-            opg.write("\t".join([l[5], l[6], '0', '0', l[7]]) + "\n")
+        mrpc.add(l.split("\t")[3].strip())
+s1 = set()
+with open('app/test', 'r') as f:
+    for line in f.readlines()[1:]:
+        s1.add(line.strip().split('\t')[0].strip())
+print(len(s1.intersection(mrpc)))
+with open('app/train', 'r') as f:
+    for line in f.readlines()[1:]:
+        s1.add(line.strip().split('\t')[0].strip())
+print(len(s1.intersection(mrpc)))

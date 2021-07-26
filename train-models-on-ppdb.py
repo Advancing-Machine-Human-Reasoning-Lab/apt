@@ -50,11 +50,11 @@ else:
     train, test = train_test_split(df, test_size=0.1)
 
 print(train.shape)
-epochs = 3
+epochs = 6 if 'large' in sys.argv[3] else 3
 try:
     datasets = sys.argv[5].split(",")
     print(datasets)
-    epochs = 5
+    epochs = 10 if 'large' in sys.argv[3] else 5
     new_dataset = read(datasets[0], sep="\t", header=True)
     for dataset in datasets[1:]:
         new_dataset = new_dataset.append(read(dataset, sep="\t", header=True))
@@ -107,11 +107,11 @@ model = ClassificationModel(
     cuda_device=0,
     args={
         "output_dir": sys.argv[4],
-        "overwrite_output_dir": True,
+        "overwrite_output_dir": False,
         "fp16": False,  # uses apex
         "num_train_epochs": epochs,
-        "train_batch_size": 32,
-        "eval_batch_size": 32,
+        "train_batch_size": 88,
+        "eval_batch_size": 88,
         "do_lower_case": False,
         "evaluate_during_training": True,
         "evaluate_during_verbose": True,
