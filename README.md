@@ -1,6 +1,6 @@
 # APT
 
-This is the repository based on a paper accepted in ACL 2021: (Improving Paraphrase Detection with the Adversarial Paraphrasing Task)[https://aclanthology.org/2021.acl-long.552/].
+This is the repository based on a paper accepted in ACL 2021: [Improving Paraphrase Detection with the Adversarial Paraphrasing Task](https://aclanthology.org/2021.acl-long.552/).
 
 ## Repository vs Paper
 - APP is the human split of the adversarial dataset (AP_H)
@@ -8,17 +8,17 @@ This is the repository based on a paper accepted in ACL 2021: (Improving Paraphr
 
 ## Packages needed:
 All the packages used in this repository are listed below linked to their installation instructions. However, you might not need to install all if you want to run only some of the functionalities of the repository (for instance, you would not need any of the flask packages if you do not want to run the web-based APT). Please check the import statements in the scripts you want to run before installing packages to avoid installing unnecessary packages.
-- (bleurt)[https://github.com/google-research/bleurt]
-- (transformers)[https://huggingface.co/transformers/installation.html]
-- (torch)[https://pytorch.org/get-started/locally/]
-- (pandas)[https://pandas.pydata.org/docs/getting_started/install.html]
-- (numpy)[https://numpy.org/install/]
-- (matplotlib)[https://matplotlib.org/stable/users/installing.html]
-- (tqdm)[https://pypi.org/project/tqdm/]
-- (flask)[https://flask.palletsprojects.com/en/2.0.x/installation/]
-- (flask-cors)[https://flask-cors.readthedocs.io/en/latest/]
-- (flask-session)[https://flask-session.readthedocs.io/en/latest/]
-- (waitress)[https://pypi.org/project/waitress/]
+- [bleurt](https://github.com/google-research/bleurt)
+- [transformers](https://huggingface.co/transformers/installation.html)
+- [torch](https://pytorch.org/get-started/locally/)
+- [pandas](https://pandas.pydata.org/docs/getting_started/install.html)
+- [numpy](https://numpy.org/install/)
+- [matplotlib](https://matplotlib.org/stable/users/installing.html)
+- [tqdm](https://pypi.org/project/tqdm/)
+- [flask](https://flask.palletsprojects.com/en/2.0.x/installation/)
+- [flask-cors](https://flask-cors.readthedocs.io/en/latest/)
+- [flask-session](https://flask-session.readthedocs.io/en/latest/)
+- [waitress](https://pypi.org/project/waitress/)
 
 ## Main scripts in this repository
 Here is a list of all scripts in this repository along with a brief description of what they do:
@@ -55,6 +55,6 @@ def generate_paraphrases(sentence, top_k=120, top_p=0.95):
             final_outputs.append(sent)
     return final_outputs
 ```
-Please refer to `nap_generation.py` for ways to better utilize this model using concepts of (top-k sampling)[https://arxiv.org/abs/1805.04833] and (top-p sampling)[https://arxiv.org/abs/1904.09751].
+Please refer to `nap_generation.py` for ways to better utilize this model using concepts of [top-k sampling](https://arxiv.org/abs/1805.04833) and [top-p sampling](https://arxiv.org/abs/1904.09751).
 
-The Adversarial dataset can be found (here)[https://drive.google.com/file/d/1a4_w9ZXMoD8AHcnLi6BIHtUCSDhsRlJp/view?usp=sharing].
+The Adversarial dataset can be found [here](https://drive.google.com/file/d/1a4_w9ZXMoD8AHcnLi6BIHtUCSDhsRlJp/view?usp=sharing).
