@@ -50,33 +50,50 @@ else:
     train, test = train_test_split(df, test_size=0.1)
 
 print(train.shape)
+epochs = 6 if 'large' in sys.argv[3] else 3
 try:
     datasets = sys.argv[5].split(",")
+    print(datasets)
+    epochs = 10 if 'large' in sys.argv[3] else 5
     new_dataset = read(datasets[0], sep="\t", header=True)
     for dataset in datasets[1:]:
         new_dataset = new_dataset.append(read(dataset, sep="\t", header=True))
-    print(new_dataset.shape)
+    print("new dataset", new_dataset.shape)
     try:
         if sys.argv[6] == "balanced":
-            new_dataset_mi = new_dataset[new_dataset.iloc[:, -1] == 0]
-            new_dataset_nmi = new_dataset[new_dataset.iloc[:, -1] == 1]
-            new_dataset = pd.concat(
-                [
-                    new_dataset_mi,
-                    resample(
+            new_dataset_mi = new_dataset[new_dataset.iloc[:, -1] == 1]
+            new_dataset_nmi = new_dataset[new_dataset.iloc[:, -1] == 0]
+            if new_dataset_mi.shape[0] <= new_dataset_nmi.shape[0]:
+                new_dataset = pd.concat(
+                    [
+                        new_dataset_mi,
+                        resample(
+                            new_dataset_nmi,
+                            replace=True,
+                            n_samples=len(new_dataset_mi),  # to match minority class
+                            random_state=0,  # reproducible results
+                        ),
+                    ]
+                )
+            else:
+                new_dataset = pd.concat(
+                    [
                         new_dataset_nmi,
-                        replace=True,
-                        n_samples=len(new_dataset_mi),  # to match minority class
-                        random_state=0,  # reproducible results
-                    ),
-                ]
-            )
+                        resample(
+                            new_dataset_mi,
+                            replace=True,
+                            n_samples=len(new_dataset_nmi),  # to match minority class
+                            random_state=0,  # reproducible results
+                        ),
+                    ]
+                )
+            print("balanced new dataset", new_dataset.shape)
     except:
         pass
     train = pd.concat([train, new_dataset])
 except:
     pass
-print(train.shape)
+print("final dataset", train.shape)
 
 # shuffle
 train = train.sample(frac=1).reset_index(drop=True)
@@ -87,14 +104,14 @@ model = ClassificationModel(
     sys.argv[3],
     num_labels=2,
     use_cuda=True,
-    cuda_device=2,
+    cuda_device=0,
     args={
         "output_dir": sys.argv[4],
-        "overwrite_output_dir": True,
-        "fp16": True,  # uses apex
-        "num_train_epochs": 5,
-        "train_batch_size": 32,
-        "eval_batch_size": 32,
+        "overwrite_output_dir": False,
+        "fp16": False,  # uses apex
+        "num_train_epochs": epochs,
+        "train_batch_size": 88,
+        "eval_batch_size": 88,
         "do_lower_case": False,
         "evaluate_during_training": True,
         "evaluate_during_verbose": True,

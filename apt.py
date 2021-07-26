@@ -16,7 +16,7 @@ from flask_cors import CORS, cross_origin
 from flask_session import Session
 from waitress import serve
 
-bleurt_scorer = BleurtScorer("bleurt/bleurt/bleurt-base-128/")
+bleurt_scorer = BleurtScorer("/home/animesh/MIforSE/bleurt-score/bleurt/bleurt-base-128/")
 hg_model_hub_name = "ynie/roberta-large-snli_mnli_fever_anli_R1_R2_R3-nli"
 tokenizer = AutoTokenizer.from_pretrained(hg_model_hub_name)
 model = AutoModelForSequenceClassification.from_pretrained(hg_model_hub_name)  # predicts E, N, C

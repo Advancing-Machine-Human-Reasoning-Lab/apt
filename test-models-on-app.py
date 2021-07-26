@@ -21,7 +21,7 @@ model = ClassificationModel(
     sys.argv[2],
     num_labels=2,
     use_cuda=True,
-    cuda_device=2,
+    cuda_device=0,
     args={
         "n_gpu": 1,
         "op_dir": sys.argv[3],
@@ -47,6 +47,10 @@ result_app, model_outputs_app, wrong_predictions_app = model.eval_model(app, acc
 print(result_app)
 result_app_test, model_outputs_app_test, wrong_predictions_app_test = model.eval_model(app_test, acc=accuracy_score)
 print(result_app_test)
+result_app_rev, model_outputs_app_rev, wrong_predictions_app_rev = model.eval_model(app.reindex(columns=["text_b", "text_a", "labels"]).rename(columns={"text_b":"text_a", "text_a":"text_b"}), acc=accuracy_score) # reverse order of sentences
+print(result_app_rev)
+result_app_test_rev, model_outputs_app_test_rev, wrong_predictions_app_test_rev = model.eval_model(app_test.reindex(columns=["text_b", "text_a", "labels"]).rename(columns={"text_b":"text_a", "text_a":"text_b"}), acc=accuracy_score)
+print(result_app_test_rev)
 try:
     result_test, model_outputs_test, wrong_predictions_test = model.eval_model(test, acc=accuracy_score)
     print(result_test)
