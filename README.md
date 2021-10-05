@@ -57,4 +57,11 @@ def generate_paraphrases(sentence, top_k=120, top_p=0.95):
 ```
 Please refer to `nap_generation.py` for ways to better utilize this model using concepts of [top-k sampling](https://arxiv.org/abs/1805.04833) and [top-p sampling](https://arxiv.org/abs/1904.09751).
 
+The fine-tuned paraphrase detector can be accessed through huggingface as follows:
+```py
+from transformers import AutoTokenizer, AutoModelForSequenceClassification
+tokenizer = AutoTokenizer.from_pretrained("coderpotter/adversarial-paraphrasing-detector")
+model = AutoModelForSequenceClassification.from_pretrained("coderpotter/adversarial-paraphrasing-detector")
+```
+
 The Adversarial dataset can be found [here](https://drive.google.com/file/d/1a4_w9ZXMoD8AHcnLi6BIHtUCSDhsRlJp/view?usp=sharing).
